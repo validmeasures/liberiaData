@@ -1,0 +1,35 @@
+Package: liberiaData
+Type: Package
+Title: Liberia Coverage Survey Data Handler
+Version: 0.1.0
+Authors@R: person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
+                  email = "ernest@guevarra.io", role = c("aut", "cre"))
+Description: The Liberia Coverage Survey for the assessment of CMAM coverage, 
+    micronutrient powder supplementation coverage, vitamin A supplementation 
+    coverage, iron folic acid supplementation coverage and IYCF counselling 
+    coverage has been commissioned by UNICEF Liberia with funding from Power of 
+    Nutrition. In support of this survey, this package for data manipulation,
+    processing and analysis has been developed.
+License: GPL-3
+Imports:
+    bbw,
+    zscorer,
+    tidyr,
+    stringr,
+    ggplot2,
+    RColorBrewer,
+    liberia (>= 0.1.0),
+    rgdal,
+    rgeos,
+    raster,
+    gstat,
+    nipnTK (>= 0.1.0)
+Suggests: 
+    shinydashboard,
+    shiny
+Remotes: 
+    validmeasures/liberia,
+    nutriverse/nipnTK
+Encoding: UTF-8
+LazyData: true
+
