@@ -12,10 +12,12 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# liberiaData
+# liberiaData: Liberia Coverage Survey Data Handler
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build status](https://travis-ci.org/validmeasures/liberiaData.svg?branch=master)](https://travis-ci.org/validmeasures/liberiaData)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/validmeasures/liberiaData?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/liberiaData)
 <!-- badges: end -->
 
 The Liberia Coverage Survey for the assessment of CMAM coverage, micronutrient powder supplementation coverage, vitamin A supplementation coverage, iron folic acid supplementation coverage and IYCF counselling coverage has been commissioned by UNICEF Liberia with funding from Power of Nutrition. In support of this survey, this package for data manipulation, processing and analysis has been developed.

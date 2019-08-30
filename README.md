@@ -1,12 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# liberiaData
+# liberiaData: Liberia Coverage Survey Data Handler
 
 <!-- badges: start -->
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build
+status](https://travis-ci.org/validmeasures/liberiaData.svg?branch=master)](https://travis-ci.org/validmeasures/liberiaData)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/validmeasures/liberiaData?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/liberiaData)
 <!-- badges: end -->
 
 The Liberia Coverage Survey for the assessment of CMAM coverage,
