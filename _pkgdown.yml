@@ -1,0 +1,43 @@
+title: myanmarMCCTchecks
+
+url: https://validmeasures.org/myanmarMCCTchecks
+
+template:
+  params:
+    bootswatch: sandstone
+    #ganalytics: UA-102485058-4
+
+reference:
+- title: Description
+  contents:
+  - myanmarMCCTchecks
+
+- title: Survey tracking
+  contents:
+  - check_survey_progress
+  - summarise_progress
+
+- title: Logic checks
+  contents:
+  - check_hh_duplicate
+  - check_hh_consent
+  - check_hh_date
+
+- title: Enumerator summary
+  contents:
+  - check_hh_response
+
+- title: Data preparation
+  contents:
+  - get_mcct_data
+  - prepare_hh_data
+
+- title: Web application
+  contents:
+  - run_mcct_checks
+
+- title: Supporting data
+  contents:
+  - villageList
+  - wardList
+  - surveyTeam
