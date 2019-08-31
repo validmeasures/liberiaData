@@ -10,10 +10,10 @@ init:
 install:
   ps: Bootstrap
 
+platform: x64
+
 #cache:
 #  - C:\RLibrary
-
-platform: x64
 
 environment:
   NOT_CRAN: true
