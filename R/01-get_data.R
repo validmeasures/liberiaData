@@ -17,6 +17,9 @@
 #'   in export to CSV. Date format is <yyyy/MM/dd> and default value current
 #'   system date
 #' @param filename Filename to use for data without the CSV file extension.
+#' @param rep Logical. Does the form have repeat/s? Default FALSE.
+#' @param rep.name A vector of repeat names to read in the form. Default
+#'   is NULL. Must be specified if \code{rep} is TRUE.
 #'
 #' @return A data.frame corresponding to dataset corresponding to the form ID
 #'   specified.
@@ -36,7 +39,8 @@
 
 get_liberia_data <- function(id, username, password,
                              start = Sys.Date(), end = Sys.Date(),
-                             filename) {
+                             filename,
+                             rep = FALSE, rep.name = NULL) {
   ## Create temporary directory
   temp <- tempdir()
   ## Get latest briefcase and put in temporary directory
@@ -60,6 +64,23 @@ get_liberia_data <- function(id, username, password,
   ## Read specified dataset
   surveyData <- read.csv(paste(temp, "/", filename, ".csv", sep = ""),
                          stringsAsFactors = FALSE)
+  ## Read repeat data
+  for(i in rep.name) {
+    assign(x = paste(rep.name, "_data"),
+           value = read.csv(paste(temp, "/", filename, "-",
+                                  rep.name, ".csv", sep = ""),
+                            stringsAsFactors = FALSE))
+  }
+  ##
+  fullData <- surveyData
+  ##
+  if(rep) {
+    fullData <- vector(mode = "list", length = length(rep.name) + 1)
+    fullData[[1]] <- surveyData
+    for(i in length(rep.name)) {
+      fullData[[i + 1]] <- get(paste(rep.name[i], "_data", sep = ""))
+    }
+  }
   ## Return data.frame
-  return(surveyData)
+  return(fullData)
 }
