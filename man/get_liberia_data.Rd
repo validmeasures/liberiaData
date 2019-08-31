@@ -7,7 +7,7 @@ This function is a wrapper for a set of functions from the \code{odkr}
 package.}
 \usage{
 get_liberia_data(id, username, password, start = Sys.Date(),
-  end = Sys.Date(), filename)
+  end = Sys.Date(), filename, rep = FALSE, rep.name = NULL)
 }
 \arguments{
 \item{id}{Form ID. Can be one of two form IDs used by the
@@ -27,6 +27,11 @@ in export to CSV. Date format is <yyyy/MM/dd> and default value current
 system date}
 
 \item{filename}{Filename to use for data without the CSV file extension.}
+
+\item{rep}{Logical. Does the form have repeat/s? Default FALSE.}
+
+\item{rep.name}{A vector of repeat names to read in the form. Default
+is NULL. Must be specified if \code{rep} is TRUE.}
 }
 \value{
 A data.frame corresponding to dataset corresponding to the form ID
