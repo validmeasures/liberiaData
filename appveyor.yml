@@ -25,7 +25,7 @@ on_failure:
   - 7z a failure.zip *.Rcheck\*
   - appveyor PushArtifact failure.zip
 
-#platform: x64
+platform: x64
 
 environment:
   global:
@@ -34,11 +34,9 @@ environment:
     WARNINGS_ARE_ERRORS: 1
 
   matrix:
-    - platform: x64
     - R_VERSION: release
     - R_ARCH: x64
 
-    - platform: x64
     - R_VERSION: devel
     - R_ARCH: x64
 
