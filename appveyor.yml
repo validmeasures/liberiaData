@@ -10,18 +10,8 @@ init:
 install:
   ps: Bootstrap
 
-platform: x64
-
-#cache:
-#  - C:\RLibrary
-
-environment:
-  NOT_CRAN: true
-  R_ARCH: x64
-  # env vars that may need to be set, at least temporarily, from time to time
-  # see https://github.com/krlmlr/r-appveyor#readme for details
-  # USE_RTOOLS: true
-  # R_REMOTES_STANDALONE: true
+cache:
+  - C:\RLibrary
 
 # Adapt as necessary starting from here
 
@@ -34,6 +24,27 @@ test_script:
 on_failure:
   - 7z a failure.zip *.Rcheck\*
   - appveyor PushArtifact failure.zip
+
+platform: x64
+
+environment:
+  global:
+    R_BUILD_ARGS: --no-multiarch
+    R_CHECK_ARGS: "--no-manual --as-cran --run-donttest --no-multiarch"
+    WARNINGS_ARE_ERRORS: 1
+
+  matrix:
+    - R_VERSION: release
+    - R_ARCH: x64
+
+    - R_VERSION: devel
+    - R_ARCH: x64
+
+    #- R_VERSION: release
+    #  R_ARCH: i386
+
+    #- R_VERSION: devel
+    #  R_ARCH: i386
 
 artifacts:
   - path: '*.Rcheck\**\*.log'
