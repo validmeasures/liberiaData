@@ -61,6 +61,7 @@ get_liberia_data <- function(id, username, password,
                     start = start,
                     end = end,
                     filename = paste(filename, ".csv", sep = ""),
+                    split = TRUE,
                     overwrite = TRUE)
   ## Read specified dataset
   surveyData <- read.csv(paste(temp, "/", filename, ".csv", sep = ""),
