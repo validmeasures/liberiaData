@@ -26,11 +26,12 @@
 #'   specified.
 #'
 #' @examples
+#' \dontrun{
 #'   get_liberia_data(id = "liberiaCoverageRound2",
 #'                    username = "cadnihead",
 #'                    password = "kEv-hAB-Arb-6Cn",
 #'                    filename = "surveyData")
-#'
+#' }
 #'
 #' @export
 #'
@@ -80,6 +81,7 @@ get_liberia_data <- function(id, username, password,
     for(i in length(rep.name)) {
       fullData[[i + 1]] <- get(paste(rep.name[i], "_data", sep = ""))
     }
+    names(fullData) <- c("surveyData", rep.name)
   }
   ## Return data.frame
   return(fullData)
