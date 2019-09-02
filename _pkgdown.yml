@@ -1,6 +1,6 @@
-title: myanmarMCCTchecks
+title: liberiaData
 
-url: https://validmeasures.org/myanmarMCCTchecks
+url: https://validmeasures.org/liberiaData
 
 template:
   params:
@@ -10,34 +10,12 @@ template:
 reference:
 - title: Description
   contents:
-  - myanmarMCCTchecks
+  - liberiaData
 
-- title: Survey tracking
+- title: Data handling
   contents:
-  - check_survey_progress
-  - summarise_progress
+  - get_liberia_data
 
-- title: Logic checks
+- title: Estimators
   contents:
-  - check_hh_duplicate
-  - check_hh_consent
-  - check_hh_date
-
-- title: Enumerator summary
-  contents:
-  - check_hh_response
-
-- title: Data preparation
-  contents:
-  - get_mcct_data
-  - prepare_hh_data
-
-- title: Web application
-  contents:
-  - run_mcct_checks
-
-- title: Supporting data
-  contents:
-  - villageList
-  - wardList
-  - surveyTeam
+  - estimate_classic
