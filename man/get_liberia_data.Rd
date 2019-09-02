@@ -40,10 +40,11 @@ This function is a wrapper for a set of functions from the `odkr`
 package.
 }
 \examples{
+\dontrun{
   get_liberia_data(id = "liberiaCoverageRound2",
                    username = "cadnihead",
                    password = "kEv-hAB-Arb-6Cn",
                    filename = "surveyData")
-
+}
 
 }
