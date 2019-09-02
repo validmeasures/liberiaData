@@ -2,24 +2,25 @@
 #
 #'
 #' Function to get Liberia Coverage Survey datasets and forms from ODK server.
-#' This function is a wrapper for a set of functions from the \code{odkr}
+#'
+#' This function is a wrapper for a set of functions from the `odkr`
 #' package.
 #'
 #' @param id Form ID. Can be one of two form IDs used by the
 #'   different forms designed for the Liberia Coverage Survey -
-#'   \code{liberiaCoverageRound2} and \code{liberiaVillageFormRound2}.
+#'   `liberiaCoverageRound2` and `liberiaVillageFormRound2`.
 #' @param username ONA server username credentials. For
 #' @param password ONA server password credentials.
 #' @param start Include data from submission dates after (inclusive) this
-#'   start date in export to CSV. Date format <yyyy/MM/dd> and default is
+#'   start date in export to CSV. Date format `<yyyy/MM/dd>` and default is
 #'   current system date
 #' @param end Include data from submission dates before (exclusive) this date
-#'   in export to CSV. Date format is <yyyy/MM/dd> and default value current
+#'   in export to CSV. Date format is `<yyyy/MM/dd>` and default value current
 #'   system date
 #' @param filename Filename to use for data without the CSV file extension.
 #' @param rep Logical. Does the form have repeat/s? Default FALSE.
 #' @param rep.name A vector of repeat names to read in the form. Default
-#'   is NULL. Must be specified if \code{rep} is TRUE.
+#'   is NULL. Must be specified if `rep`` is TRUE.
 #'
 #' @return A data.frame corresponding to dataset corresponding to the form ID
 #'   specified.
