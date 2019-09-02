@@ -6,3 +6,4 @@
 ^_pkgdown\.yml$
 ^docs$
 ^data-raw$
+^briefcase\.log$
