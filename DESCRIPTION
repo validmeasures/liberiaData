@@ -24,14 +24,16 @@ Imports:
     raster,
     gstat,
     nipnTK (>= 0.1.0),
-    odkr (>= 0.3.2)
+    odkr (>= 0.3.2),
+    squeacr (>= 0.1.9000)
 Suggests: 
     shinydashboard,
     shiny
 Remotes:  
     validmeasures/liberia,
     nutriverse/nipnTK,
-    validmeasures/odkr
+    validmeasures/odkr,
+    rapidsurveys/squeacr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
