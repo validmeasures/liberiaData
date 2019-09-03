@@ -15,7 +15,13 @@ reference:
 - title: Data handling
   contents:
   - get_liberia_data
+  - merge_repeats
 
 - title: Estimators
   contents:
   - estimate_classic
+
+- title: Datasets
+  contents:
+  - coverageData2
+  - villageData2
