@@ -26,13 +26,28 @@ calculate_ifa <- function(df, core.columns = c("cid", "did", "eid", "m2")) {
   ## Receive/purchase IFA?
   ifa3 <- as.numeric(df$ifa3)
   ifa3 <- bbw::recode(ifa3, "2=0;99=0")
+  ## Reasons: Health centre ran out
+  ifa3a <- as.numeric(df$ifa3a.1)
+  ## Reasons: Took too long to get tablets
+  ifa3b <- as.numeric(df$ifa3a.2)
+  ## Reasons: Too expensive
+  ifa3c <- as.numeric(df$ifa3a.3)
   ## Take IFA?
   ifa4 <- as.numeric(df$ifa4)
   ifa4 <- bbw::recode(ifa4, "2=0;99=0")
+  ## Reasons: Concerns about side effects
+  ifa4a <- as.numeric(df$ifa4a.1)
+  ## Reasons: Don't need it
+  ifa4b <- as.numeric(df$ifa4a.2)
+  ## Reasons: I was told not to take it
+  ifa4c <- as.numeric(df$ifa4a.3)
+  ## Reasons: I don't think it helps
+  ifa4d <- as.numeric(df$ifa4a.4)
   ## How many days?
   ifa5 <- as.numeric(df$ifa5)
   ## Create IFA data.frame
-  ifa <- data.frame(df[ , core.columns], ifa1, ifa2, ifa3, ifa4, ifa5)
+  ifa <- data.frame(df[ , core.columns], ifa1, ifa2, ifa3, ifa3a, ifa3b, ifa3c,
+                    ifa4, ifa4a, ifa4b, ifa4c, ifa4d, ifa5)
   ##
   return(ifa)
 }
