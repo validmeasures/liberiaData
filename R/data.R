@@ -39,3 +39,21 @@
 #
 ################################################################################
 "villageData2"
+
+
+################################################################################
+#
+#' Liberia Coverage Survey data codebook
+#'
+#' @format A tibble with 3 columns and 152 rows:
+#'
+#' * `variable` - Variable name
+#' * `question` - Question or data assigned to `variable`
+#' * `choices` - Possible responses for specific `variable`
+#'
+#' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
+#'
+#
+################################################################################
+"codebook"
+
