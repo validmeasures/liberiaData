@@ -16,6 +16,8 @@ reference:
   contents:
   - get_liberia_data
   - merge_repeats
+  - recode_others
+  - calculate_ifa
 
 - title: Estimators
   contents:
