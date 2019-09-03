@@ -10,6 +10,13 @@ coverageData <- get_liberia_data(id = "liberiaCoverageRound2",
                                  rep = TRUE,
                                  rep.name = "child_repeat")
 
+## Data clean-up
+
+
+
+
+
+
 coverageData <- merge_repeats(x = coverageData, rep.name = "child_repeat")
 
 coreColumns <- c("sdate", "cid", "spid", "ea", "consent2", "m2", "ch",
