@@ -2,7 +2,7 @@
 % Please edit documentation in R/04-create_ifa.R
 \name{calculate_ifa}
 \alias{calculate_ifa}
-\title{Function to create iron-folic acid coverage indicators}
+\title{Function to recode iron-folic acid coverage indicators}
 \usage{
 calculate_ifa(df, core.columns = c("cid", "did", "eid", "m2"))
 }
@@ -16,7 +16,7 @@ data.frame}
 A data.frame of iron-folic acid coverage indicators
 }
 \description{
-Function to create iron-folic acid coverage indicators
+Function to recode iron-folic acid coverage indicators
 }
 \examples{
 calculate_ifa(df = coverageData2)
