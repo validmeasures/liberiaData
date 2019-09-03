@@ -63,3 +63,9 @@ villageData2 <- villageData[ , c("cid", "county", "did", "eid", "lat", "lon", "p
 
 usethis::use_data(villageData2, overwrite = TRUE)
 
+################################################################################
+
+## Recode IFA indicators
+
+calculate_ifa(df = coverageData2)
+
