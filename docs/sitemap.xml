@@ -4,6 +4,9 @@
     <loc>https://validmeasures.org/liberiaData/index.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/calculate_ifa.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/codebook.html</loc>
   </url>
   <url>
@@ -20,6 +23,9 @@
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/merge_repeats.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_others.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/villageData2.html</loc>
