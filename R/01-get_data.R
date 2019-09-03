@@ -44,8 +44,11 @@ get_liberia_data <- function(id, username, password,
                              rep = FALSE, rep.name = NULL) {
   ## Create temporary directory
   temp <- tempdir()
-  ## Get latest briefcase and put in temporary directory
-  odkr::get_briefcase(destination = tempdir())
+  ## Check if ODK Briefcase already available in tempdir
+  if(!file.exists(paste(temp, "/odkBriefcase_latest.jar", sep = ""))) {
+    ## Get latest briefcase and put in temporary directory
+    odkr::get_briefcase(destination = tempdir())
+  }
   ## Pull ODK forms definitions and submissions from server
   odkr::pull_remote(target = temp,
                     id = id,
