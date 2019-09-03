@@ -17,3 +17,4 @@ The Liberia Coverage Survey for the assessment of CMAM coverage,
 \strong{Maintainer}: Ernest Guevarra \email{ernest@guevarra.io} (0000-0002-4887-4415)
 
 }
+\keyword{internal}
