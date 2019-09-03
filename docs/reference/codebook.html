@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • liberiaData</title>
+<title>Liberia Coverage Survey data codebook — codebook • liberiaData</title>
 
 
 <!-- jquery -->
@@ -33,7 +33,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Liberia Coverage Survey data codebook — codebook" />
+<meta property="og:description" content="Liberia Coverage Survey data codebook" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -51,7 +53,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -92,99 +94,38 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Liberia Coverage Survey data codebook</h1>
+    
+    <div class="hidden name"><code>codebook.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Liberia Coverage Survey data codebook</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>codebook</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-description" class="hasAnchor"><a href="#section-description" class="anchor"></a>Description</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="liberiaData.html">liberiaData</a></code> </p>
-        </td>
-        <td><p>Liberia Coverage Survey Data Handler</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-data-handling" class="hasAnchor"><a href="#section-data-handling" class="anchor"></a>Data handling</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="get_liberia_data.html">get_liberia_data()</a></code> </p>
-        </td>
-        <td><p>Function to get Liberia Coverage Survey datasets and forms from ODK server.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="merge_repeats.html">merge_repeats()</a></code> </p>
-        </td>
-        <td><p>Function to merge main ODK form with repeats</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-estimators" class="hasAnchor"><a href="#section-estimators" class="anchor"></a>Estimators</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="estimate_classic.html">estimate_classic()</a></code> </p>
-        </td>
-        <td><p>Estimate proportion using classic estimator</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-datasets" class="hasAnchor"><a href="#section-datasets" class="anchor"></a>Datasets</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="coverageData2.html">coverageData2</a></code> </p>
-        </td>
-        <td><p>Liberia Coverage Survey Data Round 2</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="villageData2.html">villageData2</a></code> </p>
-        </td>
-        <td><p>Liberia Coverage Survey Village Data Round 2</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A tibble with 3 columns and 152 rows:</p>
+<p>* `variable` - Variable name
+* `question` - Question or data assigned to `variable`
+* `choices` - Possible responses for specific `variable`</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Liberia Coverage Survey Round 2 - 27 August to 30 September 2019</p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-description">Description</a></li>
-      <li><a href="#section-data-handling">Data handling</a></li>
-      <li><a href="#section-estimators">Estimators</a></li>
-      <li><a href="#section-datasets">Datasets</a></li>
+      <li><a href="#format">Format</a></li>
+      <li><a href="#source">Source</a></li>
     </ul>
+
   </div>
 </div>
 

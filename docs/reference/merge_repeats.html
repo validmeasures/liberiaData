@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • liberiaData</title>
+<title>Function to merge main ODK form with repeats — merge_repeats • liberiaData</title>
 
 
 <!-- jquery -->
@@ -33,7 +33,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Function to merge main ODK form with repeats — merge_repeats" />
+<meta property="og:description" content="Function to merge main ODK form with repeats" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -51,7 +53,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -92,99 +94,46 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Function to merge main ODK form with repeats</h1>
+    
+    <div class="hidden name"><code>merge_repeats.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Function to merge main ODK form with repeats</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>merge_repeats</span>(<span class='no'>x</span>, <span class='no'>rep.name</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-description" class="hasAnchor"><a href="#section-description" class="anchor"></a>Description</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="liberiaData.html">liberiaData</a></code> </p>
-        </td>
-        <td><p>Liberia Coverage Survey Data Handler</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-data-handling" class="hasAnchor"><a href="#section-data-handling" class="anchor"></a>Data handling</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="get_liberia_data.html">get_liberia_data()</a></code> </p>
-        </td>
-        <td><p>Function to get Liberia Coverage Survey datasets and forms from ODK server.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="merge_repeats.html">merge_repeats()</a></code> </p>
-        </td>
-        <td><p>Function to merge main ODK form with repeats</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-estimators" class="hasAnchor"><a href="#section-estimators" class="anchor"></a>Estimators</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="estimate_classic.html">estimate_classic()</a></code> </p>
-        </td>
-        <td><p>Estimate proportion using classic estimator</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-datasets" class="hasAnchor"><a href="#section-datasets" class="anchor"></a>Datasets</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="coverageData2.html">coverageData2</a></code> </p>
-        </td>
-        <td><p>Liberia Coverage Survey Data Round 2</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="villageData2.html">villageData2</a></code> </p>
-        </td>
-        <td><p>Liberia Coverage Survey Village Data Round 2</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>A list of data.frames produced by `get_liberia_data` after
+retreiving data from ODK server.</p></td>
+    </tr>
+    <tr>
+      <th>rep.name</th>
+      <td><p>A character value specifying name of repeat form to merge
+with main form.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A data.frame with rows equal to repeat data merged with main form</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-description">Description</a></li>
-      <li><a href="#section-data-handling">Data handling</a></li>
-      <li><a href="#section-estimators">Estimators</a></li>
-      <li><a href="#section-datasets">Datasets</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
     </ul>
+
   </div>
 </div>
 
