@@ -19,3 +19,9 @@ A data.frame with rows equal to repeat data merged with main form
 \description{
 Function to merge main ODK form with repeats
 }
+\examples{
+\dontrun{
+merge_repeats(x = coverageData, rep.name = "child_repeat")
+}
+
+}
