@@ -11,7 +11,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' merge_repeats(x = coverageData, rep.name = "child_repeat)
+#' merge_repeats(x = coverageData, rep.name = "child_repeat")
 #' }
 #'
 #' @export
