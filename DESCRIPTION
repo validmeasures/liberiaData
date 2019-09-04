@@ -19,11 +19,11 @@ Imports:
     stringr,
     ggplot2,
     RColorBrewer,
-    liberia (>= 0.1.0),
     rgdal,
     rgeos,
     raster,
     gstat,
+    liberia (>= 0.1.0),
     nipnTK (>= 0.1.0),
     odkr (>= 0.3.2),
     squeacr (>= 0.1.9000)
