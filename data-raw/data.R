@@ -209,7 +209,15 @@ villageData.r2 <- villageData[ , c("cid", "county", "did", "eid", "lat", "lon", 
 
 usethis::use_data(villageData.r2, overwrite = TRUE)
 
-################################################################################
+################################# Read sample list #############################
+
+## Round 2 sample list
+sampleList.r2 <- read.csv("data-raw/sample/sampleList.csv", stringsAsFactors = FALSE)
+usethis::use_data(sampleList.r2, overwrite = TRUE)
+
+
+
+
 
 ## Recode IFA indicators
 
