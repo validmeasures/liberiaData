@@ -19,6 +19,6 @@ A data.frame of iron-folic acid coverage indicators
 Function to recode iron-folic acid coverage indicators
 }
 \examples{
-calculate_ifa(df = coverageData2)
+calculate_ifa(df = coverageData.r2)
 
 }
