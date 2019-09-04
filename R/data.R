@@ -96,7 +96,7 @@
 
 ################################################################################
 #
-#' Liberia Coverage Survey sample list
+#' Liberia Coverage Survey sample list Round 2
 #'
 #' @format A data.frame of with 23 columns and 178 rows:
 #'
@@ -133,7 +133,7 @@
 
 ################################################################################
 #
-#' Iron-folic acid (IFA) indicator set
+#' Iron-folic acid (IFA) indicator set Round 2
 #'
 #' @format A data.frame with 25 columns:
 #'
@@ -172,7 +172,7 @@
 
 ################################################################################
 #
-#' Infant and Young Child Feeding (IYCF) counselling coverage
+#' Infant and Young Child Feeding (IYCF) counselling coverage Round 2
 #'
 #' @format A data.frame with 15 columns:
 #'
