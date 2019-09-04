@@ -217,9 +217,9 @@ usethis::use_data(sampleList.r2, overwrite = TRUE)
 
 
 
-
+################################# Recode indicators ############################
 
 ## Recode IFA indicators
 
-calculate_ifa(df = coverageData2)
+calculate_ifa(df = coverageData1.r2)
 
