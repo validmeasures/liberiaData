@@ -247,3 +247,25 @@ names(ls) <- paste("icf2", letters[5:7], sep = "")
 ## Recode IYCF indicators
 iycfDF <- recode_iycf(df = coverageData1.r2, ls = ls)
 usethis::use_data(iycfDF, overwrite = TRUE)
+
+########################### Recode MNP indicators ##############################
+
+mnp2f <- c("done", "know", "seen", "heard", "herd") # Don't know/not seen/not hear
+mnp2g <- c("gone") # Have not gone to hospital
+mnp2h <- c("receive") # Have not received any
+mnp2i <- c("tell") # Hospital didn't tell me about it
+
+ls1 <- list(mnp2f, mnp2g, mnp2h, mnp2i)
+names(ls1) <- paste("mnp2", letters[6:9], sep = "")
+
+mnp3j <- c("refused") # Child refused to take it
+ls2 <- list(mnp3j)
+names(ls2) <- paste("mnp3", letters[10], sep = "")
+ls <- NULL
+
+## Recode MNP indicators
+mnpDF <- recode_mnp(df = coverageData1.r2, ls1 = ls1, ls2 = ls2)
+usethis::use_data(mnpDF, overwrite = TRUE)
+
+
+
