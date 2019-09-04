@@ -4,13 +4,20 @@
 \alias{recode_ifa}
 \title{Function to recode iron-folic acid coverage indicators}
 \usage{
-recode_ifa(df, core.columns = c("cid", "did", "eid", "motherID", "m2"))
+recode_ifa(df, core.columns = c("cid", "did", "eid", "motherID", "m2"),
+  ls1 = NULL, ls2 = NULL)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}
 
 \item{core.columns}{A vector of variable names to include in resulting
 data.frame}
+
+\item{ls1}{A list of thematically named string pattern vectors to use for
+searching and organising `others` responses for ifa3a}
+
+\item{ls2}{A list of thematically named string pattern vectors to use for
+searching and organising `others` responses for ifa4a}
 }
 \value{
 A data.frame of iron-folic acid coverage indicators
@@ -19,6 +26,14 @@ A data.frame of iron-folic acid coverage indicators
 Function to recode iron-folic acid coverage indicators
 }
 \examples{
-recode_ifa(df = coverageData.r2)
+ifa3d <- c("delivery", "hospital", "constantly") # Did not go to hospital
+ifa3e <- c("know") # Don't know about the tablets
+ifa3f <- c("any", "go") # Didn't get any tablets
+ifa3g <- c("given") # Was given but never took it
+ifa3h <- c("interest", "interested", "Not") # Not interested
+ifa3i <- c("Reasons") # No reasons
+ls1 <- list(ifa3d, ifa3e, ifa3f, ifa3g, ifa3h, ifa3i)
+names(ls1) <- paste("ifa3", letters[4:9], sep = "")
+recode_ifa(df = coverageData.r2, ls1 = ls1)
 
 }
