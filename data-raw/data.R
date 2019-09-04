@@ -219,7 +219,23 @@ usethis::use_data(sampleList.r2, overwrite = TRUE)
 
 ################################# Recode indicators ############################
 
+## Create list of recode for ifa3a others
+ifa3d <- c("delivery", "hospital", "constantly") # Did not go to hospital
+ifa3e <- c("know") # Don't know about the tablets
+ifa3f <- c("any", "go") # Didn't get any tablets
+ifa3g <- c("given") # Was given but never took it
+ifa3h <- c("interest", "interested", "Not") # Not interested
+ifa3i <- c("Reasons") # No reasons
+
+ls <- list(ifa3d, ifa3e, ifa3f, ifa3g, ifa3h, ifa3i)
+names(ls) <- paste("ifa3", letters[4:9], sep = "")
+
+recode_others(df = coverageData1.r2, var = "ifa3a_other", ls = ls)
+
 ## Recode IFA indicators
 
-calculate_ifa(df = coverageData1.r2)
+
+
+
+recode_ifa(df = coverageData1.r2)
 
