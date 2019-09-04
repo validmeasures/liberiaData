@@ -93,3 +93,41 @@
 ################################################################################
 "codebook"
 
+
+################################################################################
+#
+#' Liberia Coverage Survey sample list
+#'
+#' @format A data.frame of with 23 columns and 178 rows:
+#'
+#' * `spid` - Sampling point identifier
+#' * `CCNAME` - County name
+#' * `DNAME` - District name
+#' * `CLNAME` - Clan name
+#' * `FEACODE` - Enumeration area code
+#' * `SAREA` - Sampling area code
+#' * `EFEACODE` - Enumeration area code
+#' * `CCODE` - County code
+#' * `DCODE` - District code
+#' * `CLCODE` - Clan code
+#' * `EACODE` - Enumeration area code
+#' * `TOTAL` - Total population
+#' * `MALE` - Male population
+#' * `FEMALE` - Female population
+#' * `HH` - Number of households
+#' * `CCODE1` - County code
+#' * `DCODE1` - District code
+#' * `CLCODE1` - Clan code
+#' * `EACODE1` - Enumeration area code
+#' * `lon` - Longitude coordinate of centroid of enumeration area
+#' * `lat` - Latitude coordinate of centroid of enumeration area
+#' * `d` - Distance from centroid of grid
+#' * `gmap` - Google maps link
+#'
+#' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
+#'
+#
+################################################################################
+"sampleList.r2"
+
+
