@@ -19,6 +19,8 @@ reference:
   - recode_others
   - recode_ifa
   - recode_iycf
+  - recode_mnp
+  - recode_vita
 
 - title: Estimators
   contents:
@@ -34,5 +36,7 @@ reference:
   - coverageData2.r2
   - ifaDF
   - iycfDF
+  - mnpDF
+  - vitDF
 
 
