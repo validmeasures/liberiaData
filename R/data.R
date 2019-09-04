@@ -2,7 +2,7 @@
 #
 #' Liberia Coverage Survey Data Round 2
 #'
-#' @format A data.frame with 133 columns
+#' @format A data.frame with 134 columns
 #'
 #' * `sdate` - Date of data collection
 #' * `cid` - County identifier
@@ -13,7 +13,43 @@
 #'
 #
 ################################################################################
-"coverageData2"
+"coverageData.r2"
+
+
+################################################################################
+#
+#' Liberia Coverage Survey Data Round 2 - main form
+#'
+#' @format A data.frame with 69 columns
+#'
+#' * `sdate` - Date of data collection
+#' * `cid` - County identifier
+#' * `county` - County name
+#' * `did` - District identifier
+#'
+#' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
+#'
+#
+################################################################################
+"coverageData1.r2"
+
+
+################################################################################
+#
+#' Liberia Coverage Survey Data Round 2 - repeat form
+#'
+#' @format A data.frame with 65 columns
+#'
+#' * `sdate` - Date of data collection
+#' * `cid` - County identifier
+#' * `county` - County name
+#' * `did` - District identifier
+#'
+#' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
+#'
+#
+################################################################################
+"coverageData2.r2"
 
 
 ################################################################################
@@ -38,7 +74,7 @@
 #'
 #
 ################################################################################
-"villageData2"
+"villageData.r2"
 
 
 ################################################################################
