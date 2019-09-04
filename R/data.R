@@ -239,3 +239,33 @@
 #
 ################################################################################
 "mnpDF"
+
+
+################################################################################
+#
+#' Vitamin A supplementation coverage Round 2
+#'
+#' @format A data.frame with 16 columns:
+#'
+#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
+#' * `did` - District identifier
+#' * `eid` - Enumeration area identifier
+#' * `motherID` - Mother identifier
+#' * `m2` - Mother age
+#' * `vit1` - Received vitamin A?
+#' * `vit1a` - Reasons: Health centre ran out
+#' * `vit1b` - Reasons: Took too long to get drops
+#' * `vit1c` - Reasons: Child doesn't need it
+#' * `vit1d` - Reasons: Heard it doesn't work/help
+#' * `vit1e` - Reasons: Child too young during latest campaign
+#' * `vit1f` - Reasons: Not around during last campaign
+#' * `vit1g` - Reasons: Didn't hear/know about it
+#' * `vit1h` - Reasons: Never been to hospital
+#' * `vit1i` - Reasons: Vaccine team didn't come/reach
+#' * `vit1j` - Reasons: Not interested
+#'
+#' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
+#'
+#
+################################################################################
+"vitDF"
