@@ -34,18 +34,30 @@
     <loc>https://validmeasures.org/liberiaData/reference/merge_repeats.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/mnpDF.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_ifa.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_iycf.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_mnp.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_others.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_vita.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/sampleList.r2.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/villageData.r2.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/vitDF.html</loc>
   </url>
 </urlset>
