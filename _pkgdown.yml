@@ -17,7 +17,8 @@ reference:
   - get_liberia_data
   - merge_repeats
   - recode_others
-  - calculate_ifa
+  - recode_ifa
+  - recode_iycf
 
 - title: Estimators
   contents:
@@ -25,7 +26,13 @@ reference:
 
 - title: Datasets
   contents:
-  - coverageData2
-  - villageData2
   - codebook
+  - sampleList.r2
+  - villageData.r2
+  - coverageData.r2
+  - coverageData1.r2
+  - coverageData2.r2
+  - ifaDF
+  - iycfDF
+
 
