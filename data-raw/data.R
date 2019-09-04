@@ -215,9 +215,7 @@ usethis::use_data(villageData.r2, overwrite = TRUE)
 sampleList.r2 <- read.csv("data-raw/sample/sampleList.csv", stringsAsFactors = FALSE)
 usethis::use_data(sampleList.r2, overwrite = TRUE)
 
-
-
-################################# Recode indicators ############################
+########################### Recode IFA indicators ##############################
 
 ## Create list of recode for ifa3a others
 ifa3d <- c("delivery", "hospital", "constantly") # Did not go to hospital
@@ -236,3 +234,16 @@ ls2 <- NULL
 ifaDF <- recode_ifa(df = coverageData1.r2, ls1 = ls1, ls2 = ls2)
 usethis::use_data(ifaDF, overwrite = TRUE)
 
+########################### Recode IYCF indicators #############################
+
+## Create list of recode for icf2a others
+icf2e <- c("delivery", "health", "hospital") # Did not go to hospital
+icf2f <- c("Doctor", "invited", "talk", "counselling") # No one told me about it/not invited
+icf2g <- c("time") # No time
+
+ls <- list(icf2e, icf2f, icf2g)
+names(ls) <- paste("icf2", letters[5:7], sep = "")
+
+## Recode IYCF indicators
+iycfDF <- recode_iycf(df = coverageData1.r2, ls = ls)
+usethis::use_data(iycfDF, overwrite = TRUE)
