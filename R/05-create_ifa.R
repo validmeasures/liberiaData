@@ -9,14 +9,15 @@
 #' @return A data.frame of iron-folic acid coverage indicators
 #'
 #' @examples
-#' calculate_ifa(df = coverageData.r2)
+#' recode_ifa(df = coverageData.r2)
 #'
 #' @export
 #'
 #
 ################################################################################
 
-calculate_ifa <- function(df, core.columns = c("cid", "did", "eid", "m2")) {
+recode_ifa <- function(df, core.columns = c("cid", "did", "eid",
+                                            "motherID", "m2")) {
   ## Go to antenatal care?
   ifa1 <- as.numeric(df$ifa1)
   ifa1 <- bbw::recode(ifa1, "2=0;99=0")
