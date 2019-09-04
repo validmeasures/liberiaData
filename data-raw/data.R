@@ -261,11 +261,24 @@ names(ls1) <- paste("mnp2", letters[6:9], sep = "")
 mnp3j <- c("refused") # Child refused to take it
 ls2 <- list(mnp3j)
 names(ls2) <- paste("mnp3", letters[10], sep = "")
-ls <- NULL
 
 ## Recode MNP indicators
 mnpDF <- recode_mnp(df = coverageData1.r2, ls1 = ls1, ls2 = ls2)
 usethis::use_data(mnpDF, overwrite = TRUE)
 
 
+##################### Recode Vitamin A indicators ##############################
 
+vit1e <- c("age", "small") # Child too young during last campaign
+vit1f <- c("see", "missed", "Liberia", "around", "home") # Not around during last campaign
+vit1g <- c("hear", "about", "know") # Didn't hear/know about it
+vit1h <- c("hospital") # Never been to hospital
+vit1i <- c("community", "team", "reach", "received") # Vaccine team didn't come/didn't reach
+vit1j <- c("interest") # Not interested
+
+ls <- list(vit1e, vit1f, vit1g, vit1h, vit1i, vit1j)
+names(ls) <- paste("vit1", letters[5:10], sep = "")
+
+## Recode vitamin A indicators
+vitDF <- recode_vita(df = coverageData1.r2, ls = ls)
+usethis::use_data(vitDF, overwrite = TRUE)
