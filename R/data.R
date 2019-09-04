@@ -131,3 +131,41 @@
 "sampleList.r2"
 
 
+################################################################################
+#
+#' Iron-folic acid (IFA) indicator set
+#'
+#' @format A data.frame with 25 columns:
+#'
+#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
+#' * `did` - District identifier
+#' * `eid` - Enumeration area identifier
+#' * `motherID` - Mother identifier
+#' * `m2` - Mother age
+#' * `ifa1` - Go to antenatal care?
+#' * `ifa2` - Received information about IFA?
+#' * `ifa3` - Received/purchased IFA?
+#' * `ifa3a` - Reasons: Health centre ran out
+#' * `ifa3b` - Reasons: Took too long to get tablets
+#' * `ifa3c` - Too expensive
+#' * `ifa3d` - Did not go to hospital
+#' * `ifa3e` - Don't know about the tablets
+#' * `ifa3f` - Didn't get any tablets
+#' * `ifa3g` - Was given but never took it
+#' * `ifa3h` - Not interested
+#' * `ifa3i` - No reason
+#' * `ifa4` - Did you take IFA?
+#' * `ifa4a` - Reasons: Concerns about side effects
+#' * `ifa4b` - Reasons: Don't need it
+#' * `ifa4c` - Reasons: I was told not to take it
+#' * `ifa4d` - Reasons: I don't think it helps
+#' * `ifa5` - How many days did you take IFA?
+#' * `ifa6` - Took IFA for at least 90 days
+#' * `ifa7` - Took IFA for 180 days
+#'
+#' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
+#'
+#
+################################################################################
+"ifaDF"
+
