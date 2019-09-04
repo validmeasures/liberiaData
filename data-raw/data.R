@@ -227,15 +227,12 @@ ifa3g <- c("given") # Was given but never took it
 ifa3h <- c("interest", "interested", "Not") # Not interested
 ifa3i <- c("Reasons") # No reasons
 
-ls <- list(ifa3d, ifa3e, ifa3f, ifa3g, ifa3h, ifa3i)
-names(ls) <- paste("ifa3", letters[4:9], sep = "")
+ls1 <- list(ifa3d, ifa3e, ifa3f, ifa3g, ifa3h, ifa3i)
+names(ls1) <- paste("ifa3", letters[4:9], sep = "")
 
-recode_others(df = coverageData1.r2, var = "ifa3a_other", ls = ls)
+ls2 <- NULL
 
 ## Recode IFA indicators
-
-
-
-
-recode_ifa(df = coverageData1.r2)
+ifaDF <- recode_ifa(df = coverageData1.r2, ls1 = ls1, ls2 = ls2)
+usethis::use_data(ifaDF, overwrite = TRUE)
 
