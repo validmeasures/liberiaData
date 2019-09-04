@@ -35,7 +35,7 @@ recode_mnp <- function(df,
                                         "motherID", "m2"),
                        ls1 = NULL, ls2 = NULL) {
   ## Heard/seen MNP?
-  #mnp1 <- as.numeric(df$mp1)
+  mnp1 <- as.numeric(df$mnp1)
   mnp1 <- bbw::recode(mnp1, "2=0;99=0")
   ## Received/bought MNP?
   mnp2 <- as.numeric(df$mnp2)
