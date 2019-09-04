@@ -4,7 +4,7 @@
 \alias{recode_others}
 \title{Function to recode others responses}
 \usage{
-recode_others(df, var, ls)
+recode_others(df, var, ls, label = paste(var, 1:length(ls), sep = "."))
 }
 \arguments{
 \item{df}{A data.frame containing data from the Liberia Coverage Survey}
@@ -13,6 +13,8 @@ recode_others(df, var, ls)
 
 \item{ls}{A list of thematically named string pattern vectors to use for
 searching and organising `others` responses}
+
+\item{label}{A character vector for names of the resulting data.frame.}
 }
 \value{
 A data.frame with same number of rows as `df` and number of columns
@@ -22,8 +24,14 @@ A data.frame with same number of rows as `df` and number of columns
 Function to recode others responses
 }
 \examples{
-\dontrun{
-recode_others(df = coverageData2, var = "ifa3a_other", ls = )
-}
+ifa3d <- c("delivery", "hospital", "constantly") # Did not go to hospital
+ifa3e <- c("know") # Don't know about the tablets
+ifa3f <- c("any", "go") # Didn't get any tablets
+ifa3g <- c("given") # Was given but never took it
+ifa3h <- c("interest", "interested", "Not") # Not interested
+ifa3i <- c("Reasons") # No reasons
+ls1 <- list(ifa3d, ifa3e, ifa3f, ifa3g, ifa3h, ifa3i)
+names(ls1) <- paste("ifa3", letters[4:9], sep = "")
+recode_others(df = coverageData1.r2, var = "ifa3a_other", ls = ls1)
 
 }
