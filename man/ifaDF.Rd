@@ -3,7 +3,7 @@
 \docType{data}
 \name{ifaDF}
 \alias{ifaDF}
-\title{Iron-folic acid (IFA) indicator set}
+\title{Iron-folic acid (IFA) indicator set Round 2}
 \format{A data.frame with 25 columns:
 
 * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
@@ -38,6 +38,6 @@ Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 ifaDF
 }
 \description{
-Iron-folic acid (IFA) indicator set
+Iron-folic acid (IFA) indicator set Round 2
 }
 \keyword{datasets}

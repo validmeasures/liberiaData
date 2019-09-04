@@ -3,7 +3,7 @@
 \docType{data}
 \name{sampleList.r2}
 \alias{sampleList.r2}
-\title{Liberia Coverage Survey sample list}
+\title{Liberia Coverage Survey sample list Round 2}
 \format{A data.frame of with 23 columns and 178 rows:
 
 * `spid` - Sampling point identifier
@@ -36,6 +36,6 @@ Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 sampleList.r2
 }
 \description{
-Liberia Coverage Survey sample list
+Liberia Coverage Survey sample list Round 2
 }
 \keyword{datasets}

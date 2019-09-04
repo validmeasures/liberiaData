@@ -3,7 +3,7 @@
 \docType{data}
 \name{iycfDF}
 \alias{iycfDF}
-\title{Infant and Young Child Feeding (IYCF) counselling coverage}
+\title{Infant and Young Child Feeding (IYCF) counselling coverage Round 2}
 \format{A data.frame with 15 columns:
 
 * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
@@ -28,6 +28,6 @@ Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 iycfDF
 }
 \description{
-Infant and Young Child Feeding (IYCF) counselling coverage
+Infant and Young Child Feeding (IYCF) counselling coverage Round 2
 }
 \keyword{datasets}
