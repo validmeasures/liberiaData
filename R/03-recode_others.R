@@ -28,7 +28,7 @@ recode_others <- function(df, var, ls) {
   for(i in 1:length(ls)) {
     recodeDF[ , i] <- as.integer(
       as.logical(
-        stringr::str_detect(string == df$var,
+        stringr::str_detect(string == df[[var]],
                             pattern = paste(ls[[i]], collapse = "|"))
       )
     )
