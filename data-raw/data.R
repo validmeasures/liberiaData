@@ -256,3 +256,10 @@ names(ls) <- paste("vit1", letters[5:10], sep = "")
 ## Recode vitamin A indicators
 vitDF <- recode_vita(df = coverageData1.r2, ls = ls)
 usethis::use_data(vitDF, overwrite = TRUE)
+
+##################### Recode anthropometric indicators #########################
+
+anthroDF <- recode_anthro(df = coverageData.r2)
+usethis::use_data(anthroDF, overwrite = TRUE)
+
+
