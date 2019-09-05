@@ -37,6 +37,15 @@
     <loc>https://validmeasures.org/liberiaData/reference/mnpDF.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_age.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_anthro.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_height.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_ifa.html</loc>
   </url>
   <url>
@@ -46,10 +55,25 @@
     <loc>https://validmeasures.org/liberiaData/reference/recode_mnp.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_muac.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_oedema.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_others.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_position.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_sex.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_vita.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_weight.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/sampleList.r2.html</loc>
