@@ -85,7 +85,7 @@ recode_weight <- function(df) {
   ## Keep NAs
   weight[is.na(df$weight1)] <- NA
   ##
-  weight[is.na(df$weight2) & is.na(df$weigth3)] <- df$weight1[is.na(df$weight2) & is.na(df$weigth3)]
+  weight[is.na(df$weight2) & is.na(df$weight3)] <- df$weight1[is.na(df$weight2) & is.na(df$weight3)]
   ##
   weight[!is.na(df$weight2)] <- df$weight2[!is.na(df$weight2)]
   ##
@@ -227,6 +227,10 @@ recode_position <- function(df) {
 #' @param df A coverage data.frame collected for the Liberia Coverage Survey
 #' @param core.columns A vector of variable names to include in resulting
 #'   data.frame
+#' @param flag Logical. Should WHO flagging criteria be applied to the z-scores?
+#'   Default is TRUE.
+#' @param cases Logical. Should cases of child undernutrition be assessed?
+#'   Default is TRUE.
 #'
 #' @return A data.frame of recoded anthropometric measurements and z-scores
 #'
@@ -240,7 +244,8 @@ recode_position <- function(df) {
 
 recode_anthro <- function(df,
                           core.columns = c("cid", "did", "eid",
-                                           "motherID", "m2")) {
+                                           "motherID", "m2"),
+                          flag = TRUE, cases = TRUE) {
   ## Recode anthro measurements
   age <- recode_age(df = df)
   sex <- recode_sex(df = df)
@@ -269,7 +274,19 @@ recode_anthro <- function(df,
                                firstPart = "weight", secondPart = "height",
                                index = "wfh", standing = "position",
                                output = "whz")
-
+  ## Convert age back to months
+  anthroDF$age <- anthroDF$age / (365.25 / 12)
+  ## Flag z-scores using WHO flagging criteria
+  if(flag) {
+    anthroDF <- zscorer::flag_who(df = anthroDF, haz = "haz", waz = "waz", whz = "whz")
+  }
+  ## Find undernutrition cases
+  if(cases) {
+    anthroDF <- zscorer::find_child_stunting(df = anthroDF, flag = "flag")
+    anthroDF <- zscorer::find_child_underweight(df = anthroDF, flag = "flag")
+    anthroDF <- zscorer::find_child_wasting(df = anthroDF, flag = "flag")
+  }
+  ##
   return(anthroDF)
 }
 
