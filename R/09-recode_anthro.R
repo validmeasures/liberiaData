@@ -278,13 +278,13 @@ recode_anthro <- function(df,
   anthroDF$age <- anthroDF$age / (365.25 / 12)
   ## Flag z-scores using WHO flagging criteria
   if(flag) {
-    anthroDF <- zscorer::flag_who(df = anthroDF, haz = "haz", waz = "waz", whz = "whz")
+    anthroDF <- nutricheckr::flag_who(df = anthroDF, haz = "haz", waz = "waz", whz = "whz")
   }
   ## Find undernutrition cases
   if(cases) {
-    anthroDF <- zscorer::find_child_stunting(df = anthroDF, flag = "flag")
-    anthroDF <- zscorer::find_child_underweight(df = anthroDF, flag = "flag")
-    anthroDF <- zscorer::find_child_wasting(df = anthroDF, flag = "flag")
+    anthroDF <- nutricheckr::find_child_stunting(df = anthroDF, flag = "flag")
+    anthroDF <- nutricheckr::find_child_underweight(df = anthroDF, flag = "flag")
+    anthroDF <- nutricheckr::find_child_wasting(df = anthroDF, flag = "flag")
   }
   ##
   return(anthroDF)
