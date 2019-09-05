@@ -6,13 +6,19 @@
 anthropometric z-scores}
 \usage{
 recode_anthro(df, core.columns = c("cid", "did", "eid", "motherID",
-  "m2"))
+  "m2"), flag = TRUE, cases = TRUE)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}
 
 \item{core.columns}{A vector of variable names to include in resulting
 data.frame}
+
+\item{flag}{Logical. Should WHO flagging criteria be applied to the z-scores?
+Default is TRUE.}
+
+\item{cases}{Logical. Should cases of child undernutrition be assessed?
+Default is TRUE.}
 }
 \value{
 A data.frame of recoded anthropometric measurements and z-scores
