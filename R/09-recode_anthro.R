@@ -254,19 +254,21 @@ recode_anthro <- function(df,
                          age, sex, muac, height, weight, oedema, position)
 
   ## Get z-scores weight-for-age
-  zscorer::addWGSR(data = anthroDF, sex = "sex",
-                   firstPart = "weight", secondPart = "age",
-                   index = "wfa", output = "waz")
+  anthroDF <- zscorer::addWGSR(data = anthroDF, sex = "sex",
+                               firstPart = "weight", secondPart = "age",
+                               index = "wfa", output = "waz")
 
   ## Get z-scores height-for-age
-  zscorer::addWGSR(data = anthroDF, sex = "sex",
-                   firstPart = "height", secondPart = "age",
-                   index = "hfa", standing = "position", output = "haz")
+  anthroDF <- zscorer::addWGSR(data = anthroDF, sex = "sex",
+                               firstPart = "height", secondPart = "age",
+                               index = "hfa", standing = "position",
+                               output = "haz")
 
   ## Get z-scores weight-for-height
-  zscorer::addWGSR(data = anthroDF, sex = "sex",
-                   firstPart = "weight", secondPart = "height",
-                   index = "wfh", standing = "position", output = "whz")
+  anthroDF <- zscorer::addWGSR(data = anthroDF, sex = "sex",
+                               firstPart = "weight", secondPart = "height",
+                               index = "wfh", standing = "position",
+                               output = "whz")
 
   return(anthroDF)
 }
