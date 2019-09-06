@@ -22,6 +22,12 @@
     <loc>https://validmeasures.org/liberiaData/reference/coverageData2.r2.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/create_points.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/create_sp.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/estimate_classic.html</loc>
   </url>
   <url>
@@ -31,10 +37,16 @@
     <loc>https://validmeasures.org/liberiaData/reference/get_liberia_data.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/get_spid.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/gmHexGrid.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/ifaDF.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/interpolate_indicators.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/iycfDF.html</loc>
@@ -82,6 +94,9 @@
     <loc>https://validmeasures.org/liberiaData/reference/recode_position.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_screening.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_sex.html</loc>
   </url>
   <url>
@@ -92,6 +107,9 @@
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/sampleList.r2.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/screenDF.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/villageData.r2.html</loc>

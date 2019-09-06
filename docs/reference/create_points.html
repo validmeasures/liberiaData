@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Child anthropometry indicators Round 2 — anthroDF • liberiaData</title>
+<title>Create SpatialPoints from a hexagonal grid map — create_points • liberiaData</title>
 
 
 <!-- jquery -->
@@ -33,8 +33,8 @@
 
 
 
-<meta property="og:title" content="Child anthropometry indicators Round 2 — anthroDF" />
-<meta property="og:description" content="Child anthropometry indicators Round 2" />
+<meta property="og:title" content="Create SpatialPoints from a hexagonal grid map — create_points" />
+<meta property="og:description" content="Create SpatialPoints from a hexagonal grid map" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -99,60 +99,43 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Child anthropometry indicators Round 2</h1>
+    <h1>Create SpatialPoints from a hexagonal grid map</h1>
     
-    <div class="hidden name"><code>anthroDF.Rd</code></div>
+    <div class="hidden name"><code>create_points.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Child anthropometry indicators Round 2</p>
+    <p>Create SpatialPoints from a hexagonal grid map</p>
     </div>
 
-    <pre class="usage"><span class='no'>anthroDF</span></pre>
+    <pre class="usage"><span class='fu'>create_points</span>(<span class='no'>hexgrid</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>hexgrid</th>
+      <td><p>A SpatialPolygonsDataFrame hexagonal grid map</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A data.frame with 28 columns:</p>
-<p>* `spid` - Sampling point identifier
-* `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-* `did` - District identifier
-* `eid` - Enumeration area identifier
-* `motherID` - Mother identifier
-* `m2` - Mother age
-* `age` - Age of child in months
-* `sex` - Sex of child. 1 = Male; 2 = Female
-* `muac` - Mid-upper arm circumference (MUAC) of child in centimetres
-* `height` - Height of child in centimetres
-* `weight` - Weight of child in kilograms
-* `oedema` - Does child have oedema? 1 = Yes; 2 = No
-* `position` - Position of child on height measurement. 1 = standing; 2 = supine
-* `waz` - Weight-for-age z-score
-* `haz` - Height-for-age z-score
-* `whz` - Weight-for-height z-score
-* `flag` - Flag values based on WHO flagging criteria
-* `global.haz` - Global stunting
-* `moderate.haz` - Moderate stunting
-* `severe.haz` - Severe stunting
-* `global.waz` - Global underweight
-* `moderate` - Moderate underweight
-* `severe` - Severe underweight
-* `gam.whz` - Global wasting by weight-for-height z-score
-* `mam.whz` - Moderate wasting by weight-for-height z-score
-* `sam.whz` - Severe wasting by weight-for-height z-score
-* `gam.muac` - Global wasting by MUAC
-* `mam.muac` - Moderate wasting by MUAC
-* `sam.muac` - Severe wasting by MUAC</p>
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+    <p>A SpatialPoints class object of hexagonal grid centroids</p>
 
-    <p>Liberia Coverage Survey Round 2 - 27 August to 30 September 2019</p>
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>create_points</span>(<span class='kw'>hexgrid</span> <span class='kw'>=</span> <span class='no'>gmHexGrid</span>)</div><div class='output co'>#&gt; class       : SpatialPoints 
+#&gt; features    : 8663 
+#&gt; extent      : -10.81722, -10.62301, 6.218992, 6.418793  (xmin, xmax, ymin, ymax)
+#&gt; crs         : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#format">Format</a></li>
-      <li><a href="#source">Source</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
