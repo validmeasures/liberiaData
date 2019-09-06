@@ -27,11 +27,12 @@ Imports:
     odkr (>= 0.3.2),
     squeacr (>= 0.1.9000),
     zscorer (>= 0.3.0),
-    nutricheckr (>= 0.1.0)
+    nutricheckr (>= 0.1.0),
+    sp
 Suggests: 
     shinydashboard,
     shiny
-Remotes:  
+Remotes: 
     validmeasures/liberia,
     nutriverse/nipnTK,
     validmeasures/odkr,
