@@ -30,6 +30,11 @@ reference:
   - recode_oedema
   - recode_anthro
   - recode_cmam
+  - recode_screening
+  - interpolate_indicators
+  - create_points
+  - create_sp
+  - get_spid
 
 - title: Estimators
   contents:
@@ -49,6 +54,7 @@ reference:
   - vitDF
   - anthroDF
   - cmamDF
+  - screenDF
 
 - title: Maps
   contents:
