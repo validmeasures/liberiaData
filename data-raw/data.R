@@ -278,3 +278,9 @@ usethis::use_data(cmamDF, overwrite = TRUE)
 
 screenDF <- recode_screening(df = coverageData.r2)
 usethis::use_data(screenDF, overwrite = TRUE)
+
+############################### Interpolation ##################################
+
+#DFResults <- interpolate_indicators(indicator = c("ifaDF", "iycfDF", "mnpDF", "vitDF"),
+#                                     coords = sampleList.r2[ , c("EFEACODE", "lon", "lat")],
+#                                     hexgrid = gmHexGrid)
