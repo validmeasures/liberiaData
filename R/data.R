@@ -137,6 +137,7 @@
 #'
 #' @format A data.frame with 25 columns:
 #'
+#' * `spid` - Sampling point identifier
 #' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
 #' * `did` - District identifier
 #' * `eid` - Enumeration area identifier
@@ -176,6 +177,7 @@
 #'
 #' @format A data.frame with 15 columns:
 #'
+#' * `spid` - Sampling point identifier
 #' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
 #' * `did` - District identifier
 #' * `eid` - Enumeration area identifier
@@ -205,6 +207,7 @@
 #'
 #' @format A data.frame with 28 columns:
 #'
+#' * `spid` - Sampling point identifier
 #' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
 #' * `did` - District identifier
 #' * `eid` - Enumeration area identifier
@@ -247,6 +250,7 @@
 #'
 #' @format A data.frame with 16 columns:
 #'
+#' * `spid` - Sampling point identifier
 #' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
 #' * `did` - District identifier
 #' * `eid` - Enumeration area identifier
@@ -277,6 +281,7 @@
 #'
 #' @format A data.frame with 28 columns:
 #'
+#' * `spid` - Sampling point identifier
 #' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
 #' * `did` - District identifier
 #' * `eid` - Enumeration area identifier
@@ -320,6 +325,7 @@
 #'
 #' @format A data.frame with 35 columns:
 #'
+#' * `spid` - Sampling point identifier
 #' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
 #' * `did` - District identifier
 #' * `eid` - Enumeration area identifier
@@ -385,3 +391,27 @@
 #
 ################################################################################
 "gbHexGrid"
+
+
+################################################################################
+#
+#' Nutrition screening coverage indicators
+#'
+#' @format A data.frame with 10 columns:
+#'
+#' * `spid` - Sampling point identifier
+#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
+#' * `did` - District identifier
+#' * `eid` - Enumeration area identifier
+#' * `motherID` - Mother identifier
+#' * `m2` - Mother age
+#' * `muac.screen` - Has child been measured with a MUAC tape in past month?
+#' * `oedema.screen` - Has child been checked for oedema in the past month?
+#' * `weight.screen` - Has child's weight been measured in the past month?
+#' * `height.screen` - Has child's height been measured in the past month?
+#'
+#' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
+#'
+#
+################################################################################
+"screenDF"
