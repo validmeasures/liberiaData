@@ -262,4 +262,8 @@ usethis::use_data(vitDF, overwrite = TRUE)
 anthroDF <- recode_anthro(df = coverageData.r2)
 usethis::use_data(anthroDF, overwrite = TRUE)
 
+##################### Recode CMAM indicators ###################################
+
+cmamDF <- recode_cmam(df = coverageData.r2)
+usethis::use_data(cmamDF, overwrite = TRUE)
 
