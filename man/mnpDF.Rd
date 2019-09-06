@@ -6,6 +6,7 @@
 \title{Micronutrient Powder (MNP) supplementation coverage Round 2}
 \format{A data.frame with 28 columns:
 
+* `spid` - Sampling point identifier
 * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
 * `did` - District identifier
 * `eid` - Enumeration area identifier
