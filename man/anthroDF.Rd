@@ -4,7 +4,38 @@
 \name{anthroDF}
 \alias{anthroDF}
 \title{Child anthropometry indicators Round 2}
-\format{An object of class \code{data.frame} with 3425 rows and 29 columns.}
+\format{A data.frame with 28 columns:
+\describe{
+  \item{\code{spid}}{Sampling point identifier}
+  \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+  \item{\code{did}}{District identifier}
+  \item{\code{eid}}{Enumeration area identifier}
+  \item{\code{motherID}}{Mother identifier}
+  \item{\code{m2}}{Mother age}
+  \item{\code{age}}{Age of child in months}
+  \item{\code{sex}}{Sex of child. 1 = Male; 2 = Female}
+  \item{\code{muac}}{Mid-upper arm circumference (MUAC) of child in centimetres}
+  \item{\code{height}}{Height of child in centimetres}
+  \item{\code{weight}}{Weight of child in kilograms}
+  \item{\code{oedema}}{Does child have oedema? 1 = Yes; 2 = No}
+  \item{\code{position}}{Position of child on height measurement. 1 = standing; 2 = supine}
+  \item{\code{waz}}{Weight-for-age z-score}
+  \item{\code{haz}}{Height-for-age z-score}
+  \item{\code{whz}}{Weight-for-height z-score}
+  \item{\code{flag}}{Flag values based on WHO flagging criteria}
+  \item{\code{global.haz}}{Global stunting}
+  \item{\code{moderate.haz}}{Moderate stunting}
+  \item{\code{severe.haz}}{Severe stunting}
+  \item{\code{global.waz}}{Global underweight}
+  \item{\code{moderate}}{Moderate underweight}
+  \item{\code{severe}}{Severe underweight}
+  \item{\code{gam.whz}}{Global wasting by weight-for-height z-score}
+  \item{\code{mam.whz}}{Moderate wasting by weight-for-height z-score}
+  \item{\code{sam.whz}}{Severe wasting by weight-for-height z-score}
+  \item{\code{gam.muac}}{Global wasting by MUAC}
+  \item{\code{mam.muac}}{Moderate wasting by MUAC}
+  \item{\code{sam.muac}}{Severe wasting by MUAC}
+}}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

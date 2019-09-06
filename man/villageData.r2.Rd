@@ -4,7 +4,20 @@
 \name{villageData.r2}
 \alias{villageData.r2}
 \title{Liberia Coverage Survey Village Data Round 2}
-\format{An object of class \code{data.frame} with 90 rows and 11 columns.}
+\format{A data.frame with 11 columns
+\describe{
+  \item{\code{cid}}{County identifier}
+  \item{\code{county}}{County name}
+  \item{\code{did}}{District identifier}
+  \item{\code{eid}}{Enumerator identifier}
+  \item{\code{lat}}{Provided latitude coordinate}
+  \item{\code{lon}}{Provided longitude coordinate}
+  \item{\code{pop}}{Population}
+  \item{\code{coords.Latitude}}{Recorded latitude coordinate}
+  \item{\code{coords.Longitude}}{Recorded longitude coordinate}
+  \item{\code{coords.Altitude}}{Recorded altitude}
+  \item{\code{coords.Accuracy}}{Accuracy of coordinates recording}
+}}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }
