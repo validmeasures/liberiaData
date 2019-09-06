@@ -3,11 +3,12 @@
 #' Liberia Coverage Survey Data Round 2
 #'
 #' @format A data.frame with 134 columns
-#'
-#' * `sdate` - Date of data collection
-#' * `cid` - County identifier
-#' * `county` - County name
-#' * `did` - District identifier
+#' \describe{
+#'   \item{\code{sdate}}{Date of data collection}
+#'   \item{\code{cid}}{County identifier}
+#'   \item{\code{county}}{County name}
+#'   \item{\code{did}}{District identifier}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -21,11 +22,12 @@
 #' Liberia Coverage Survey Data Round 2 - main form
 #'
 #' @format A data.frame with 69 columns
-#'
-#' * `sdate` - Date of data collection
-#' * `cid` - County identifier
-#' * `county` - County name
-#' * `did` - District identifier
+#' \describe{
+#'   \item{\code{sdate}}{Date of data collection}
+#'   \item{\code{cid}}{County identifier}
+#'   \item{\code{county}}{County name}
+#'   \item{\code{did}}{District identifier}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -39,11 +41,12 @@
 #' Liberia Coverage Survey Data Round 2 - repeat form
 #'
 #' @format A data.frame with 65 columns
-#'
-#' * `sdate` - Date of data collection
-#' * `cid` - County identifier
-#' * `county` - County name
-#' * `did` - District identifier
+#' \describe{
+#'   \item{\code{sdate}}{Date of data collection}
+#'   \item{\code{cid}}{County identifier}
+#'   \item{\code{county}}{County name}
+#'   \item{\code{did}}{District identifier}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -57,18 +60,19 @@
 #' Liberia Coverage Survey Village Data Round 2
 #'
 #' @format A data.frame with 11 columns
-#'
-#' * `cid` - County identifier
-#' * `county` - County name
-#' * `did` - District identifier
-#' * `eid` - Enumerator identifier
-#' * `lat` - Provided latitude coordinate
-#' * `lon` - Provided longitude coordinate
-#' * `pop` - Population
-#' * `coords.Latitude` - Recorded latitude coordinate
-#' * `coords.Longitude` - Recorded longitude coordinate
-#' * `coords.Altitude` - Recorded altitude
-#' * `coords.Accuracy` - Accuracy of coordinates recording
+#' \describe{
+#'   \item{\code{cid}}{County identifier}
+#'   \item{\code{county}}{County name}
+#'   \item{\code{did}}{District identifier}
+#'   \item{\code{eid}}{Enumerator identifier}
+#'   \item{\code{lat}}{Provided latitude coordinate}
+#'   \item{\code{lon}{Provided longitude coordinate}
+#'   \item{\code{pop}}{Population}
+#'   \item{\code{coords.Latitude}}{Recorded latitude coordinate}
+#'   \item{\code{coords.Longitude}}{Recorded longitude coordinate}
+#'   \item{\code{coords.Altitude}{Recorded altitude}
+#'   \item{\code{coords.Accuracy}}{Accuracy of coordinates recording}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -82,10 +86,11 @@
 #' Liberia Coverage Survey data codebook
 #'
 #' @format A tibble with 3 columns and 152 rows:
-#'
-#' * `variable` - Variable name
-#' * `question` - Question or data assigned to `variable`
-#' * `choices` - Possible responses for specific `variable`
+#' \describe{
+#'   \item{\code{variable}}{Variable name}
+#'   \item{\code{question}}{Question or data assigned to \code{variable}}
+#'   \item{\code{choices}}{Possible responses for specific \code{variable}}
+#'  }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -99,30 +104,31 @@
 #' Liberia Coverage Survey sample list Round 2
 #'
 #' @format A data.frame of with 23 columns and 178 rows:
-#'
-#' * `spid` - Sampling point identifier
-#' * `CCNAME` - County name
-#' * `DNAME` - District name
-#' * `CLNAME` - Clan name
-#' * `FEACODE` - Enumeration area code
-#' * `SAREA` - Sampling area code
-#' * `EFEACODE` - Enumeration area code
-#' * `CCODE` - County code
-#' * `DCODE` - District code
-#' * `CLCODE` - Clan code
-#' * `EACODE` - Enumeration area code
-#' * `TOTAL` - Total population
-#' * `MALE` - Male population
-#' * `FEMALE` - Female population
-#' * `HH` - Number of households
-#' * `CCODE1` - County code
-#' * `DCODE1` - District code
-#' * `CLCODE1` - Clan code
-#' * `EACODE1` - Enumeration area code
-#' * `lon` - Longitude coordinate of centroid of enumeration area
-#' * `lat` - Latitude coordinate of centroid of enumeration area
-#' * `d` - Distance from centroid of grid
-#' * `gmap` - Google maps link
+#' \describe{
+#'   \item{\code{spid}}{Sampling point identifier}
+#'   \item{\code{CCNAME}}{County name}
+#'   \item{\code{DNAME}}{District name}
+#'   \item{\code{CLNAME}}{Clan name}
+#'   \item{\code{FEACODE}}{Enumeration area code}
+#'   \item{\code{SAREA}}{Sampling area code}
+#'   \item{\code{EFEACODE}}{Enumeration area code}
+#'   \item{\code{CCODE}}{County code}
+#'   \item{\code{DCODE}}{District code}
+#'   \item{\code{CLCODE}}{Clan code}
+#'   \item{\code{EACODE}}{Enumeration area code}
+#'   \item{\code{TOTAL}}{Total population}
+#'   \item{\code{MALE}}{Male population}
+#'   \item{\code{FEMALE}}{Female population}
+#'   \item{\code{HH}}{Number of households}
+#'   \item{\code{CCODE1}}{County code}
+#'   \item{\code{DCODE1}}{District code}
+#'   \item{\code{CLCODE1}}{Clan code}
+#'   \item{\code{EACODE1}}{Enumeration area code}
+#'   \item{\code{lon}}{Longitude coordinate of centroid of enumeration area}
+#'   \item{\code{lat}}{Latitude coordinate of centroid of enumeration area}
+#'   \item{\code{d}}{Distance from centroid of grid}
+#'   \item{\code{gmap}}{Google maps link}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -136,33 +142,34 @@
 #' Iron-folic acid (IFA) indicator set Round 2
 #'
 #' @format A data.frame with 25 columns:
-#'
-#' * `spid` - Sampling point identifier
-#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-#' * `did` - District identifier
-#' * `eid` - Enumeration area identifier
-#' * `motherID` - Mother identifier
-#' * `m2` - Mother age
-#' * `ifa1` - Go to antenatal care?
-#' * `ifa2` - Received information about IFA?
-#' * `ifa3` - Received/purchased IFA?
-#' * `ifa3a` - Reasons: Health centre ran out
-#' * `ifa3b` - Reasons: Took too long to get tablets
-#' * `ifa3c` - Too expensive
-#' * `ifa3d` - Did not go to hospital
-#' * `ifa3e` - Don't know about the tablets
-#' * `ifa3f` - Didn't get any tablets
-#' * `ifa3g` - Was given but never took it
-#' * `ifa3h` - Not interested
-#' * `ifa3i` - No reason
-#' * `ifa4` - Did you take IFA?
-#' * `ifa4a` - Reasons: Concerns about side effects
-#' * `ifa4b` - Reasons: Don't need it
-#' * `ifa4c` - Reasons: I was told not to take it
-#' * `ifa4d` - Reasons: I don't think it helps
-#' * `ifa5` - How many days did you take IFA?
-#' * `ifa6` - Took IFA for at least 90 days
-#' * `ifa7` - Took IFA for 180 days
+#' \describe{
+#'   \item{\code{spid}}{Sampling point identifier}
+#'   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+#'   \item{\code{did}}{District identifier}
+#'   \item{\code{eid}}{Enumeration area identifier}
+#'   \item{\code{motherID}}{Mother identifier}
+#'   \item{\code{m2}}{Mother age}
+#'   \item{\code{ifa1}}{Go to antenatal care?}
+#'   \item{\code{ifa2}}{Received information about IFA?}
+#'   \item{\code{ifa3}}{Received/purchased IFA?}
+#'   \item{\code{ifa3a}}{Reasons: Health centre ran out}
+#'   \item{\code{ifa3b}}{Reasons: Took too long to get tablets}
+#'   \item{\code{ifa3c}}{Too expensive}
+#'   \item{\code{ifa3d}}{Did not go to hospital}
+#'   \item{\code{ifa3e}}{Don't know about the tablets}
+#'   \item{\code{ifa3f}}{Didn't get any tablets}
+#'   \item{\code{ifa3g}}{Was given but never took it}
+#'   \item{\code{ifa3h}}{Not interested}
+#'   \item{\code{ifa3i}}{No reason}
+#'   \item{\code{ifa4}}{Did you take IFA?}
+#'   \item{\code{ifa4a}}{Reasons: Concerns about side effects}
+#'   \item{\code{ifa4b}}{Reasons: Don't need it}
+#'   \item{\code{ifa4c}}{Reasons: I was told not to take it}
+#'   \item{\code{ifa4d}}{Reasons: I don't think it helps}
+#'   \item{\code{ifa5}}{How many days did you take IFA?}
+#'   \item{\code{ifa6}}{Took IFA for at least 90 days}
+#'   \item{\code{ifa7}}{Took IFA for 180 days}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -176,23 +183,24 @@
 #' Infant and Young Child Feeding (IYCF) counselling coverage Round 2
 #'
 #' @format A data.frame with 15 columns:
-#'
-#' * `spid` - Sampling point identifier
-#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-#' * `did` - District identifier
-#' * `eid` - Enumeration area identifier
-#' * `motherID` - Mother identifier
-#' * `m2` - Mother age
-#' * `icf1` - Hear about IYCF counselling?
-#' * `icf2` - Attend IYCF counselling?
-#' * `icf2a` - Reasons: timing not convenient
-#' * `icf2b` - Reasons: Not interested
-#' * `icf2c` - Reasons: Do not trust counsellor
-#' * `icf2d` - Reasons: Don't think I need it
-#' * `icf2e` - Reasons: Did not go to hospital
-#' * `icf2f` - Reasons: No one told me about it/not invited
-#' * `icf2g` - Reasons: No time
-#' * `icf3` - Received/purchased IFA?
+#' \describe{
+#'   \item{\code{spid}}{Sampling point identifier}
+#'   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+#'   \item{\code{did}}{District identifier}
+#'   \item{\code{eid}}{Enumeration area identifier}
+#'   \item{\code{motherID}}{Mother identifier}
+#'   \item{\code{m2}}{Mother age}
+#'   \item{\code{icf1}}{Hear about IYCF counselling?}
+#'   \item{\code{icf2}}{Attend IYCF counselling?}
+#'   \item{\code{icf2a}}{Reasons: timing not convenient}
+#'   \item{\code{icf2b}}{Reasons: Not interested}
+#'   \item{\code{icf2c}}{Reasons: Do not trust counsellor}
+#'   \item{\code{icf2d}}{Reasons: Don't think I need it}
+#'   \item{\code{icf2e}}{Reasons: Did not go to hospital}
+#'   \item{\code{icf2f}}{Reasons: No one told me about it/not invited}
+#'   \item{\code{icf2g}}{Reasons: No time}
+#'   \item{\code{icf3}}{Received/purchased IFA?}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -206,36 +214,37 @@
 #' Micronutrient Powder (MNP) supplementation coverage Round 2
 #'
 #' @format A data.frame with 28 columns:
-#'
-#' * `spid` - Sampling point identifier
-#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-#' * `did` - District identifier
-#' * `eid` - Enumeration area identifier
-#' * `motherID` - Mother identifier
-#' * `m2` - Mother age
-#' * `mnp1` - Heard about MNP?
-#' * `mnp2` - Received/purchased MNP?
-#' * `mnp2a` - Reasons: Health centre ran out
-#' * `mnp2b` - Reasons: Took too long to get MNP
-#' * `mnp2c` - Reasons: Too expensive
-#' * `mnp2d` - Reasons: Child doesn't need it
-#' * `mnp2e` - Reasons: Heard it doesn't work/help
-#' * `mnp2f` - Reasons: Don't know/not seen/not heard of MNP
-#' * `mnp2g` - Reasons: Have not gone to hospital
-#' * `mnp2h` - Reasons: Have not received any from hospital/centre
-#' * `mnp2i` - Reasons: Hospital didn't tell me about it
-#' * `mnp3` - Take MNP?
-#' * `mnp3a` - Reasons: Too expensive
-#' * `mnp3b` - Reasons: Not available in the market
-#' * `mnp3c` - Reasons: Do not need MNP
-#' * `mnp3d` - Reasons: Heard other's bad experience
-#' * `mnp3e` - Reasons: Advised not to use it
-#' * `mnp3f` - Reasons: Not seen other mothers use it
-#' * `mnp3g` - Reasons: Don't trust the product
-#' * `mnp3h` - Reasons: Using another product
-#' * `mnp3i` - Reasons: Haven't seen it
-#' * `mnp3j` - Reasons: Child refused to take it
-#' * `mnp4` - How many times child ate MNP in the past week?
+#' \describe{
+#'   \item{\code{spid}}{Sampling point identifier}
+#'   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+#'   \item{\code{did}}{District identifier}
+#'   \item{\code{eid}}{Enumeration area identifier}
+#'   \item{\code{motherID}}{Mother identifier}
+#'   \item{\code{m2}}{Mother age}
+#'   \item{\code{mnp1}}{Heard about MNP?}
+#'   \item{\code{mnp2}}{Received/purchased MNP?}
+#'   \item{\code{mnp2a}}{Reasons: Health centre ran out}
+#'   \item{\code{mnp2b}}{Reasons: Took too long to get MNP}
+#'   \item{\code{mnp2c}}{Reasons: Too expensive}
+#'   \item{\code{mnp2d}}{Reasons: Child doesn't need it}
+#'   \item{\code{mnp2e}}{Reasons: Heard it doesn't work/help}
+#'   \item{\code{mnp2f}}{Reasons: Don't know/not seen/not heard of MNP}
+#'   \item{\code{mnp2g}}{Reasons: Have not gone to hospital}
+#'   \item{\code{mnp2h}}{Reasons: Have not received any from hospital/centre}
+#'   \item{\code{mnp2i}}{Reasons: Hospital didn't tell me about it}
+#'   \item{\code{mnp3}}{Take MNP?}
+#'   \item{\code{mnp3a}}{Reasons: Too expensive}
+#'   \item{\code{mnp3b}}{Reasons: Not available in the market}
+#'   \item{\code{mnp3c}}{Reasons: Do not need MNP}
+#'   \item{\code{mnp3d}}{Reasons: Heard other's bad experience}
+#'   \item{\code{mnp3e}}{Reasons: Advised not to use it}
+#'   \item{\code{mnp3f}}{Reasons: Not seen other mothers use it}
+#'   \item{\code{mnp3g}}{Reasons: Don't trust the product}
+#'   \item{\code{mnp3h}}{Reasons: Using another product}
+#'   \item{\code{mnp3i}}{Reasons: Haven't seen it}
+#'   \item{\code{mnp3j}}{Reasons: Child refused to take it}
+#'   \item{\code{mnp4}}{How many times child ate MNP in the past week?}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -249,24 +258,25 @@
 #' Vitamin A supplementation coverage Round 2
 #'
 #' @format A data.frame with 16 columns:
-#'
-#' * `spid` - Sampling point identifier
-#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-#' * `did` - District identifier
-#' * `eid` - Enumeration area identifier
-#' * `motherID` - Mother identifier
-#' * `m2` - Mother age
-#' * `vit1` - Received vitamin A?
-#' * `vit1a` - Reasons: Health centre ran out
-#' * `vit1b` - Reasons: Took too long to get drops
-#' * `vit1c` - Reasons: Child doesn't need it
-#' * `vit1d` - Reasons: Heard it doesn't work/help
-#' * `vit1e` - Reasons: Child too young during latest campaign
-#' * `vit1f` - Reasons: Not around during last campaign
-#' * `vit1g` - Reasons: Didn't hear/know about it
-#' * `vit1h` - Reasons: Never been to hospital
-#' * `vit1i` - Reasons: Vaccine team didn't come/reach
-#' * `vit1j` - Reasons: Not interested
+#' \describe{
+#'   \item{\code{spid}}{Sampling point identifier}
+#'   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+#'   \item{\code{did}}{District identifier}
+#'   \item{\code{eid}}{Enumeration area identifier}
+#'   \item{\code{motherID}}{Mother identifier}
+#'   \item{\code{m2}}{Mother age}
+#'   \item{\code{vit1}}{Received vitamin A?}
+#'   \item{\code{vit1a}}{Reasons: Health centre ran out}
+#'   \item{\code{vit1b}}{Reasons: Took too long to get drops}
+#'   \item{\code{vit1c}}{Reasons: Child doesn't need it}
+#'   \item{\code{vit1d}}{Reasons: Heard it doesn't work/help}
+#'   \item{\code{vit1e}}{Reasons: Child too young during latest campaign}
+#'   \item{\code{vit1f}}{Reasons: Not around during last campaign}
+#'   \item{\code{vit1g}}{Reasons: Didn't hear/know about it}
+#'   \item{\code{vit1h}}{Reasons: Never been to hospital}
+#'   \item{\code{vit1i}}{Reasons: Vaccine team didn't come/reach}
+#'   \item{\code{vit1j}}{Reasons: Not interested}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -280,36 +290,37 @@
 #' Child anthropometry indicators Round 2
 #'
 #' @format A data.frame with 28 columns:
-#'
-#' * `spid` - Sampling point identifier
-#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-#' * `did` - District identifier
-#' * `eid` - Enumeration area identifier
-#' * `motherID` - Mother identifier
-#' * `m2` - Mother age
-#' * `age` - Age of child in months
-#' * `sex` - Sex of child. 1 = Male; 2 = Female
-#' * `muac` - Mid-upper arm circumference (MUAC) of child in centimetres
-#' * `height` - Height of child in centimetres
-#' * `weight` - Weight of child in kilograms
-#' * `oedema` - Does child have oedema? 1 = Yes; 2 = No
-#' * `position` - Position of child on height measurement. 1 = standing; 2 = supine
-#' * `waz` - Weight-for-age z-score
-#' * `haz` - Height-for-age z-score
-#' * `whz` - Weight-for-height z-score
-#' * `flag` - Flag values based on WHO flagging criteria
-#' * `global.haz` - Global stunting
-#' * `moderate.haz` - Moderate stunting
-#' * `severe.haz` - Severe stunting
-#' * `global.waz` - Global underweight
-#' * `moderate` - Moderate underweight
-#' * `severe` - Severe underweight
-#' * `gam.whz` - Global wasting by weight-for-height z-score
-#' * `mam.whz` - Moderate wasting by weight-for-height z-score
-#' * `sam.whz` - Severe wasting by weight-for-height z-score
-#' * `gam.muac` - Global wasting by MUAC
-#' * `mam.muac` - Moderate wasting by MUAC
-#' * `sam.muac` - Severe wasting by MUAC
+#' \describe{
+#'   \item{\code{spid}}{Sampling point identifier
+#'   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
+#'   \item{\code{did}}{District identifier
+#'   \item{\code{eid}}{Enumeration area identifier
+#'   \item{\code{motherID}}{Mother identifier
+#'   \item{\code{m2}}{Mother age
+#'   \item{\code{age}}{Age of child in months
+#'   \item{\code{sex}}{Sex of child. 1 = Male; 2 = Female
+#'   \item{\code{muac}}{Mid-upper arm circumference (MUAC) of child in centimetres
+#'   \item{\code{height}}{Height of child in centimetres
+#'   \item{\code{weight}}{Weight of child in kilograms
+#'   \item{\code{oedema}}{Does child have oedema? 1 = Yes; 2 = No
+#'   \item{\code{position}}{Position of child on height measurement. 1 = standing; 2 = supine
+#'   \item{\code{waz}}{Weight-for-age z-score
+#'   \item{\code{haz}}{Height-for-age z-score
+#'   \item{\code{whz}}{Weight-for-height z-score
+#'   \item{\code{flag}}{Flag values based on WHO flagging criteria
+#'   \item{\code{global.haz}}{Global stunting
+#'   \item{\code{moderate.haz}}{Moderate stunting
+#'   \item{\code{severe.haz}}{Severe stunting
+#'   \item{\code{global.waz}}{Global underweight
+#'   \item{\code{moderate}}{Moderate underweight
+#'   \item{\code{severe}}{Severe underweight
+#'   \item{\code{gam.whz}}{Global wasting by weight-for-height z-score
+#'   \item{\code{mam.whz}}{Moderate wasting by weight-for-height z-score
+#'   \item{\code{sam.whz}}{Severe wasting by weight-for-height z-score
+#'   \item{\code{gam.muac}}{Global wasting by MUAC
+#'   \item{\code{mam.muac}}{Moderate wasting by MUAC
+#'   \item{\code{sam.muac}}{Severe wasting by MUAC
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -324,43 +335,44 @@
 #' Round 2
 #'
 #' @format A data.frame with 35 columns:
-#'
-#' * `spid` - Sampling point identifier
-#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-#' * `did` - District identifier
-#' * `eid` - Enumeration area identifier
-#' * `motherID` - Mother identifier
-#' * `m2` - Mother age
-#' * `cin` - SAM case in programme
-#' * `cout` - SAM case not in programme
-#' * `rin` - Recovering case in programme
-#' * `q1` - Is child sick?
-#' * `q1a` - Child suffering from: malnutrition
-#' * `q1b` - Child suffering from: diarrhoea
-#' * `q1c` - Child suffering from: fever
-#' * `q1d` - Child suffering from: cough
-#' * `q1e` - Child suffering from: malaria
-#' * `q1f` - Child suffering from: don't know
-#' * `q2` - Do you think your child is too small?
-#' * `q3` - Know of treatment
-#' * `q4a` - Came to health centre but was not measured
-#' * `q4b` - Too far
-#' * `q4c` - No time/too busy
-#' * `q4d` - Mother/carer is sick
-#' * `q4e` - Cannot carry more than one child
-#' * `q4f` - Feels ashamed about coming
-#' * `q4g` - Security problems
-#' * `q4h` - No one else to take care of other siblings
-#' * `q4i` - Rejected by programme
-#' * `q4j` - Other parent's children have been rejected
-#' * `q4k` - Husband refused
-#' * `q4l` - Thought necessary to be enrolled in hospital first
-#' * `q4m` - Does not think programme can help children
-#' * `q4n` - Got diarrhoea
-#' * `q4o` - Ration has worms
-#' * `q4p` - Out of stock
-#' * `q4q` - Lack of money to pay for transport
-#' * `q4r` - SAM case in SFP
+#' \describe{
+#'   \item{\code{spid}}{Sampling point identifier}
+#'   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+#'   \item{\code{did}}{District identifier}
+#'   \item{\code{eid}}{Enumeration area identifier}
+#'   \item{\code{motherID}}{Mother identifier}
+#'   \item{\code{m2}}{Mother age}
+#'   \item{\code{cin}}{SAM case in programme}
+#'   \item{\code{cout}}{SAM case not in programme}
+#'   \item{\code{rin}}{Recovering case in programme}
+#'   \item{\code{q1}}{Is child sick?}
+#'   \item{\code{q1a}}{Child suffering from: malnutrition}
+#'   \item{\code{q1b}}{Child suffering from: diarrhoea}
+#'   \item{\code{q1c}}{Child suffering from: fever}
+#'   \item{\code{q1d}}{Child suffering from: cough}
+#'   \item{\code{q1e}}{Child suffering from: malaria}
+#'   \item{\code{q1f}}{Child suffering from: don't know}
+#'   \item{\code{q2}}{Do you think your child is too small?}
+#'   \item{\code{q3}}{Know of treatment}
+#'   \item{\code{q4a}}{Came to health centre but was not measured}
+#'   \item{\code{q4b}}{Too far}
+#'   \item{\code{q4c}}{No time/too busy}
+#'   \item{\code{q4d}}{Mother/carer is sick}
+#'   \item{\code{q4e}}{Cannot carry more than one child}
+#'   \item{\code{q4f}}{Feels ashamed about coming}
+#'   \item{\code{q4g}}{Security problems}
+#'   \item{\code{q4h}}{No one else to take care of other siblings}
+#'   \item{\code{q4i}}{Rejected by programme}
+#'   \item{\code{q4j}}{Other parent's children have been rejected}
+#'   \item{\code{q4k}}{Husband refused}
+#'   \item{\code{q4l}}{Thought necessary to be enrolled in hospital first}
+#'   \item{\code{q4m}}{Does not think programme can help children}
+#'   \item{\code{q4n}}{Got diarrhoea}
+#'   \item{\code{q4o}}{Ration has worms}
+#'   \item{\code{q4p}}{Out of stock}
+#'   \item{\code{q4q}}{Lack of money to pay for transport}
+#'   \item{\code{q4r}}{SAM case in SFP}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
@@ -398,17 +410,18 @@
 #' Nutrition screening coverage indicators
 #'
 #' @format A data.frame with 10 columns:
-#'
-#' * `spid` - Sampling point identifier
-#' * `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-#' * `did` - District identifier
-#' * `eid` - Enumeration area identifier
-#' * `motherID` - Mother identifier
-#' * `m2` - Mother age
-#' * `muac.screen` - Has child been measured with a MUAC tape in past month?
-#' * `oedema.screen` - Has child been checked for oedema in the past month?
-#' * `weight.screen` - Has child's weight been measured in the past month?
-#' * `height.screen` - Has child's height been measured in the past month?
+#' \describe{
+#'   \item{\code{spid}}{Sampling point identifier}
+#'   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+#'   \item{\code{did}}{District identifier}
+#'   \item{\code{eid}}{Enumeration area identifier}
+#'   \item{\code{motherID}}{Mother identifier}
+#'   \item{\code{m2}}{Mother age}
+#'   \item{\code{muac.screen}}{Has child been measured with a MUAC tape in past month?}
+#'   \item{\code{oedema.screen}}{Has child been checked for oedema in the past month?}
+#'   \item{\code{weight.screen}}{Has child's weight been measured in the past month?}
+#'   \item{\code{height.screen}}{Has child's height been measured in the past month?}
+#' }
 #'
 #' @source Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 #'
