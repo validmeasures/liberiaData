@@ -4,8 +4,8 @@
 \alias{recode_iycf}
 \title{Function to recode IYCF counselling coverage indicators}
 \usage{
-recode_iycf(df, core.columns = c("cid", "did", "eid", "motherID", "m2"),
-  ls = NULL)
+recode_iycf(df, core.columns = c("spid", "cid", "did", "eid", "motherID",
+  "m2"), ls = NULL)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}

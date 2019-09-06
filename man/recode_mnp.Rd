@@ -4,8 +4,8 @@
 \alias{recode_mnp}
 \title{Function to recode micronutrient powder coverage indicators}
 \usage{
-recode_mnp(df, core.columns = c("cid", "did", "eid", "motherID", "m2"),
-  ls1 = NULL, ls2 = NULL)
+recode_mnp(df, core.columns = c("spid", "cid", "did", "eid", "motherID",
+  "m2"), ls1 = NULL, ls2 = NULL)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}

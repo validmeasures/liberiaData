@@ -5,8 +5,8 @@
 \title{Function to recode child anthropometric indicators and calculate
 anthropometric z-scores}
 \usage{
-recode_anthro(df, core.columns = c("cid", "did", "eid", "motherID",
-  "m2"), flag = TRUE, cases = TRUE)
+recode_anthro(df, core.columns = c("spid", "cid", "did", "eid",
+  "motherID", "m2"), flag = TRUE, cases = TRUE)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}
