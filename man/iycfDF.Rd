@@ -5,23 +5,24 @@
 \alias{iycfDF}
 \title{Infant and Young Child Feeding (IYCF) counselling coverage Round 2}
 \format{A data.frame with 15 columns:
-
-* `spid` - Sampling point identifier
-* `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-* `did` - District identifier
-* `eid` - Enumeration area identifier
-* `motherID` - Mother identifier
-* `m2` - Mother age
-* `icf1` - Hear about IYCF counselling?
-* `icf2` - Attend IYCF counselling?
-* `icf2a` - Reasons: timing not convenient
-* `icf2b` - Reasons: Not interested
-* `icf2c` - Reasons: Do not trust counsellor
-* `icf2d` - Reasons: Don't think I need it
-* `icf2e` - Reasons: Did not go to hospital
-* `icf2f` - Reasons: No one told me about it/not invited
-* `icf2g` - Reasons: No time
-* `icf3` - Received/purchased IFA?}
+\describe{
+  \item{\code{spid}}{Sampling point identifier}
+  \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+  \item{\code{did}}{District identifier}
+  \item{\code{eid}}{Enumeration area identifier}
+  \item{\code{motherID}}{Mother identifier}
+  \item{\code{m2}}{Mother age}
+  \item{\code{icf1}}{Hear about IYCF counselling?}
+  \item{\code{icf2}}{Attend IYCF counselling?}
+  \item{\code{icf2a}}{Reasons: timing not convenient}
+  \item{\code{icf2b}}{Reasons: Not interested}
+  \item{\code{icf2c}}{Reasons: Do not trust counsellor}
+  \item{\code{icf2d}}{Reasons: Don't think I need it}
+  \item{\code{icf2e}}{Reasons: Did not go to hospital}
+  \item{\code{icf2f}}{Reasons: No one told me about it/not invited}
+  \item{\code{icf2g}}{Reasons: No time}
+  \item{\code{icf3}}{Received/purchased IFA?}
+}}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

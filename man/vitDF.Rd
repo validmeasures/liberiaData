@@ -5,24 +5,25 @@
 \alias{vitDF}
 \title{Vitamin A supplementation coverage Round 2}
 \format{A data.frame with 16 columns:
-
-* `spid` - Sampling point identifier
-* `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-* `did` - District identifier
-* `eid` - Enumeration area identifier
-* `motherID` - Mother identifier
-* `m2` - Mother age
-* `vit1` - Received vitamin A?
-* `vit1a` - Reasons: Health centre ran out
-* `vit1b` - Reasons: Took too long to get drops
-* `vit1c` - Reasons: Child doesn't need it
-* `vit1d` - Reasons: Heard it doesn't work/help
-* `vit1e` - Reasons: Child too young during latest campaign
-* `vit1f` - Reasons: Not around during last campaign
-* `vit1g` - Reasons: Didn't hear/know about it
-* `vit1h` - Reasons: Never been to hospital
-* `vit1i` - Reasons: Vaccine team didn't come/reach
-* `vit1j` - Reasons: Not interested}
+\describe{
+  \item{\code{spid}}{Sampling point identifier}
+  \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+  \item{\code{did}}{District identifier}
+  \item{\code{eid}}{Enumeration area identifier}
+  \item{\code{motherID}}{Mother identifier}
+  \item{\code{m2}}{Mother age}
+  \item{\code{vit1}}{Received vitamin A?}
+  \item{\code{vit1a}}{Reasons: Health centre ran out}
+  \item{\code{vit1b}}{Reasons: Took too long to get drops}
+  \item{\code{vit1c}}{Reasons: Child doesn't need it}
+  \item{\code{vit1d}}{Reasons: Heard it doesn't work/help}
+  \item{\code{vit1e}}{Reasons: Child too young during latest campaign}
+  \item{\code{vit1f}}{Reasons: Not around during last campaign}
+  \item{\code{vit1g}}{Reasons: Didn't hear/know about it}
+  \item{\code{vit1h}}{Reasons: Never been to hospital}
+  \item{\code{vit1i}}{Reasons: Vaccine team didn't come/reach}
+  \item{\code{vit1j}}{Reasons: Not interested}
+}}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

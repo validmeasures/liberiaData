@@ -4,19 +4,7 @@
 \name{villageData.r2}
 \alias{villageData.r2}
 \title{Liberia Coverage Survey Village Data Round 2}
-\format{A data.frame with 11 columns
-
-* `cid` - County identifier
-* `county` - County name
-* `did` - District identifier
-* `eid` - Enumerator identifier
-* `lat` - Provided latitude coordinate
-* `lon` - Provided longitude coordinate
-* `pop` - Population
-* `coords.Latitude` - Recorded latitude coordinate
-* `coords.Longitude` - Recorded longitude coordinate
-* `coords.Altitude` - Recorded altitude
-* `coords.Accuracy` - Accuracy of coordinates recording}
+\format{An object of class \code{data.frame} with 90 rows and 11 columns.}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

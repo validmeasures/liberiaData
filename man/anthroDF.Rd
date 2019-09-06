@@ -4,37 +4,7 @@
 \name{anthroDF}
 \alias{anthroDF}
 \title{Child anthropometry indicators Round 2}
-\format{A data.frame with 28 columns:
-
-* `spid` - Sampling point identifier
-* `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-* `did` - District identifier
-* `eid` - Enumeration area identifier
-* `motherID` - Mother identifier
-* `m2` - Mother age
-* `age` - Age of child in months
-* `sex` - Sex of child. 1 = Male; 2 = Female
-* `muac` - Mid-upper arm circumference (MUAC) of child in centimetres
-* `height` - Height of child in centimetres
-* `weight` - Weight of child in kilograms
-* `oedema` - Does child have oedema? 1 = Yes; 2 = No
-* `position` - Position of child on height measurement. 1 = standing; 2 = supine
-* `waz` - Weight-for-age z-score
-* `haz` - Height-for-age z-score
-* `whz` - Weight-for-height z-score
-* `flag` - Flag values based on WHO flagging criteria
-* `global.haz` - Global stunting
-* `moderate.haz` - Moderate stunting
-* `severe.haz` - Severe stunting
-* `global.waz` - Global underweight
-* `moderate` - Moderate underweight
-* `severe` - Severe underweight
-* `gam.whz` - Global wasting by weight-for-height z-score
-* `mam.whz` - Moderate wasting by weight-for-height z-score
-* `sam.whz` - Severe wasting by weight-for-height z-score
-* `gam.muac` - Global wasting by MUAC
-* `mam.muac` - Moderate wasting by MUAC
-* `sam.muac` - Severe wasting by MUAC}
+\format{An object of class \code{data.frame} with 3425 rows and 29 columns.}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

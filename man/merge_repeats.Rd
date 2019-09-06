@@ -21,7 +21,8 @@ Function to merge main ODK form with repeats
 }
 \examples{
 \dontrun{
-merge_repeats(x = coverageData, rep.name = "child_repeat")
+fullData <- merge_repeats(x = coverageData, rep.name = "child_repeat")
+head(fullData)
 }
 
 }

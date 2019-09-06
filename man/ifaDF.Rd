@@ -5,33 +5,34 @@
 \alias{ifaDF}
 \title{Iron-folic acid (IFA) indicator set Round 2}
 \format{A data.frame with 25 columns:
-
-* `spid` - Sampling point identifier
-* `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-* `did` - District identifier
-* `eid` - Enumeration area identifier
-* `motherID` - Mother identifier
-* `m2` - Mother age
-* `ifa1` - Go to antenatal care?
-* `ifa2` - Received information about IFA?
-* `ifa3` - Received/purchased IFA?
-* `ifa3a` - Reasons: Health centre ran out
-* `ifa3b` - Reasons: Took too long to get tablets
-* `ifa3c` - Too expensive
-* `ifa3d` - Did not go to hospital
-* `ifa3e` - Don't know about the tablets
-* `ifa3f` - Didn't get any tablets
-* `ifa3g` - Was given but never took it
-* `ifa3h` - Not interested
-* `ifa3i` - No reason
-* `ifa4` - Did you take IFA?
-* `ifa4a` - Reasons: Concerns about side effects
-* `ifa4b` - Reasons: Don't need it
-* `ifa4c` - Reasons: I was told not to take it
-* `ifa4d` - Reasons: I don't think it helps
-* `ifa5` - How many days did you take IFA?
-* `ifa6` - Took IFA for at least 90 days
-* `ifa7` - Took IFA for 180 days}
+\describe{
+  \item{\code{spid}}{Sampling point identifier}
+  \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+  \item{\code{did}}{District identifier}
+  \item{\code{eid}}{Enumeration area identifier}
+  \item{\code{motherID}}{Mother identifier}
+  \item{\code{m2}}{Mother age}
+  \item{\code{ifa1}}{Go to antenatal care?}
+  \item{\code{ifa2}}{Received information about IFA?}
+  \item{\code{ifa3}}{Received/purchased IFA?}
+  \item{\code{ifa3a}}{Reasons: Health centre ran out}
+  \item{\code{ifa3b}}{Reasons: Took too long to get tablets}
+  \item{\code{ifa3c}}{Too expensive}
+  \item{\code{ifa3d}}{Did not go to hospital}
+  \item{\code{ifa3e}}{Don't know about the tablets}
+  \item{\code{ifa3f}}{Didn't get any tablets}
+  \item{\code{ifa3g}}{Was given but never took it}
+  \item{\code{ifa3h}}{Not interested}
+  \item{\code{ifa3i}}{No reason}
+  \item{\code{ifa4}}{Did you take IFA?}
+  \item{\code{ifa4a}}{Reasons: Concerns about side effects}
+  \item{\code{ifa4b}}{Reasons: Don't need it}
+  \item{\code{ifa4c}}{Reasons: I was told not to take it}
+  \item{\code{ifa4d}}{Reasons: I don't think it helps}
+  \item{\code{ifa5}}{How many days did you take IFA?}
+  \item{\code{ifa6}}{Took IFA for at least 90 days}
+  \item{\code{ifa7}}{Took IFA for 180 days}
+}}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

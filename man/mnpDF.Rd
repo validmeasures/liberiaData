@@ -5,36 +5,37 @@
 \alias{mnpDF}
 \title{Micronutrient Powder (MNP) supplementation coverage Round 2}
 \format{A data.frame with 28 columns:
-
-* `spid` - Sampling point identifier
-* `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
-* `did` - District identifier
-* `eid` - Enumeration area identifier
-* `motherID` - Mother identifier
-* `m2` - Mother age
-* `mnp1` - Heard about MNP?
-* `mnp2` - Received/purchased MNP?
-* `mnp2a` - Reasons: Health centre ran out
-* `mnp2b` - Reasons: Took too long to get MNP
-* `mnp2c` - Reasons: Too expensive
-* `mnp2d` - Reasons: Child doesn't need it
-* `mnp2e` - Reasons: Heard it doesn't work/help
-* `mnp2f` - Reasons: Don't know/not seen/not heard of MNP
-* `mnp2g` - Reasons: Have not gone to hospital
-* `mnp2h` - Reasons: Have not received any from hospital/centre
-* `mnp2i` - Reasons: Hospital didn't tell me about it
-* `mnp3` - Take MNP?
-* `mnp3a` - Reasons: Too expensive
-* `mnp3b` - Reasons: Not available in the market
-* `mnp3c` - Reasons: Do not need MNP
-* `mnp3d` - Reasons: Heard other's bad experience
-* `mnp3e` - Reasons: Advised not to use it
-* `mnp3f` - Reasons: Not seen other mothers use it
-* `mnp3g` - Reasons: Don't trust the product
-* `mnp3h` - Reasons: Using another product
-* `mnp3i` - Reasons: Haven't seen it
-* `mnp3j` - Reasons: Child refused to take it
-* `mnp4` - How many times child ate MNP in the past week?}
+\describe{
+  \item{\code{spid}}{Sampling point identifier}
+  \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
+  \item{\code{did}}{District identifier}
+  \item{\code{eid}}{Enumeration area identifier}
+  \item{\code{motherID}}{Mother identifier}
+  \item{\code{m2}}{Mother age}
+  \item{\code{mnp1}}{Heard about MNP?}
+  \item{\code{mnp2}}{Received/purchased MNP?}
+  \item{\code{mnp2a}}{Reasons: Health centre ran out}
+  \item{\code{mnp2b}}{Reasons: Took too long to get MNP}
+  \item{\code{mnp2c}}{Reasons: Too expensive}
+  \item{\code{mnp2d}}{Reasons: Child doesn't need it}
+  \item{\code{mnp2e}}{Reasons: Heard it doesn't work/help}
+  \item{\code{mnp2f}}{Reasons: Don't know/not seen/not heard of MNP}
+  \item{\code{mnp2g}}{Reasons: Have not gone to hospital}
+  \item{\code{mnp2h}}{Reasons: Have not received any from hospital/centre}
+  \item{\code{mnp2i}}{Reasons: Hospital didn't tell me about it}
+  \item{\code{mnp3}}{Take MNP?}
+  \item{\code{mnp3a}}{Reasons: Too expensive}
+  \item{\code{mnp3b}}{Reasons: Not available in the market}
+  \item{\code{mnp3c}}{Reasons: Do not need MNP}
+  \item{\code{mnp3d}}{Reasons: Heard other's bad experience}
+  \item{\code{mnp3e}}{Reasons: Advised not to use it}
+  \item{\code{mnp3f}}{Reasons: Not seen other mothers use it}
+  \item{\code{mnp3g}}{Reasons: Don't trust the product}
+  \item{\code{mnp3h}}{Reasons: Using another product}
+  \item{\code{mnp3i}}{Reasons: Haven't seen it}
+  \item{\code{mnp3j}}{Reasons: Child refused to take it}
+  \item{\code{mnp4}}{How many times child ate MNP in the past week?}
+}}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

@@ -5,30 +5,31 @@
 \alias{sampleList.r2}
 \title{Liberia Coverage Survey sample list Round 2}
 \format{A data.frame of with 23 columns and 178 rows:
-
-* `spid` - Sampling point identifier
-* `CCNAME` - County name
-* `DNAME` - District name
-* `CLNAME` - Clan name
-* `FEACODE` - Enumeration area code
-* `SAREA` - Sampling area code
-* `EFEACODE` - Enumeration area code
-* `CCODE` - County code
-* `DCODE` - District code
-* `CLCODE` - Clan code
-* `EACODE` - Enumeration area code
-* `TOTAL` - Total population
-* `MALE` - Male population
-* `FEMALE` - Female population
-* `HH` - Number of households
-* `CCODE1` - County code
-* `DCODE1` - District code
-* `CLCODE1` - Clan code
-* `EACODE1` - Enumeration area code
-* `lon` - Longitude coordinate of centroid of enumeration area
-* `lat` - Latitude coordinate of centroid of enumeration area
-* `d` - Distance from centroid of grid
-* `gmap` - Google maps link}
+\describe{
+  \item{\code{spid}}{Sampling point identifier}
+  \item{\code{CCNAME}}{County name}
+  \item{\code{DNAME}}{District name}
+  \item{\code{CLNAME}}{Clan name}
+  \item{\code{FEACODE}}{Enumeration area code}
+  \item{\code{SAREA}}{Sampling area code}
+  \item{\code{EFEACODE}}{Enumeration area code}
+  \item{\code{CCODE}}{County code}
+  \item{\code{DCODE}}{District code}
+  \item{\code{CLCODE}}{Clan code}
+  \item{\code{EACODE}}{Enumeration area code}
+  \item{\code{TOTAL}}{Total population}
+  \item{\code{MALE}}{Male population}
+  \item{\code{FEMALE}}{Female population}
+  \item{\code{HH}}{Number of households}
+  \item{\code{CCODE1}}{County code}
+  \item{\code{DCODE1}}{District code}
+  \item{\code{CLCODE1}}{Clan code}
+  \item{\code{EACODE1}}{Enumeration area code}
+  \item{\code{lon}}{Longitude coordinate of centroid of enumeration area}
+  \item{\code{lat}}{Latitude coordinate of centroid of enumeration area}
+  \item{\code{d}}{Distance from centroid of grid}
+  \item{\code{gmap}}{Google maps link}
+}}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

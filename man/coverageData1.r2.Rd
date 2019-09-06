@@ -5,11 +5,12 @@
 \alias{coverageData1.r2}
 \title{Liberia Coverage Survey Data Round 2 - main form}
 \format{A data.frame with 69 columns
-
-* `sdate` - Date of data collection
-* `cid` - County identifier
-* `county` - County name
-* `did` - District identifier}
+\describe{
+  \item{\code{sdate}}{Date of data collection}
+  \item{\code{cid}}{County identifier}
+  \item{\code{county}}{County name}
+  \item{\code{did}}{District identifier}
+}}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }
