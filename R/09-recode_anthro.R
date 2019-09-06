@@ -246,7 +246,7 @@ recode_position <- function(df) {
 ################################################################################
 
 recode_anthro <- function(df,
-                          core.columns = c("cid", "did", "eid",
+                          core.columns = c("spid", "cid", "did", "eid",
                                            "motherID", "m2"),
                           flag = TRUE, cases = TRUE) {
   ## Recode anthro measurements

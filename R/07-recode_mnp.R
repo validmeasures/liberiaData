@@ -31,7 +31,7 @@
 ################################################################################
 
 recode_mnp <- function(df,
-                       core.columns = c("cid", "did", "eid",
+                       core.columns = c("spid", "cid", "did", "eid",
                                         "motherID", "m2"),
                        ls1 = NULL, ls2 = NULL) {
   ## Heard/seen MNP?

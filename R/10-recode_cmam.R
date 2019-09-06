@@ -18,7 +18,7 @@
 ################################################################################
 
 recode_cmam <- function(df,
-                        core.columns = c("cid", "did", "eid",
+                        core.columns = c("spid", "cid", "did", "eid",
                                              "motherID", "m2")) {
   anthroDF <- recode_anthro(df = df)
   cin <- vector(mode = "numeric", length = nrow(df))
@@ -37,7 +37,7 @@ recode_cmam <- function(df,
   rin[anthroDF$oedema == 0 & anthroDF$sam.whz == 0 & anthroDF$sam.muac == 0 & df$recovering == 1] <- 1
 
   ## q1: Think child is sick?
-  q1 <- bbw::recode(var = df$q1, recodes = "2=0")
+  q1 <- bbw::recode(var = df$q1, recodes = "1=0;2=1")
   ## q1a: What condition is child suffering from?: malnutrition
   q1a <- vector(mode = "numeric", length = nrow(df))
   q1a[is.na(anthroDF$age)] <- NA
@@ -81,9 +81,9 @@ recode_cmam <- function(df,
   q1f[df$q1a.6 == 1] <- 1
   q1f[df$q1a.6 == 2] <- 0
   ## q2: Do you think your child is too thin or too small
-  q2 <- bbw::recode(var = df$q2, recodes = "2=0")
+  q2 <- bbw::recode(var = df$q2, recodes = "1=0;2=1")
   ## q3: Aware of treament
-  q3 <- bbw::recode(var = df$q3, recodes = "2=0")
+  q3 <- bbw::recode(var = df$q3, recodes = "1=0;2=1")
   ## q4a: Went to health centre but child was not measured
   q4a <- vector(mode = "numeric", length = nrow(df))
   q4a[is.na(anthroDF$age)] <- NA

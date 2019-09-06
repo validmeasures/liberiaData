@@ -29,7 +29,7 @@
 ################################################################################
 
 recode_ifa <- function(df,
-                       core.columns = c("cid", "did", "eid",
+                       core.columns = c("spid", "cid", "did", "eid",
                                             "motherID", "m2"),
                        ls1 = NULL, ls2 = NULL) {
   ## Go to antenatal care?

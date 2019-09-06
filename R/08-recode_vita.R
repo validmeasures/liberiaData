@@ -29,7 +29,7 @@
 ################################################################################
 
 recode_vita <- function(df,
-                        core.columns = c("cid", "did", "eid",
+                        core.columns = c("spid", "cid", "did", "eid",
                                          "motherID", "m2"),
                         ls = NULL) {
   ## Receive vitamin A in past 6 months?

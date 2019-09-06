@@ -24,7 +24,7 @@
 ################################################################################
 
 recode_iycf <- function(df,
-                        core.columns = c("cid", "did", "eid",
+                        core.columns = c("spid", "cid", "did", "eid",
                                          "motherID", "m2"),
                         ls = NULL) {
   ## Receive information/heard about IYCF counselling?
