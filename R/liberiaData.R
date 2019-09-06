@@ -10,6 +10,7 @@
 #' @importFrom bbw recode
 #' @importFrom stringr str_detect
 #' @importFrom zscorer addWGSR getWGSR
+#' @importFrom sp SpatialPointsDataFrame SpatialPolygonsDataFrame
 #'
 #
 ################################################################################
