@@ -50,4 +50,8 @@ reference:
   - anthroDF
   - cmamDF
 
+- title: Maps
+  contents:
+  - gmHexGrid
+  - gbHexGrid
 
