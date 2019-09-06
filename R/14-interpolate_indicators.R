@@ -15,9 +15,9 @@
 #' @return A data.frame as long as `hexgrid` containing
 #'   interpolated indicator values at each location of `hexgrid`
 #'
-#' @example
+#' @examples
 #' interpolate_indicators(indicator = "anthroDF",
-#'                        coords = sampleList.r2[ , c("EFEACODE", "lon", "lat")]
+#'                        coords = sampleList.r2[ , c("EFEACODE", "lon", "lat")],
 #'                        hexgrid = gmHexGrid)
 #'
 #' @export
