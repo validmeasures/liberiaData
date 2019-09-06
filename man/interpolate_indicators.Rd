@@ -29,3 +29,9 @@ A data.frame as long as `hexgrid` containing
 \description{
 Function to interpolate indicators from the Liberia Coverage Survey
 }
+\examples{
+interpolate_indicators(indicator = "anthroDF",
+                       coords = sampleList.r2[ , c("EFEACODE", "lon", "lat")],
+                       hexgrid = gmHexGrid)
+
+}
