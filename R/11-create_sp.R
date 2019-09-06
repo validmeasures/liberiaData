@@ -30,3 +30,26 @@ create_sp <- function(df, coords,
   ##
   return(tempSP)
 }
+
+
+################################################################################
+#
+#' Create SpatialPoints from a hexagonal grid map
+#'
+#' @param hexgrid A SpatialPolygonsDataFrame hexagonal grid map
+#'
+#' @return A SpatialPoints class object of hexagonal grid centroids
+#'
+#' @examples
+#' create_points(hexgrid = gmHexGrid)
+#'
+#' @export
+#'
+#
+################################################################################
+
+create_points <- function(hexgrid) {
+  sp::SpatialPoints(coords = sp::coordinates(hexgrid),
+                    proj4string = sp::CRS(sp::proj4string(hexgrid)))
+}
+
