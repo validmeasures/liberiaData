@@ -16,7 +16,7 @@
 #'   interpolated indicator values at each location of `hexgrid`
 #'
 #' @examples
-#' interpolate_indicators(indicator = "anthroDF",
+#' interpolate_indicators(indicator = "vitDF",
 #'                        coords = sampleList.r2[ , c("EFEACODE", "lon", "lat")],
 #'                        hexgrid = gmHexGrid)
 #'
@@ -51,11 +51,13 @@ interpolate_indicators <- function(indicator = c("ifaDF", "iycfDF",
     ##
     for(j in names(currentDF)[!names(currentDF) %in% core.columns]) {
       currentIndicator <- currentSP[!is.na(currentSP[[j]]), ]
-      temp <- gstat::idw(formula = eval(parse(text = paste(j, "~", 1, sep = " "))),
-                         locations = currentIndicator,
-                         newdata = create_points(hexgrid = hexgrid),
-                         idp = idp)
-      currentDFresults[[j]] <- temp$var1.pred
+      if(length(currentIndicator) != 0 ) {
+        temp <- gstat::idw(formula = eval(parse(text = paste(j, "~", 1, sep = " "))),
+                           locations = currentIndicator,
+                           newdata = create_points(hexgrid = hexgrid),
+                           idp = idp)
+        currentDFresults[[j]] <- temp$var1.pred
+      }
     }
     ##
     interpolationResults[[i]] <- currentDFresults
