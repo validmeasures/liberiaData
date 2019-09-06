@@ -25,7 +25,13 @@
     <loc>https://validmeasures.org/liberiaData/reference/estimate_classic.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/gbHexGrid.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/get_liberia_data.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/gmHexGrid.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/ifaDF.html</loc>
