@@ -183,6 +183,9 @@ recode_oedema <- function(df) {
   oedema[!is.na(df$oedema2)] <- df$oedema2[!is.na(df$oedema2)]
   ##
   oedema[!is.na(df$oedema3)] <- df$oedema3[!is.na(df$oedema3)]
+  ##
+  oedema <- bbw::recode(var = oedema, recodes = "2=0")
+  ##
   return(oedema)
 }
 
