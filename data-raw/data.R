@@ -273,3 +273,8 @@ usethis::use_data(anthroDF, overwrite = TRUE)
 cmamDF <- recode_cmam(df = coverageData.r2)
 usethis::use_data(cmamDF, overwrite = TRUE)
 
+
+##################### Recode CMAM indicators ###################################
+
+screenDF <- recode_screening(df = coverageData.r2)
+usethis::use_data(screenDF, overwrite = TRUE)
