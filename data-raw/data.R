@@ -161,6 +161,12 @@ coverageData1.r2 <- coverageData1[ , columns1]
 coverageData2.r2 <- coverageData2[ , columns2]
 coverageData.r2 <- coverageData[ , c(columns1, columns2)]
 
+## Get spid
+coverageData1.r2 <- get_spid(df = coverageData1.r2, splist = sampleList.r2)
+coverageData2.r2 <- get_spid(df = coverageData2.r2, splist = sampleList.r2)
+coverageData.r2 <- get_spid(df = coverageData.r2, splist = sampleList.r2)
+
+
 ########################### Create internal datasets ###########################
 
 usethis::use_data(coverageData1.r2, overwrite = TRUE)
