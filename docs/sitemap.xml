@@ -7,6 +7,9 @@
     <loc>https://validmeasures.org/liberiaData/reference/anthroDF.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/cmamDF.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/codebook.html</loc>
   </url>
   <url>
@@ -44,6 +47,9 @@
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_anthro.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/recode_cmam.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_height.html</loc>

@@ -6,7 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Child anthropometry indicators Round 2 — anthroDF • liberiaData</title>
+<title>Community-based Management of Acute Malnutrition (CMAM) coverage indicators
+Round 2 — cmamDF • liberiaData</title>
 
 
 <!-- jquery -->
@@ -33,8 +34,10 @@
 
 
 
-<meta property="og:title" content="Child anthropometry indicators Round 2 — anthroDF" />
-<meta property="og:description" content="Child anthropometry indicators Round 2" />
+<meta property="og:title" content="Community-based Management of Acute Malnutrition (CMAM) coverage indicators
+Round 2 — cmamDF" />
+<meta property="og:description" content="Community-based Management of Acute Malnutrition (CMAM) coverage indicators
+Round 2" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -99,49 +102,58 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Child anthropometry indicators Round 2</h1>
+    <h1>Community-based Management of Acute Malnutrition (CMAM) coverage indicators
+Round 2</h1>
     
-    <div class="hidden name"><code>anthroDF.Rd</code></div>
+    <div class="hidden name"><code>cmamDF.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Child anthropometry indicators Round 2</p>
+    <p>Community-based Management of Acute Malnutrition (CMAM) coverage indicators
+Round 2</p>
     </div>
 
-    <pre class="usage"><span class='no'>anthroDF</span></pre>
+    <pre class="usage"><span class='no'>cmamDF</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data.frame with 28 columns:</p>
+    <p>A data.frame with 35 columns:</p>
 <p>* `cid` - County identifier. 1 = Urban Montserrado; 2 = Grand Bassa
 * `did` - District identifier
 * `eid` - Enumeration area identifier
 * `motherID` - Mother identifier
 * `m2` - Mother age
-* `age` - Age of child in months
-* `sex` - Sex of child. 1 = Male; 2 = Female
-* `muac` - Mid-upper arm circumference (MUAC) of child in centimetres
-* `height` - Height of child in centimetres
-* `weight` - Weight of child in kilograms
-* `oedema` - Does child have oedema? 1 = Yes; 2 = No
-* `position` - Position of child on height measurement. 1 = standing; 2 = supine
-* `waz` - Weight-for-age z-score
-* `haz` - Height-for-age z-score
-* `whz` - Weight-for-height z-score
-* `flag` - Flag values based on WHO flagging criteria
-* `global.haz` - Global stunting
-* `moderate.haz` - Moderate stunting
-* `severe.haz` - Severe stunting
-* `global.waz` - Global underweight
-* `moderate` - Moderate underweight
-* `severe` - Severe underweight
-* `gam.whz` - Global wasting by weight-for-height z-score
-* `mam.whz` - Moderate wasting by weight-for-height z-score
-* `sam.whz` - Severe wasting by weight-for-height z-score
-* `gam.muac` - Global wasting by MUAC
-* `mam.muac` - Moderate wasting by MUAC
-* `sam.muac` - Severe wasting by MUAC</p>
+* `cin` - SAM case in programme
+* `cout` - SAM case not in programme
+* `rin` - Recovering case in programme
+* `q1` - Is child sick?
+* `q1a` - Child suffering from: malnutrition
+* `q1b` - Child suffering from: diarrhoea
+* `q1c` - Child suffering from: fever
+* `q1d` - Child suffering from: cough
+* `q1e` - Child suffering from: malaria
+* `q1f` - Child suffering from: don't know
+* `q2` - Do you think your child is too small?
+* `q3` - Know of treatment
+* `q4a` - Came to health centre but was not measured
+* `q4b` - Too far
+* `q4c` - No time/too busy
+* `q4d` - Mother/carer is sick
+* `q4e` - Cannot carry more than one child
+* `q4f` - Feels ashamed about coming
+* `q4g` - Security problems
+* `q4h` - No one else to take care of other siblings
+* `q4i` - Rejected by programme
+* `q4j` - Other parent's children have been rejected
+* `q4k` - Husband refused
+* `q4l` - Thought necessary to be enrolled in hospital first
+* `q4m` - Does not think programme can help children
+* `q4n` - Got diarrhoea
+* `q4o` - Ration has worms
+* `q4p` - Out of stock
+* `q4q` - Lack of money to pay for transport
+* `q4r` - SAM case in SFP</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Liberia Coverage Survey Round 2 - 27 August to 30 September 2019</p>
