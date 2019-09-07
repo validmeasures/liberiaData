@@ -68,6 +68,7 @@ recode_ifa <- function(df,
   ## Take IFA?
   ifa4 <- as.numeric(df$ifa4)
   ifa4 <- bbw::recode(ifa4, "2=0;99=0")
+  ifa4[ifa3 == 0] <- 0
 
   ######################## recode others ifa4a #################################
 
