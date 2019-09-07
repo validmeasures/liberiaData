@@ -281,6 +281,30 @@ usethis::use_data(screenDF, overwrite = TRUE)
 
 ############################### Interpolation ##################################
 
-#DFResults <- interpolate_indicators(indicator = c("ifaDF", "iycfDF", "mnpDF", "vitDF"),
-#                                     coords = sampleList.r2[ , c("EFEACODE", "lon", "lat")],
-#                                     hexgrid = gmHexGrid)
+intResults <- interpolate_indicators(indicator = c("ifaDF", "iycfDF",
+                                                   "mnpDF", "vitDF",
+                                                   "screenDF", "anthroDF",
+                                                   "cmamDF"),
+                                     coords = sampleList.r2,
+                                     hexgrid = gmHexGrid)
+
+ifaInt <- intResults[["ifaDF"]]
+usethis::use_data(ifaInt, overwrite = TRUE)
+
+iycfInt <- intResults[["iycfDF"]]
+usethis::use_data(iycfInt, overwrite = TRUE)
+
+mnpInt <- intResults[["mnpDF"]]
+usethis::use_data(mnpInt, overwrite = TRUE)
+
+vitInt <- intResults[["vitDF"]]
+usethis::use_data(vitInt, overwrite = TRUE)
+
+screenInt <- intResults[["screenDF"]]
+usethis::use_data(screenInt, overwrite = TRUE)
+
+anthroInt <- intResults[["anthroDF"]]
+usethis::use_data(anthroInt, overwrite = TRUE)
+
+cmamInt <- intResults[["cmamDF"]]
+usethis::use_data(cmamInt, overwrite = TRUE)
