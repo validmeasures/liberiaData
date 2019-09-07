@@ -653,3 +653,33 @@
 #
 ################################################################################
 "screenInt"
+
+
+################################################################################
+#
+#' Population dataset for enumeration areas in Urban Montserrado
+#'
+#' \describe{
+#'   \item{\code{psu}}{Primary sampling unit corresponding to the enumeration area code}
+#'   \item{\code{pop}}{Population}
+#' }
+#'
+#'
+#
+################################################################################
+"psuDataGM"
+
+
+################################################################################
+#
+#' Population dataset for enumeration areas in Grand Bassa
+#'
+#' \describe{
+#'   \item{\code{psu}}{Primary sampling unit corresponding to the enumeration area code}
+#'   \item{\code{pop}}{Population}
+#' }
+#'
+#'
+#
+################################################################################
+"psuDataGB"
