@@ -308,3 +308,15 @@ usethis::use_data(anthroInt, overwrite = TRUE)
 
 cmamInt <- intResults[["cmamDF"]]
 usethis::use_data(cmamInt, overwrite = TRUE)
+
+################################## Population Data #############################
+
+psuData <- sampleList.r2[ , c("EFEACODE", "TOTAL")]
+names(psuData) <- c("psu", "pop")
+psuDataGM <- psuData[sampleList.r2$CCNAME == "Montserrado", ]
+usethis::use_data(psuDataGM, overwrite = TRUE)
+
+psuDataGB <- psuData[sampleList.r2$CCNAME == "Grand Bassa", ]
+usethis::use_data(psuDataGB, overwrite = TRUE)
+
+
