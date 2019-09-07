@@ -4,7 +4,7 @@
 \alias{create_sp}
 \title{Create sp class versions of datasets}
 \usage{
-create_sp(df, coords, proj)
+create_sp(df, coords, by.x = "eid", by.y = "EFEACODE", proj)
 }
 \arguments{
 \item{df}{A data.frame of recoded indicator values for the Liberia Coverage
@@ -12,6 +12,12 @@ Survey}
 
 \item{coords}{A data.frame containing per enumeration area centroid
 coordinates}
+
+\item{by.x}{A character value for variable in \code{df} to use for matching
+with \code{coords} for merging}
+
+\item{by.y}{A character value for variable in \code{coords} to use for
+matching with \code{df} for merging}
 
 \item{proj}{A projection string of class CRS}
 }
