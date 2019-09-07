@@ -73,6 +73,7 @@ recode_mnp <- function(df,
   ## Take mnp?
   mnp3 <- as.numeric(df$mnp3)
   mnp3 <- bbw::recode(mnp3, "2=0;99=0")
+  mnp3[mnp2 == 0] <- 0
 
   ######################## recode others mnp3a #################################
 
