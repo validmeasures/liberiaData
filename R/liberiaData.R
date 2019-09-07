@@ -12,6 +12,7 @@
 #' @importFrom zscorer addWGSR getWGSR
 #' @importFrom sp SpatialPointsDataFrame SpatialPolygonsDataFrame SpatialPoints CRS proj4string coordinates
 #' @importFrom gstat idw
+#' @importFrom stats aggregate
 #'
 #
 ################################################################################
