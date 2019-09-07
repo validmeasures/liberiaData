@@ -27,6 +27,7 @@
 
 interpolate_indicators <- function(indicator = c("ifaDF", "iycfDF",
                                                  "mnpDF", "vitDF",
+                                                 "screenDF",
                                                  "anthroDF", "cmamDF"),
                                    core.columns = c("spid", "cid", "did", "eid",
                                                     "motherID", "m2"),
