@@ -217,5 +217,20 @@ recode_cmam <- function(df,
                        q4a, q4b, q4c, q4d, q4e, q4f, q4g, q4h, q4i, q4j,
                        q4k, q4l, q4m, q4n, q4o, q4p, q4q, q4r)
   ##
+  cmamDF <- aggregate(x = cmamDF[ , c("cin", "cout", "rin",
+                                      "q1", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f",
+                                      "q2", "q3",
+                                      "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q4g",
+                                      "q4h", "q4i", "q4j", "q4k", "q4l", "q4m", "q4n",
+                                      "q4o", "q4p", "q4q", "q4r")],
+                      by = list(cmamDF$spid), FUN = sum, na.rm = TRUE)
+  ##
+  names(cmamDF) <- c("spid", "cin", "cout", "rin",
+                     "q1", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f",
+                     "q2", "q3",
+                     "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q4g",
+                     "q4h", "q4i", "q4j", "q4k", "q4l", "q4m", "q4n",
+                     "q4o", "q4p", "q4q", "q4r")
+  ##
   return(cmamDF)
 }
