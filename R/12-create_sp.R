@@ -7,6 +7,10 @@
 #'   Survey
 #' @param coords A data.frame containing per enumeration area centroid
 #'   coordinates
+#' @param by.x A character value for variable in \code{df} to use for matching
+#'   with \code{coords} for merging
+#' @param by.y A character value for variable in \code{coords} to use for
+#'   matching with \code{df} for merging
 #' @param proj A projection string of class CRS
 #'
 #' @return An `sp` class version of datasets
@@ -21,9 +25,10 @@
 ################################################################################
 
 create_sp <- function(df, coords,
+                      by.x = "eid", by.y = "EFEACODE",
                       proj) {
   ##
-  temp <- merge(df, coords, by.x = "eid", by.y = "EFEACODE", all.x = TRUE)
+  temp <- merge(df, coords, by.x = by.x, by.y = by.y, all.x = TRUE)
   ##
   tempSP <- sp::SpatialPointsDataFrame(coords = temp[ , c("lon", "lat")],
                                        data = temp, proj4string = proj)
