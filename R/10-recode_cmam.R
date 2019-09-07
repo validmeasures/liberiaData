@@ -232,5 +232,12 @@ recode_cmam <- function(df,
                      "q4h", "q4i", "q4j", "q4k", "q4l", "q4m", "q4n",
                      "q4o", "q4p", "q4q", "q4r")
   ##
+  cf <- squeacr::calculate_cf(cin = cmamDF$cin, cout = cmamDF$cout)
+  ##
+  tc <- squeacr::calculate_tc(cin = cmamDF$cin, cout = cmamDF$cout,
+                              rin = cmamDF$rin, k = 3)
+  ##
+  cmamDF <- data.frame(cmamDF, cf, tc)
+  ##
   return(cmamDF)
 }
