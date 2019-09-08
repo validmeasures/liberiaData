@@ -826,3 +826,24 @@
 #
 ################################################################################
 "anthroBoot"
+
+
+################################################################################
+#
+#'
+#' Boostrap results for CMAM coverage indicators
+#'
+#' @format A data.frame with 2 rows and 6 columns
+#' \describe{
+#'   \item{\code{varLabel}}{Short code of indicators}
+#'   \item{\code{df}}{Name of data.frame to which indicator belongs}
+#'   \item{\code{varNames}}{Long names of indicators}
+#'   \item{\code{estimate}}{Indicator estimate}
+#'   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
+#'   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
+#' }
+#'
+#'
+#
+################################################################################
+"cmamEst"
