@@ -47,18 +47,21 @@ recode_ifa <- function(df,
   ## Reasons: Health centre ran out
   ifa3a <- as.numeric(df$ifa3a.1)
   ifa3a[is.na(df$ifa1)] <- NA
+  ifa3a[ifa3 == 1] <- NA
   ## Reasons: Took too long to get tablets
   ifa3b <- as.numeric(df$ifa3a.2)
   ifa3b[is.na(df$ifa1)] <- NA
+  ifa3b[ifa3 == 1] <- NA
   ## Reasons: Too expensive
   ifa3c <- as.numeric(df$ifa3a.3)
   ifa3c[is.na(df$ifa1)] <- NA
+  ifa3c[ifa3 == 1] <- NA
 
   if(length(table(df[["ifa3a_other"]])) != 0 | !is.null(ls1)) {
     ifa3a_other <- data.frame(ifa3a, ifa3b, ifa3c,
                                recode_others(df = df, var = "ifa3a_other",
                                              ls = ls1, label = names(ls1)))
-    ifa3a_other[is.na(df$ifa1), ] <- NA
+    ifa3a_other[is.na(df$ifa1) | df$ifa3 == 1, ] <- NA
   } else {
     ifa3a_other <- data.frame(ifa3a, ifa3b, ifa3c)
   }
@@ -75,21 +78,25 @@ recode_ifa <- function(df,
   ## Reasons: Concerns about side effects
   ifa4a <- as.numeric(df$ifa4a.1)
   ifa4a[is.na(df$ifa1)] <- NA
+  ifa4a[ifa4 == 1] <- NA
   ## Reasons: Don't need it
   ifa4b <- as.numeric(df$ifa4a.2)
   ifa4b[is.na(df$ifa1)] <- NA
+  ifa4b[ifa4 == 1] <- NA
   ## Reasons: I was told not to take it
   ifa4c <- as.numeric(df$ifa4a.3)
   ifa4c[is.na(df$ifa1)] <- NA
+  ifa4c[ifa4 == 1] <- NA
   ## Reasons: I don't think it helps
   ifa4d <- as.numeric(df$ifa4a.4)
   ifa4d[is.na(df$ifa1)] <- NA
+  ifa4d[ifa4 == 1] <- NA
 
   if(length(table(df[["ifa4a_other"]])) != 0 | !is.null(ls2)) {
     ifa4a_other <- data.frame(ifa4a, ifa4b, ifa4c, ifa4d,
                               recode_others(df = df, var = "ifa4a_other",
                                             ls = ls2, label = names(ls2)))
-    ifa4a_other[is.na(df$ifa1), ] <- NA
+    ifa4a_other[is.na(df$ifa1) | df$ifa4 == 1, ] <- NA
   } else {
     ifa4a_other <- data.frame(ifa4a, ifa4b, ifa4c, ifa4d)
   }

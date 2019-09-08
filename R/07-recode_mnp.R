@@ -63,7 +63,7 @@ recode_mnp <- function(df,
     mnp2a_other <- data.frame(mnp2a, mnp2b, mnp2c, mnp2d, mnp2e,
                               recode_others(df = df, var = "mnp2a_other",
                                             ls = ls1, label = names(ls1)))
-    mnp2a_other[is.na(df$mnp1), ] <- NA
+    mnp2a_other[is.na(df$mnp1) | df$mnp1 == 1, ] <- NA
   } else {
     mnp2a_other <- data.frame(mnp2a, mnp2b, mnp2c, mnp2d, mnp2e)
   }
@@ -109,7 +109,7 @@ recode_mnp <- function(df,
     mnp3a_other <- data.frame(mnp3a, mnp3b, mnp3c, mnp3d, mnp3e, mnp3f, mnp3g, mnp3h, mnp3i,
                               recode_others(df = df, var = "mnp3a_other",
                                             ls = ls2, label = names(ls2)))
-    mnp3a_other[is.na(df$mnp1), ] <- NA
+    mnp3a_other[is.na(df$mnp1) | df$mnp3 == 1, ] <- NA
   } else {
     mnp3a_other <- data.frame(mnp3a, mnp3b, mnp3c, mnp3d, mnp3e, mnp3f, mnp3g, mnp3h, mnp3i)
   }

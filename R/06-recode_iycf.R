@@ -39,21 +39,25 @@ recode_iycf <- function(df,
   ## Reasons: Timing was not convenient
   icf2a <- as.numeric(df$icf2a.1)
   icf2a[is.na(df$icf1)] <- NA
+  icf2a[icf2 == 1] <- NA
   ## Reasons: Not interested
   icf2b <- as.numeric(df$icf2a.2)
   icf2b[is.na(df$icf1)] <- NA
+  icf2b[icf2 == 1] <- NA
   ## Reasons: Do not trust counsellor
   icf2c <- as.numeric(df$icf2a.3)
   icf2c[is.na(df$icf1)] <- NA
+  icf2c[icf2 == 1] <- NA
   ## Reasons: Don't think I need it
   icf2d <- as.numeric(df$icf2a.4)
   icf2d[is.na(df$icf1)] <- NA
+  icf2d[icf2 == 1] <- NA
 
   if(length(table(df[["icf2a_other"]])) != 0 | !is.null(ls)) {
     icf2a_other <- data.frame(icf2a, icf2b, icf2c, icf2d,
                               recode_others(df = df, var = "icf2a_other",
                                             ls = ls, label = names(ls)))
-    icf2a_other[is.na(df$icf1), ] <- NA
+    icf2a_other[is.na(df$icf1) | df$icf2 == 1, ] <- NA
   } else {
     icf2a_other <- data.frame(icf2a, icf2b, icf2c, icf2d)
   }

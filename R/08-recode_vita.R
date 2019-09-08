@@ -41,21 +41,25 @@ recode_vita <- function(df,
   ## Reasons: Health centre ran out
   vit1a <- as.numeric(df$vita.1)
   vit1a[is.na(df$vit1)] <- NA
+  vit1a[df$vit1 == 1] <- NA
   ## Reasons: Took too long to get drops
   vit1b <- as.numeric(df$vit1a.2)
+  vit1b[df$vit1 == 1] <- NA
   vit1b[is.na(df$vit1)] <- NA
   ## Reasons: Child doesn't need it
   vit1c <- as.numeric(df$vit1a.3)
   vit1c[is.na(df$vit1)] <- NA
+  vit1c[df$vit1 == 1] <- NA
   ## Reasons: Heard it doesn't work/help
   vit1d <- as.numeric(df$vit1a.4)
   vit1d[is.na(df$vit1)] <- NA
+  vit1d[df$vit1 == 1] <- NA
 
   if(length(table(df[["vit1a_other"]])) != 0 | !is.null(ls)) {
     vit1a_other <- data.frame(vit1a, vit1b, vit1c, vit1d,
                               recode_others(df = df, var = "vit1a_other",
                                             ls = ls, label = names(ls)))
-    vit1a_other[is.na(df$vit1), ] <- NA
+    vit1a_other[is.na(df$vit1) | df$vit1 == 1, ] <- NA
   } else {
     vit1a_other <- data.frame(vit1a, vit1b, vit1c, vit1d)
   }
