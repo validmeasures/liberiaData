@@ -35,14 +35,15 @@ boot_estimate <- function(indicator = c("ifaDF", "iycfDF",
   ##
   for(i in indicator) {
     currentDF <- get(i)
-    ## Rename "eid" to psu
-    colnames(currentDF)[4] <- "psu"
     ##
     params <- names(currentDF)[!names(currentDF) %in% core.columns]
+    ##
     if(i == "anthroDF") {
       core.columns <- c(core.columns, "age", "sex", "position", "flag")
       params <- names(currentDF)[!names(currentDF) %in% core.columns]
     }
+    ## Rename "eid" to psu
+    colnames(currentDF)[4] <- "psu"
     ##
     outputColumns <- params
     ##
@@ -50,10 +51,14 @@ boot_estimate <- function(indicator = c("ifaDF", "iycfDF",
                         statistic = bbw::bootClassic,
                         params = params,
                         outputColumns = outputColumns,
-                        replicates = 399)
-    est <- apply(X = temp, MARGIN = 2, FUN = quantile, probs = c(0.5, 0.025, 0.975))
+                        replicates = replicates)
+    est <- apply(X = temp, MARGIN = 2, FUN = quantile,
+                 probs = c(0.5, 0.025, 0.975), na.rm = TRUE)
     est <- t(est)
-    bootResults[[i]] <- data.frame(row.names(est), est)
+    est <- data.frame(row.names(est), est)
+    row.names(est) <- 1:nrow(est)
+    names(est) <- c("varLabel", "estimate", "lcl", "ucl")
+    bootResults[[i]] <- est
   }
   return(bootResults)
 }
