@@ -319,4 +319,177 @@ usethis::use_data(psuDataGM, overwrite = TRUE)
 psuDataGB <- psuData[sampleList.r2$CCNAME == "Grand Bassa", ]
 usethis::use_data(psuDataGB, overwrite = TRUE)
 
+################################################################################
+
+core.columns <- c("spid", "cid", "did", "eid", "motherID", "m2")
+
+df <- c(rep("ifaDF", ncol(ifaDF) - 6),
+        rep("iycfDF", ncol(iycfDF) - 6),
+        rep("mnpDF", ncol(mnpDF) - 6),
+        rep("vitDF", ncol(vitDF) - 6),
+        rep("screenDF", ncol(screenDF) - 6),
+        rep("cmamDF", ncol(cmamDF) - 4),
+        rep("anthroDF", ncol(anthroDF) - 10))
+
+varLabel <- c(names(ifaDF)[!names(ifaDF) %in% core.columns],
+              names(iycfDF)[!names(iycfDF) %in% core.columns],
+              names(mnpDF)[!names(mnpDF) %in% core.columns],
+              names(vitDF)[!names(vitDF) %in% core.columns],
+              names(screenDF)[!names(screenDF) %in% core.columns],
+              names(cmamDF)[!names(cmamDF) %in% c("spid", "cin", "cout", "rin")],
+              names(anthroDF)[!names(anthroDF) %in% c(core.columns, "age", "sex", "position", "flag")])
+
+varNames <- c("At least one ANC visit",
+              "Know/heard about iron-folic acid",
+              "Received/purchased iron-folic acid",
+              "Health centre ran out",
+              "Took too long to get tablets",
+              "Too expensive",
+              "Did not go to hospital",
+              "Don't know about iron-folic acid",
+              "Didn't get any iron-folic acid",
+              "Received but did not take",
+              "Not interested",
+              "No reason",
+              "Consumed iron-folic acid",
+              "Concerns about side-effects",
+              "Don't need it",
+              "Told not to take it",
+              "Don't think it helps",
+              "Mean number of days of iron-folic acid consumption",
+              "Consumed iron-folic acid for at least 90 days",
+              "Consumed iron-folic acid for 180 days",
+              "Know/heard about IYCF counselling",
+              "Attended IYCF counselling",
+              "Timing not convenient",
+              "Not interested",
+              "Do not trust counsellor",
+              "Don't think I need it",
+              "Did not go to hospital",
+              "No one told me about it/not invited",
+              "No time",
+              "Mean number of times attended IYCF counselling",
+              "Heard about micronutrient powder",
+              "Received/purchased micronutrient powder",
+              "Health centre ran out",
+              "Took too long to get micronutrient powder",
+              "Too expensive",
+              "Child doesn't need it",
+              "Heard it doesn't work/help",
+              "Don't know/not seen/not heard of micronutrient powder",
+              "Have not gone to hospital",
+              "Have not received any from hospital/centre",
+              "Hospital didn't tell me about it",
+              "Child consumed micronutrient powder",
+              "Too expensive",
+              "Not available in the market",
+              "Do not need micronutrient powder",
+              "Heard other's bad experience",
+              "Advised not to use it",
+              "Not seen other mothers use it",
+              "Don't trust the product",
+              "Using another product",
+              "Haven't seen it",
+              "Child refused to take it",
+              "Mean number of times micronutrient powder is eatin by child in a week",
+              "Received vitamin A in the past 6 months",
+              "Health centre ran out",
+              "Took too long to get drops",
+              "Child doesn't need it",
+              "Heard it doesn't work/help",
+              "Child too young during last campaign",
+              "Not around during last campaign",
+              "Didn't hear/know about it",
+              "Never been to hospital",
+              "Vaccine team didn't come/reach",
+              "Not interested",
+              "Child MUAC measured in the past month",
+              "Child checked for oedema in the past month",
+              "Child weight measured in the past month",
+              "Child height measured in the past month",
+              "Mother/carer does not think child to be sick",
+              "Mother/carer thinks child has malnutrition",
+              "Mother/carer thinks child has diarrhoea",
+              "Mother/carer thinks child has fever",
+              "Mother/carer thinks child has cough",
+              "Mother/carer thinks child has malari",
+              "Mother/carer doesn't know child's illness",
+              "Mother/carer does not think child is too small/thin",
+              "Mother/carer does not know of any treatment",
+              "Came to health centre but was not measured",
+              "Too far",
+              "No time/too busy",
+              "Mother/carer is sick",
+              "Cannot carry more than one child",
+              "Feels ashamed about coming",
+              "Security problems",
+              "No one else to take care of other siblings",
+              "Rejected by programme",
+              "Other parents' children have been rejected",
+              "Husband refused",
+              "Though necessary to be enrolled in hospital first",
+              "Does not think programme can help children",
+              "Got diarrhoea from RUTF",
+              "Ration has worms",
+              "Out of stock",
+              "Lack of money to pay for transport",
+              "SAM case in SFP",
+              "Case-finding effectiveness",
+              "Treatment coverage",
+              "Mean mid-upper arm circumference (cms)",
+              "Mean height (cms)",
+              "Mean weight (kgs)",
+              "Oedema prevalence",
+              "Mean weight-for-age z-score",
+              "Mean height-for-age z-score",
+              "Mean weight-for-height z-score",
+              "Global stunting prevalence",
+              "Moderate stunting prevalence",
+              "Severe stunting prevalence",
+              "Global underweight prevalence",
+              "Moderate underweight prevalence",
+              "Severe underweight prevalence",
+              "Global acute malnutrition by weight-for-height z-score prevalence",
+              "Moderate acute malnutrition by weight-for-height z-score prevalence",
+              "Severe acute malnutrition by weight-for-height z-score prevalence",
+              "Global acute malnutrition by MUAC prevalence",
+              "Moderate acute malnutrition by MUAC prevalence",
+              "Severe acute malnutrition by MUAC prevalence")
+
+indicatorList <- data.frame(df, varNames, varLabel)
+usethis::use_data(indicatorList, overwrite = TRUE)
+
+############################### Get bootstrap results ##########################
+
+bootResults <- boot_estimate(w = psuDataGM)
+
+##
+ifaBoot <- bootResults[["ifaDF"]]
+ifaBoot <- merge(indicatorList, ifaBoot, by = "varLabel", all.y = TRUE)
+usethis::use_data(ifaBoot, overwrite = TRUE)
+
+##
+iycfBoot <- bootResults[["iycfDF"]]
+iycfBoot <- merge(indicatorList, iycfBoot, by = "varLabel", all.y = TRUE)
+usethis::use_data(iycfBoot, overwrite = TRUE)
+
+##
+mnpBoot <- bootResults[["mnpDF"]]
+mnpBoot <- merge(indicatorList, mnpBoot, by = "varLabel", all.y = TRUE)
+usethis::use_data(mnpBoot, overwrite = TRUE)
+
+##
+vitBoot <- bootResults[["vitDF"]]
+vitBoot <- merge(indiatorList, vitBoot, by = "varLabel", all.y = TRUE)
+usethis::use_data(vitBoot, overwrite = TRUE)
+
+##
+screenBoot <- bootResults[["screenDF"]]
+screenBoot <- merge(indicatorList, screenBoot, by = "varLabel", all.y = TRUE)
+usethis::use_data(screenBoot, overwrite = TRUE)
+
+##
+anthroBoot <- bootResults[["anthroDF"]]
+anthroBoot <- merge(indicatorList, anthroBoot, by = "varLabel", all.y = TRUE)
+usethis::use_data(anthroBoot, overwrite = TRUE)
 
