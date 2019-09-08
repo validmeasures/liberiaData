@@ -683,3 +683,146 @@
 #
 ################################################################################
 "psuDataGB"
+
+
+################################################################################
+#
+#'
+#' List of indicators assessed in the Liberia Coverage Survey
+#'
+#' @format A data.frame with 116 rows and 3 columns:
+#' \describe{
+#'   \item{\code{df}}{Name of data.frame to which indicator belongs}
+#'   \item{\code{varNames}}{Long names of indicators}
+#'   \item{\code{varLabel}}{Short code of indicators}
+#' }
+#'
+#
+################################################################################
+"indicatorList"
+
+
+################################################################################
+#
+#'
+#' Boostrap results for iron-folic acid indicators
+#'
+#' @format A data.frame with 20 rows and 6 columns
+#' \describe{
+#'   \item{\code{varLabel}}{Short code of indicators}
+#'   \item{\code{df}}{Name of data.frame to which indicator belongs}
+#'   \item{\code{varNames}}{Long names of indicators}
+#'   \item{\code{estimate}}{Indicator estimate}
+#'   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
+#'   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
+#' }
+#'
+#'
+#
+################################################################################
+"ifaBoot"
+
+
+################################################################################
+#
+#'
+#' Boostrap results for IYCF indicators
+#'
+#' @format A data.frame with 10 rows and 6 columns
+#' \describe{
+#'   \item{\code{varLabel}}{Short code of indicators}
+#'   \item{\code{df}}{Name of data.frame to which indicator belongs}
+#'   \item{\code{varNames}}{Long names of indicators}
+#'   \item{\code{estimate}}{Indicator estimate}
+#'   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
+#'   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
+#' }
+#'
+#'
+#
+################################################################################
+"iycfBoot"
+
+
+################################################################################
+#
+#'
+#' Boostrap results for micronutrient powder indicators
+#'
+#' @format A data.frame with 23 rows and 6 columns
+#' \describe{
+#'   \item{\code{varLabel}}{Short code of indicators}
+#'   \item{\code{df}}{Name of data.frame to which indicator belongs}
+#'   \item{\code{varNames}}{Long names of indicators}
+#'   \item{\code{estimate}}{Indicator estimate}
+#'   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
+#'   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
+#' }
+#'
+#'
+#
+################################################################################
+"mnpBoot"
+
+
+################################################################################
+#
+#'
+#' Boostrap results for vitamin A indicators
+#'
+#' @format A data.frame with 11 rows and 6 columns
+#' \describe{
+#'   \item{\code{varLabel}}{Short code of indicators}
+#'   \item{\code{df}}{Name of data.frame to which indicator belongs}
+#'   \item{\code{varNames}}{Long names of indicators}
+#'   \item{\code{estimate}}{Indicator estimate}
+#'   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
+#'   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
+#' }
+#'
+#'
+#
+################################################################################
+"vitBoot"
+
+
+################################################################################
+#
+#'
+#' Boostrap results for nutrition screening indicators
+#'
+#' @format A data.frame with 4 rows and 6 columns
+#' \describe{
+#'   \item{\code{varLabel}}{Short code of indicators}
+#'   \item{\code{df}}{Name of data.frame to which indicator belongs}
+#'   \item{\code{varNames}}{Long names of indicators}
+#'   \item{\code{estimate}}{Indicator estimate}
+#'   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
+#'   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
+#' }
+#'
+#'
+#
+################################################################################
+"screenBoot"
+
+
+################################################################################
+#
+#'
+#' Boostrap results for anthropometric indicators
+#'
+#' @format A data.frame with 20 rows and 6 columns
+#' \describe{
+#'   \item{\code{varLabel}}{Short code of indicators}
+#'   \item{\code{df}}{Name of data.frame to which indicator belongs}
+#'   \item{\code{varNames}}{Long names of indicators}
+#'   \item{\code{estimate}}{Indicator estimate}
+#'   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
+#'   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
+#' }
+#'
+#'
+#
+################################################################################
+"anthroBoot"
