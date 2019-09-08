@@ -21,8 +21,8 @@
 
 estimate_classic <- function(x, n, z = 1.96) {
   estimate <- x / n
-  lowerCI  <- x - z * sqrt((x * (1 - x)) / (n ^ 2))
-  upperCI  <- x + z * sqrt((x * (1 - x)) / (n ^ 2))
+  lowerCI  <- estimate - z * sqrt((estimate * (1 - estimate)) / (n ^ 2))
+  upperCI  <- estimate + z * sqrt((estimate * (1 - estimate)) / (n ^ 2))
   conf.int <- c(lowerCI, upperCI)
   x <- list(estimate, conf.int)
   return(x)
