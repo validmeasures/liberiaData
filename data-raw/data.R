@@ -480,7 +480,7 @@ usethis::use_data(mnpBoot, overwrite = TRUE)
 
 ##
 vitBoot <- bootResults[["vitDF"]]
-vitBoot <- merge(indiatorList, vitBoot, by = "varLabel", all.y = TRUE)
+vitBoot <- merge(indicatorList, vitBoot, by = "varLabel", all.y = TRUE)
 usethis::use_data(vitBoot, overwrite = TRUE)
 
 ##
@@ -492,4 +492,23 @@ usethis::use_data(screenBoot, overwrite = TRUE)
 anthroBoot <- bootResults[["anthroDF"]]
 anthroBoot <- merge(indicatorList, anthroBoot, by = "varLabel", all.y = TRUE)
 usethis::use_data(anthroBoot, overwrite = TRUE)
+
+############################# CMAM Coverage ####################################
+
+samCases <- colSums(cmamDF[ , c("cin", "cout", "rin")])
+rout <- squeacr::calculate_rout(cin = samCases[1], cout = samCases[2], rin = samCases[3])
+
+cf <- estimate_classic(x = samCases[1], n = samCases[1] + samCases[2])
+tc <- estimate_classic(x = samCases[1] + samCases[3], n = samCases[1] + samCases[2] + samCases[3] + rout)
+
+cmamEst <- data.frame(
+  varLabel = c("cf", "tc"),
+  df = "cmamDF",
+  varNames = c("Case-finding effectiveness", "Treatment coverage"),
+  estimate = c(cf[[1]], tc[[1]]),
+  lcl = c(cf[[2]][1], tc[[2]][1]),
+  ucl = c(cf[[2]][2], tc[[2]][2])
+)
+
+usethis::use_data(cmamEst, overwrite = TRUE)
 
