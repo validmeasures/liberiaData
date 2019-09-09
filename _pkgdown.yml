@@ -39,12 +39,19 @@ reference:
 - title: Estimators
   contents:
   - estimate_classic
+  - boot_estimate
 
-- title: Datasets
+- title: Supporting Datasets
   contents:
   - codebook
   - sampleList.r2
+  - indicatorList
+
+- title: Indicator Datasets
+  contents:
   - villageData.r2
+  - psuDataGB
+  - psuDataGM
   - coverageData.r2
   - coverageData1.r2
   - coverageData2.r2
@@ -56,8 +63,32 @@ reference:
   - cmamDF
   - screenDF
 
-- title: Maps
+- title: Spatial Interpolation Datasets
+  contents:
+  - ifaInt
+  - iycfInt
+  - mnpInt
+  - vitInt
+  - cmamInt
+  - screenInt
+  - anthroInt
+
+- title: Boostrap Estimate Datasets
+  contents:
+  - ifaBoot
+  - iycfBoot
+  - mnpBoot
+  - vitBoot
+  - cmamEst
+  - screenBoot
+  - anthroBoot
+
+- title: Raster Maps
   contents:
   - gmHexGrid
   - gbHexGrid
+
+- title: Launching Results Dashboard
+  contents:
+  - run_dashboard
 
