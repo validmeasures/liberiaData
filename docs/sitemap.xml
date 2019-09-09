@@ -4,10 +4,25 @@
     <loc>https://validmeasures.org/liberiaData/index.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/anthroBoot.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/anthroDF.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/anthroInt.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/boot_estimate.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/cmamDF.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/cmamEst.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/cmamInt.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/codebook.html</loc>
@@ -43,13 +58,28 @@
     <loc>https://validmeasures.org/liberiaData/reference/gmHexGrid.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/ifaBoot.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/ifaDF.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/ifaInt.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/indicatorList.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/interpolate_indicators.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/iycfBoot.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/iycfDF.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/iycfInt.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/liberiaData.html</loc>
@@ -58,7 +88,19 @@
     <loc>https://validmeasures.org/liberiaData/reference/merge_repeats.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/mnpBoot.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/mnpDF.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/mnpInt.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/psuDataGB.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/psuDataGM.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/recode_age.html</loc>
@@ -106,15 +148,30 @@
     <loc>https://validmeasures.org/liberiaData/reference/recode_weight.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/run_dashboard.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/sampleList.r2.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/screenBoot.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/liberiaData/reference/screenDF.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/screenInt.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/villageData.r2.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/liberiaData/reference/vitBoot.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/liberiaData/reference/vitDF.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/liberiaData/reference/vitInt.html</loc>
   </url>
 </urlset>

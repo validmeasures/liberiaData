@@ -8,12 +8,10 @@
 
 <title>Function reference • liberiaData</title>
 
-
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -32,9 +30,7 @@
 
 
 
-
 <meta property="og:title" content="Function reference" />
-
 
 
 
@@ -83,6 +79,7 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         
       </ul>
@@ -270,11 +267,17 @@ anthropometric z-scores</p></td>
           <p><code><a href="estimate_classic.html">estimate_classic()</a></code> </p>
         </td>
         <td><p>Estimate proportion using classic estimator</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="boot_estimate.html">boot_estimate()</a></code> </p>
+        </td>
+        <td><p>Apply blocked weighted bootstrap to indicator datasets</p></td>
       </tr>
     </tbody><tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-datasets" class="hasAnchor"><a href="#section-datasets" class="anchor"></a>Datasets</h2>
+          <h2 id="section-supporting-datasets" class="hasAnchor"><a href="#section-supporting-datasets" class="anchor"></a>Supporting Datasets</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
@@ -293,9 +296,35 @@ anthropometric z-scores</p></td>
       </tr><tr>
         
         <td>
+          <p><code><a href="indicatorList.html">indicatorList</a></code> </p>
+        </td>
+        <td><p>List of indicators assessed in the Liberia Coverage Survey</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-indicator-datasets" class="hasAnchor"><a href="#section-indicator-datasets" class="anchor"></a>Indicator Datasets</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
           <p><code><a href="villageData.r2.html">villageData.r2</a></code> </p>
         </td>
         <td><p>Liberia Coverage Survey Village Data Round 2</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="psuDataGB.html">psuDataGB</a></code> </p>
+        </td>
+        <td><p>Population dataset for enumeration areas in Grand Bassa</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="psuDataGM.html">psuDataGM</a></code> </p>
+        </td>
+        <td><p>Population dataset for enumeration areas in Urban Montserrado</p></td>
       </tr><tr>
         
         <td>
@@ -361,7 +390,110 @@ Round 2</p></td>
     </tbody><tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-maps" class="hasAnchor"><a href="#section-maps" class="anchor"></a>Maps</h2>
+          <h2 id="section-spatial-interpolation-datasets" class="hasAnchor"><a href="#section-spatial-interpolation-datasets" class="anchor"></a>Spatial Interpolation Datasets</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="ifaInt.html">ifaInt</a></code> </p>
+        </td>
+        <td><p>Interpolated iron-folic acid (IFA) indicator set Round 2</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="iycfInt.html">iycfInt</a></code> </p>
+        </td>
+        <td><p>Interpolated Infant and Young Child Feeding (IYCF) counselling coverage
+indicator set Round 2</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="mnpInt.html">mnpInt</a></code> </p>
+        </td>
+        <td><p>Interpolated Micronutrient Powder (MNP) supplementation coverage indicator
+set Round 2</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="vitInt.html">vitInt</a></code> </p>
+        </td>
+        <td><p>Interpolated Vitamin A supplementation coverage indicator set Round 2</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="cmamInt.html">cmamInt</a></code> </p>
+        </td>
+        <td><p>Interpolated Community-based Management of Acute Malnutrition (CMAM) coverage
+indicator set Round 2</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="screenInt.html">screenInt</a></code> </p>
+        </td>
+        <td><p>Interpolated nutrition screening coverage indicator set Round 2</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="anthroInt.html">anthroInt</a></code> </p>
+        </td>
+        <td><p>Interpolated child anthropometry indicator set Round 2</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-boostrap-estimate-datasets" class="hasAnchor"><a href="#section-boostrap-estimate-datasets" class="anchor"></a>Boostrap Estimate Datasets</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="ifaBoot.html">ifaBoot</a></code> </p>
+        </td>
+        <td><p>Boostrap results for iron-folic acid indicators</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="iycfBoot.html">iycfBoot</a></code> </p>
+        </td>
+        <td><p>Boostrap results for IYCF indicators</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="mnpBoot.html">mnpBoot</a></code> </p>
+        </td>
+        <td><p>Boostrap results for micronutrient powder indicators</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="vitBoot.html">vitBoot</a></code> </p>
+        </td>
+        <td><p>Boostrap results for vitamin A indicators</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="cmamEst.html">cmamEst</a></code> </p>
+        </td>
+        <td><p>Boostrap results for CMAM coverage indicators</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="screenBoot.html">screenBoot</a></code> </p>
+        </td>
+        <td><p>Boostrap results for nutrition screening indicators</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="anthroBoot.html">anthroBoot</a></code> </p>
+        </td>
+        <td><p>Boostrap results for anthropometric indicators</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-raster-maps" class="hasAnchor"><a href="#section-raster-maps" class="anchor"></a>Raster Maps</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
@@ -378,6 +510,20 @@ Round 2</p></td>
         </td>
         <td><p>Grand Bassa hexagonal grid map</p></td>
       </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-launching-results-dashboard" class="hasAnchor"><a href="#section-launching-results-dashboard" class="anchor"></a>Launching Results Dashboard</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="run_dashboard.html">run_dashboard()</a></code> </p>
+        </td>
+        <td><p>Initialise built-in Shiny application</p></td>
+      </tr>
     </tbody>
     </table>
   </div>
@@ -388,8 +534,12 @@ Round 2</p></td>
       <li><a href="#section-description">Description</a></li>
       <li><a href="#section-data-handling">Data handling</a></li>
       <li><a href="#section-estimators">Estimators</a></li>
-      <li><a href="#section-datasets">Datasets</a></li>
-      <li><a href="#section-maps">Maps</a></li>
+      <li><a href="#section-supporting-datasets">Supporting Datasets</a></li>
+      <li><a href="#section-indicator-datasets">Indicator Datasets</a></li>
+      <li><a href="#section-spatial-interpolation-datasets">Spatial Interpolation Datasets</a></li>
+      <li><a href="#section-boostrap-estimate-datasets">Boostrap Estimate Datasets</a></li>
+      <li><a href="#section-raster-maps">Raster Maps</a></li>
+      <li><a href="#section-launching-results-dashboard">Launching Results Dashboard</a></li>
     </ul>
   </div>
 </div>

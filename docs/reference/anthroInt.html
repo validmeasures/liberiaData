@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Micronutrient Powder (MNP) supplementation coverage Round 2 — mnpDF • liberiaData</title>
+<title>Interpolated child anthropometry indicator set Round 2 — anthroInt • liberiaData</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Micronutrient Powder (MNP) supplementation coverage Round 2 — mnpDF" />
+<meta property="og:title" content="Interpolated child anthropometry indicator set Round 2 — anthroInt" />
 
-<meta property="og:description" content="Micronutrient Powder (MNP) supplementation coverage Round 2" />
+<meta property="og:description" content="Interpolated child anthropometry indicator set Round 2" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -97,51 +97,42 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Micronutrient Powder (MNP) supplementation coverage Round 2</h1>
+    <h1>Interpolated child anthropometry indicator set Round 2</h1>
     
-    <div class="hidden name"><code>mnpDF.Rd</code></div>
+    <div class="hidden name"><code>anthroInt.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Micronutrient Powder (MNP) supplementation coverage Round 2</p>
+    <p>Interpolated child anthropometry indicator set Round 2</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>mnpDF</span></pre>
+    <pre class="usage"><span class='no'>anthroInt</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data.frame with 28 columns:</p><dl class='dl-horizontal'>
+    <p>A data.frame with 23 columns:</p><dl class='dl-horizontal'>
   <dt><code>spid</code></dt><dd><p>Sampling point identifier</p></dd>
-  <dt><code>cid</code></dt><dd><p>County identifier. 1 = Urban Montserrado; 2 = Grand Bassa</p></dd>
-  <dt><code>did</code></dt><dd><p>District identifier</p></dd>
-  <dt><code>eid</code></dt><dd><p>Enumeration area identifier</p></dd>
-  <dt><code>motherID</code></dt><dd><p>Mother identifier</p></dd>
-  <dt><code>m2</code></dt><dd><p>Mother age</p></dd>
-  <dt><code>mnp1</code></dt><dd><p>Heard about MNP?</p></dd>
-  <dt><code>mnp2</code></dt><dd><p>Received/purchased MNP?</p></dd>
-  <dt><code>mnp2a</code></dt><dd><p>Reasons: Health centre ran out</p></dd>
-  <dt><code>mnp2b</code></dt><dd><p>Reasons: Took too long to get MNP</p></dd>
-  <dt><code>mnp2c</code></dt><dd><p>Reasons: Too expensive</p></dd>
-  <dt><code>mnp2d</code></dt><dd><p>Reasons: Child doesn't need it</p></dd>
-  <dt><code>mnp2e</code></dt><dd><p>Reasons: Heard it doesn't work/help</p></dd>
-  <dt><code>mnp2f</code></dt><dd><p>Reasons: Don't know/not seen/not heard of MNP</p></dd>
-  <dt><code>mnp2g</code></dt><dd><p>Reasons: Have not gone to hospital</p></dd>
-  <dt><code>mnp2h</code></dt><dd><p>Reasons: Have not received any from hospital/centre</p></dd>
-  <dt><code>mnp2i</code></dt><dd><p>Reasons: Hospital didn't tell me about it</p></dd>
-  <dt><code>mnp3</code></dt><dd><p>Take MNP?</p></dd>
-  <dt><code>mnp3a</code></dt><dd><p>Reasons: Too expensive</p></dd>
-  <dt><code>mnp3b</code></dt><dd><p>Reasons: Not available in the market</p></dd>
-  <dt><code>mnp3c</code></dt><dd><p>Reasons: Do not need MNP</p></dd>
-  <dt><code>mnp3d</code></dt><dd><p>Reasons: Heard other's bad experience</p></dd>
-  <dt><code>mnp3e</code></dt><dd><p>Reasons: Advised not to use it</p></dd>
-  <dt><code>mnp3f</code></dt><dd><p>Reasons: Not seen other mothers use it</p></dd>
-  <dt><code>mnp3g</code></dt><dd><p>Reasons: Don't trust the product</p></dd>
-  <dt><code>mnp3h</code></dt><dd><p>Reasons: Using another product</p></dd>
-  <dt><code>mnp3i</code></dt><dd><p>Reasons: Haven't seen it</p></dd>
-  <dt><code>mnp3j</code></dt><dd><p>Reasons: Child refused to take it</p></dd>
-  <dt><code>mnp4</code></dt><dd><p>How many times child ate MNP in the past week?</p></dd>
+  <dt><code>muac</code></dt><dd><p>Mid-upper arm circumference (MUAC) of child in centimetres</p></dd>
+  <dt><code>height</code></dt><dd><p>Height of child in centimetres</p></dd>
+  <dt><code>weight</code></dt><dd><p>Weight of child in kilograms</p></dd>
+  <dt><code>oedema</code></dt><dd><p>Does child have oedema? 1 = Yes; 2 = No</p></dd>
+  <dt><code>waz</code></dt><dd><p>Weight-for-age z-score</p></dd>
+  <dt><code>haz</code></dt><dd><p>Height-for-age z-score</p></dd>
+  <dt><code>whz</code></dt><dd><p>Weight-for-height z-score</p></dd>
+  <dt><code>global.haz</code></dt><dd><p>Global stunting</p></dd>
+  <dt><code>moderate.haz</code></dt><dd><p>Moderate stunting</p></dd>
+  <dt><code>severe.haz</code></dt><dd><p>Severe stunting</p></dd>
+  <dt><code>global.waz</code></dt><dd><p>Global underweight</p></dd>
+  <dt><code>moderate</code></dt><dd><p>Moderate underweight</p></dd>
+  <dt><code>severe</code></dt><dd><p>Severe underweight</p></dd>
+  <dt><code>gam.whz</code></dt><dd><p>Global wasting by weight-for-height z-score</p></dd>
+  <dt><code>mam.whz</code></dt><dd><p>Moderate wasting by weight-for-height z-score</p></dd>
+  <dt><code>sam.whz</code></dt><dd><p>Severe wasting by weight-for-height z-score</p></dd>
+  <dt><code>gam.muac</code></dt><dd><p>Global wasting by MUAC</p></dd>
+  <dt><code>mam.muac</code></dt><dd><p>Moderate wasting by MUAC</p></dd>
+  <dt><code>sam.muac</code></dt><dd><p>Severe wasting by MUAC</p></dd>
 </dl>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>

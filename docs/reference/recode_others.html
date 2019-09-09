@@ -8,12 +8,10 @@
 
 <title>Function to recode others responses — recode_others • liberiaData</title>
 
-
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -32,11 +30,10 @@
 
 
 
-
 <meta property="og:title" content="Function to recode others responses — recode_others" />
+
 <meta property="og:description" content="Function to recode others responses" />
 <meta name="twitter:card" content="summary" />
-
 
 
 
@@ -85,6 +82,7 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         
       </ul>
@@ -105,11 +103,13 @@
     </div>
 
     <div class="ref-description">
+    
     <p>Function to recode others responses</p>
+    
     </div>
 
     <pre class="usage"><span class='fu'>recode_others</span>(<span class='no'>df</span>, <span class='no'>var</span>, <span class='no'>ls</span>, <span class='kw'>label</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/paste'>paste</a></span>(<span class='no'>var</span>, <span class='fl'>1</span>:<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/length'>length</a></span>(<span class='no'>ls</span>), <span class='kw'>sep</span> <span class='kw'>=</span> <span class='st'>"."</span>))</pre>
-
+    
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -131,11 +131,12 @@ searching and organising `others` responses</p></td>
       <td><p>A character vector for names of the resulting data.frame.</p></td>
     </tr>
     </table>
-
+    
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A data.frame with same number of rows as `df` and number of columns
   equal to the length of `ls` containing recoded values</p>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>ifa3d</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"delivery"</span>, <span class='st'>"hospital"</span>, <span class='st'>"constantly"</span>) <span class='co'># Did not go to hospital</span>
@@ -1735,7 +1736,7 @@ searching and organising `others` responses</p></td>
 #&gt; 1586             0             0             0             0             0
 #&gt; 1587             0             0             0             0             0
 #&gt; 1588             0             0             0             0             0
-#&gt; 1589             0             0             1             0             0
+#&gt; 1589             0             0             0             0             0
 #&gt; 1590             0             0             0             0             0
 #&gt; 1591             0             0             0             0             0
 #&gt; 1592             0             0             0             0             0
@@ -1788,7 +1789,7 @@ searching and organising `others` responses</p></td>
 #&gt; 1639             0             0             0             0             0
 #&gt; 1640             0             0             0             0             0
 #&gt; 1641             0             0             0             0             0
-#&gt; 1642             0             0             0             0             1
+#&gt; 1642             0             0             0             0             0
 #&gt; 1643             0             0             0             0             0
 #&gt; 1644             0             0             0             0             0
 #&gt; 1645             0             0             0             0             0
@@ -1844,7 +1845,7 @@ searching and organising `others` responses</p></td>
 #&gt; 1695             0             0             0             0             0
 #&gt; 1696             0             0             0             0             0
 #&gt; 1697             0             0             0             0             0
-#&gt; 1698             0             0             0             0             1
+#&gt; 1698             0             0             0             0             0
 #&gt; 1699             0             0             0             0             0
 #&gt; 1700             0             0             0             0             0
 #&gt; 1701             0             0             0             0             0
@@ -1872,7 +1873,7 @@ searching and organising `others` responses</p></td>
 #&gt; 1723             0             0             0             0             0
 #&gt; 1724             0             0             0             0             0
 #&gt; 1725             0             0             0             0             0
-#&gt; 1726             0             0             0             0             0
+#&gt; 1726             0             0             1             0             0
 #&gt; 1727             0             0             0             0             0
 #&gt; 1728             0             0             0             0             0
 #&gt; 1729             0             0             0             0             0
@@ -1925,7 +1926,7 @@ searching and organising `others` responses</p></td>
 #&gt; 1776             0             0             0             0             0
 #&gt; 1777             0             0             0             0             0
 #&gt; 1778             0             0             0             0             0
-#&gt; 1779             0             0             0             0             0
+#&gt; 1779             0             0             0             0             1
 #&gt; 1780             0             0             0             0             0
 #&gt; 1781             0             0             0             0             0
 #&gt; 1782             0             0             0             0             0
@@ -1981,7 +1982,7 @@ searching and organising `others` responses</p></td>
 #&gt; 1832             0             0             0             0             0
 #&gt; 1833             0             0             0             0             0
 #&gt; 1834             0             0             0             0             0
-#&gt; 1835             0             0             0             0             0
+#&gt; 1835             0             0             0             0             1
 #&gt; 1836             0             0             0             0             0
 #&gt; 1837             0             0             0             0             0
 #&gt; 1838             0             0             0             0             0
@@ -2264,11 +2265,11 @@ searching and organising `others` responses</p></td>
 #&gt; 2115             0             0             0             0             0
 #&gt; 2116             0             0             0             0             0
 #&gt; 2117             0             0             0             0             0
-#&gt; 2118             0             0             0             0             1
+#&gt; 2118             0             0             0             0             0
 #&gt; 2119             0             0             0             0             0
 #&gt; 2120             0             0             0             0             0
 #&gt; 2121             0             0             0             0             0
-#&gt; 2122             0             0             0             0             1
+#&gt; 2122             0             0             0             0             0
 #&gt; 2123             0             0             0             0             0
 #&gt; 2124             0             0             0             0             0
 #&gt; 2125             0             0             0             0             0
@@ -2276,7 +2277,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2127             0             0             0             0             0
 #&gt; 2128             0             0             0             0             0
 #&gt; 2129             0             0             0             0             0
-#&gt; 2130             0             0             0             0             1
+#&gt; 2130             0             0             0             0             0
 #&gt; 2131             0             0             0             0             0
 #&gt; 2132             0             0             0             0             0
 #&gt; 2133             0             0             0             0             0
@@ -2311,7 +2312,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2162             0             0             0             0             0
 #&gt; 2163             0             0             0             0             0
 #&gt; 2164             0             0             0             0             0
-#&gt; 2165             0             0             0             0             1
+#&gt; 2165             0             0             0             0             0
 #&gt; 2166             0             0             0             0             0
 #&gt; 2167             0             0             0             0             0
 #&gt; 2168             0             0             0             0             0
@@ -2343,7 +2344,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2194             0             0             0             0             0
 #&gt; 2195             0             0             0             0             0
 #&gt; 2196             0             0             0             0             0
-#&gt; 2197             0             0             0             0             1
+#&gt; 2197             0             0             0             0             0
 #&gt; 2198             0             0             0             0             0
 #&gt; 2199             0             0             0             0             0
 #&gt; 2200             0             0             0             0             0
@@ -2360,7 +2361,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2211             0             0             0             0             0
 #&gt; 2212             0             0             0             0             0
 #&gt; 2213             0             0             0             0             0
-#&gt; 2214             0             0             0             0             1
+#&gt; 2214             0             0             0             0             0
 #&gt; 2215             0             0             0             0             0
 #&gt; 2216             0             0             0             0             0
 #&gt; 2217             0             0             0             0             0
@@ -2373,7 +2374,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2224             0             0             0             0             0
 #&gt; 2225             0             0             0             0             0
 #&gt; 2226             0             0             0             0             0
-#&gt; 2227             0             0             0             0             1
+#&gt; 2227             0             0             0             0             0
 #&gt; 2228             0             0             0             0             0
 #&gt; 2229             0             0             0             0             0
 #&gt; 2230             0             0             0             0             0
@@ -2401,11 +2402,11 @@ searching and organising `others` responses</p></td>
 #&gt; 2252             0             0             0             0             0
 #&gt; 2253             0             0             0             0             0
 #&gt; 2254             0             0             0             0             0
-#&gt; 2255             0             0             0             0             0
+#&gt; 2255             0             0             0             0             1
 #&gt; 2256             0             0             0             0             0
 #&gt; 2257             0             0             0             0             0
 #&gt; 2258             0             0             0             0             0
-#&gt; 2259             0             0             0             0             0
+#&gt; 2259             0             0             0             0             1
 #&gt; 2260             0             0             0             0             0
 #&gt; 2261             0             0             0             0             0
 #&gt; 2262             0             0             0             0             0
@@ -2413,7 +2414,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2264             0             0             0             0             0
 #&gt; 2265             0             0             0             0             0
 #&gt; 2266             0             0             0             0             0
-#&gt; 2267             0             0             0             0             0
+#&gt; 2267             0             0             0             0             1
 #&gt; 2268             0             0             0             0             0
 #&gt; 2269             0             0             0             0             0
 #&gt; 2270             0             0             0             0             0
@@ -2448,7 +2449,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2299             0             0             0             0             0
 #&gt; 2300             0             0             0             0             0
 #&gt; 2301             0             0             0             0             0
-#&gt; 2302             0             0             0             0             0
+#&gt; 2302             0             0             0             0             1
 #&gt; 2303             0             0             0             0             0
 #&gt; 2304             0             0             0             0             0
 #&gt; 2305             0             0             0             0             0
@@ -2480,7 +2481,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2331             0             0             0             0             0
 #&gt; 2332             0             0             0             0             0
 #&gt; 2333             0             0             0             0             0
-#&gt; 2334             0             0             0             0             0
+#&gt; 2334             0             0             0             0             1
 #&gt; 2335             0             0             0             0             0
 #&gt; 2336             0             0             0             0             0
 #&gt; 2337             0             0             0             0             0
@@ -2497,7 +2498,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2348             0             0             0             0             0
 #&gt; 2349             0             0             0             0             0
 #&gt; 2350             0             0             0             0             0
-#&gt; 2351             0             0             0             0             0
+#&gt; 2351             0             0             0             0             1
 #&gt; 2352             0             0             0             0             0
 #&gt; 2353             0             0             0             0             0
 #&gt; 2354             0             0             0             0             0
@@ -2510,7 +2511,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2361             0             0             0             0             0
 #&gt; 2362             0             0             0             0             0
 #&gt; 2363             0             0             0             0             0
-#&gt; 2364             0             0             0             0             0
+#&gt; 2364             0             0             0             0             1
 #&gt; 2365             0             0             0             0             0
 #&gt; 2366             0             0             0             0             0
 #&gt; 2367             0             0             0             0             0
@@ -3110,6 +3111,143 @@ searching and organising `others` responses</p></td>
 #&gt; 2961             0             0             0             0             0
 #&gt; 2962             0             0             0             0             0
 #&gt; 2963             0             0             0             0             0
+#&gt; 2964             0             0             0             0             0
+#&gt; 2965             0             0             0             0             0
+#&gt; 2966             0             0             0             0             0
+#&gt; 2967             0             0             0             0             0
+#&gt; 2968             0             0             0             0             0
+#&gt; 2969             0             0             0             0             0
+#&gt; 2970             0             0             0             0             0
+#&gt; 2971             0             0             0             0             0
+#&gt; 2972             0             0             0             0             0
+#&gt; 2973             0             0             0             0             0
+#&gt; 2974             0             0             0             0             0
+#&gt; 2975             0             0             0             0             0
+#&gt; 2976             0             0             0             0             0
+#&gt; 2977             0             0             0             0             0
+#&gt; 2978             0             0             0             0             0
+#&gt; 2979             0             0             0             0             0
+#&gt; 2980             0             0             0             0             0
+#&gt; 2981             0             0             0             0             0
+#&gt; 2982             0             0             0             0             0
+#&gt; 2983             0             0             0             0             0
+#&gt; 2984             0             0             0             0             0
+#&gt; 2985             0             0             0             0             0
+#&gt; 2986             0             0             0             0             0
+#&gt; 2987             0             0             0             0             0
+#&gt; 2988             0             0             0             0             0
+#&gt; 2989             0             0             0             0             0
+#&gt; 2990             0             0             0             0             0
+#&gt; 2991             0             0             0             0             0
+#&gt; 2992             0             0             0             0             0
+#&gt; 2993             0             0             0             0             0
+#&gt; 2994             0             0             0             0             0
+#&gt; 2995             0             0             0             0             0
+#&gt; 2996             0             0             0             0             0
+#&gt; 2997             0             0             0             0             0
+#&gt; 2998             0             0             0             0             0
+#&gt; 2999             0             0             0             0             0
+#&gt; 3000             0             0             0             0             0
+#&gt; 3001             0             0             0             0             0
+#&gt; 3002             0             0             0             0             0
+#&gt; 3003             0             0             0             0             0
+#&gt; 3004             0             0             0             0             0
+#&gt; 3005             0             0             0             0             0
+#&gt; 3006             0             0             0             0             0
+#&gt; 3007             0             0             0             0             0
+#&gt; 3008             0             0             0             0             0
+#&gt; 3009             0             0             0             0             0
+#&gt; 3010             0             0             0             0             0
+#&gt; 3011             0             0             0             0             0
+#&gt; 3012             0             0             0             0             0
+#&gt; 3013             0             0             0             0             0
+#&gt; 3014             0             0             0             0             0
+#&gt; 3015             0             0             0             0             0
+#&gt; 3016             0             0             0             0             0
+#&gt; 3017             0             0             0             0             0
+#&gt; 3018             0             0             0             0             0
+#&gt; 3019             0             0             0             0             0
+#&gt; 3020             0             0             0             0             0
+#&gt; 3021             0             0             0             0             0
+#&gt; 3022             0             0             0             0             0
+#&gt; 3023             0             0             0             0             0
+#&gt; 3024             0             0             0             0             0
+#&gt; 3025             0             0             0             0             0
+#&gt; 3026             0             0             0             0             0
+#&gt; 3027             0             0             0             0             0
+#&gt; 3028             0             0             0             0             0
+#&gt; 3029             0             0             0             0             0
+#&gt; 3030             0             0             0             0             0
+#&gt; 3031             0             0             0             0             0
+#&gt; 3032             0             0             0             0             0
+#&gt; 3033             0             0             0             0             0
+#&gt; 3034             0             0             0             0             0
+#&gt; 3035             0             0             0             0             0
+#&gt; 3036             0             0             0             0             0
+#&gt; 3037             0             0             0             0             0
+#&gt; 3038             0             0             0             0             0
+#&gt; 3039             0             0             0             0             0
+#&gt; 3040             0             0             0             0             0
+#&gt; 3041             0             0             0             0             0
+#&gt; 3042             0             0             0             0             0
+#&gt; 3043             0             0             0             0             0
+#&gt; 3044             0             0             0             0             0
+#&gt; 3045             0             0             0             0             0
+#&gt; 3046             0             0             0             0             0
+#&gt; 3047             0             0             0             0             0
+#&gt; 3048             0             0             0             0             0
+#&gt; 3049             0             0             0             0             0
+#&gt; 3050             0             0             0             0             0
+#&gt; 3051             0             0             0             0             0
+#&gt; 3052             0             0             0             0             0
+#&gt; 3053             0             0             0             0             0
+#&gt; 3054             0             0             0             0             0
+#&gt; 3055             0             0             0             0             0
+#&gt; 3056             0             0             0             0             0
+#&gt; 3057             0             0             0             0             0
+#&gt; 3058             0             0             0             0             0
+#&gt; 3059             0             0             0             0             0
+#&gt; 3060             0             0             0             0             0
+#&gt; 3061             0             0             0             0             0
+#&gt; 3062             0             0             0             0             0
+#&gt; 3063             0             0             0             0             0
+#&gt; 3064             0             0             0             0             0
+#&gt; 3065             0             0             0             0             0
+#&gt; 3066             0             0             0             0             0
+#&gt; 3067             0             0             0             0             0
+#&gt; 3068             0             0             0             0             0
+#&gt; 3069             0             0             0             0             0
+#&gt; 3070             0             0             0             0             0
+#&gt; 3071             0             0             0             0             0
+#&gt; 3072             0             0             0             0             0
+#&gt; 3073             0             0             0             0             0
+#&gt; 3074             0             0             0             0             0
+#&gt; 3075             0             0             0             0             0
+#&gt; 3076             0             0             0             0             0
+#&gt; 3077             0             0             0             0             0
+#&gt; 3078             0             0             0             0             0
+#&gt; 3079             0             0             0             0             0
+#&gt; 3080             0             0             0             0             0
+#&gt; 3081             0             0             0             0             0
+#&gt; 3082             0             0             0             0             0
+#&gt; 3083             0             0             0             0             0
+#&gt; 3084             0             0             0             0             0
+#&gt; 3085             0             0             0             0             0
+#&gt; 3086             0             0             0             0             0
+#&gt; 3087             0             0             0             0             0
+#&gt; 3088             0             0             0             0             0
+#&gt; 3089             0             0             0             0             0
+#&gt; 3090             0             0             0             0             0
+#&gt; 3091             0             0             0             0             0
+#&gt; 3092             0             0             0             0             0
+#&gt; 3093             0             0             0             0             0
+#&gt; 3094             0             0             0             0             0
+#&gt; 3095             0             0             0             0             0
+#&gt; 3096             0             0             0             0             0
+#&gt; 3097             0             0             0             0             0
+#&gt; 3098             0             0             0             0             0
+#&gt; 3099             0             0             0             0             0
+#&gt; 3100             0             0             0             0             0
 #&gt;      ifa3a_other.6
 #&gt; 1                0
 #&gt; 2                0
@@ -5848,7 +5986,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2735             0
 #&gt; 2736             0
 #&gt; 2737             0
-#&gt; 2738             1
+#&gt; 2738             0
 #&gt; 2739             0
 #&gt; 2740             0
 #&gt; 2741             0
@@ -5985,7 +6123,7 @@ searching and organising `others` responses</p></td>
 #&gt; 2872             0
 #&gt; 2873             0
 #&gt; 2874             0
-#&gt; 2875             0
+#&gt; 2875             1
 #&gt; 2876             0
 #&gt; 2877             0
 #&gt; 2878             0
@@ -6073,14 +6211,153 @@ searching and organising `others` responses</p></td>
 #&gt; 2960             0
 #&gt; 2961             0
 #&gt; 2962             0
-#&gt; 2963             0</div><div class='input'>
+#&gt; 2963             0
+#&gt; 2964             0
+#&gt; 2965             0
+#&gt; 2966             0
+#&gt; 2967             0
+#&gt; 2968             0
+#&gt; 2969             0
+#&gt; 2970             0
+#&gt; 2971             0
+#&gt; 2972             0
+#&gt; 2973             0
+#&gt; 2974             0
+#&gt; 2975             0
+#&gt; 2976             0
+#&gt; 2977             0
+#&gt; 2978             0
+#&gt; 2979             0
+#&gt; 2980             0
+#&gt; 2981             0
+#&gt; 2982             0
+#&gt; 2983             0
+#&gt; 2984             0
+#&gt; 2985             0
+#&gt; 2986             0
+#&gt; 2987             0
+#&gt; 2988             0
+#&gt; 2989             0
+#&gt; 2990             0
+#&gt; 2991             0
+#&gt; 2992             0
+#&gt; 2993             0
+#&gt; 2994             0
+#&gt; 2995             0
+#&gt; 2996             0
+#&gt; 2997             0
+#&gt; 2998             0
+#&gt; 2999             0
+#&gt; 3000             0
+#&gt; 3001             0
+#&gt; 3002             0
+#&gt; 3003             0
+#&gt; 3004             0
+#&gt; 3005             0
+#&gt; 3006             0
+#&gt; 3007             0
+#&gt; 3008             0
+#&gt; 3009             0
+#&gt; 3010             0
+#&gt; 3011             0
+#&gt; 3012             0
+#&gt; 3013             0
+#&gt; 3014             0
+#&gt; 3015             0
+#&gt; 3016             0
+#&gt; 3017             0
+#&gt; 3018             0
+#&gt; 3019             0
+#&gt; 3020             0
+#&gt; 3021             0
+#&gt; 3022             0
+#&gt; 3023             0
+#&gt; 3024             0
+#&gt; 3025             0
+#&gt; 3026             0
+#&gt; 3027             0
+#&gt; 3028             0
+#&gt; 3029             0
+#&gt; 3030             0
+#&gt; 3031             0
+#&gt; 3032             0
+#&gt; 3033             0
+#&gt; 3034             0
+#&gt; 3035             0
+#&gt; 3036             0
+#&gt; 3037             0
+#&gt; 3038             0
+#&gt; 3039             0
+#&gt; 3040             0
+#&gt; 3041             0
+#&gt; 3042             0
+#&gt; 3043             0
+#&gt; 3044             0
+#&gt; 3045             0
+#&gt; 3046             0
+#&gt; 3047             0
+#&gt; 3048             0
+#&gt; 3049             0
+#&gt; 3050             0
+#&gt; 3051             0
+#&gt; 3052             0
+#&gt; 3053             0
+#&gt; 3054             0
+#&gt; 3055             0
+#&gt; 3056             0
+#&gt; 3057             0
+#&gt; 3058             0
+#&gt; 3059             0
+#&gt; 3060             0
+#&gt; 3061             0
+#&gt; 3062             0
+#&gt; 3063             0
+#&gt; 3064             0
+#&gt; 3065             0
+#&gt; 3066             0
+#&gt; 3067             0
+#&gt; 3068             0
+#&gt; 3069             0
+#&gt; 3070             0
+#&gt; 3071             0
+#&gt; 3072             0
+#&gt; 3073             0
+#&gt; 3074             0
+#&gt; 3075             0
+#&gt; 3076             0
+#&gt; 3077             0
+#&gt; 3078             0
+#&gt; 3079             0
+#&gt; 3080             0
+#&gt; 3081             0
+#&gt; 3082             0
+#&gt; 3083             0
+#&gt; 3084             0
+#&gt; 3085             0
+#&gt; 3086             0
+#&gt; 3087             0
+#&gt; 3088             0
+#&gt; 3089             0
+#&gt; 3090             0
+#&gt; 3091             0
+#&gt; 3092             0
+#&gt; 3093             0
+#&gt; 3094             0
+#&gt; 3095             0
+#&gt; 3096             0
+#&gt; 3097             0
+#&gt; 3098             0
+#&gt; 3099             0
+#&gt; 3100             0</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      
       <li><a href="#value">Value</a></li>
+      
       <li><a href="#examples">Examples</a></li>
     </ul>
 

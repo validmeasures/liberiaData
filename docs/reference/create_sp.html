@@ -8,12 +8,10 @@
 
 <title>Create sp class versions of datasets — create_sp • liberiaData</title>
 
-
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -32,11 +30,10 @@
 
 
 
-
 <meta property="og:title" content="Create sp class versions of datasets — create_sp" />
+
 <meta property="og:description" content="Create sp class versions of datasets" />
 <meta name="twitter:card" content="summary" />
-
 
 
 
@@ -85,6 +82,7 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         
       </ul>
@@ -105,11 +103,13 @@
     </div>
 
     <div class="ref-description">
+    
     <p>Create sp class versions of datasets</p>
+    
     </div>
 
-    <pre class="usage"><span class='fu'>create_sp</span>(<span class='no'>df</span>, <span class='no'>coords</span>, <span class='no'>proj</span>)</pre>
-
+    <pre class="usage"><span class='fu'>create_sp</span>(<span class='no'>df</span>, <span class='no'>coords</span>, <span class='kw'>by.x</span> <span class='kw'>=</span> <span class='st'>"eid"</span>, <span class='kw'>by.y</span> <span class='kw'>=</span> <span class='st'>"EFEACODE"</span>, <span class='no'>proj</span>)</pre>
+    
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -124,32 +124,45 @@ Survey</p></td>
 coordinates</p></td>
     </tr>
     <tr>
+      <th>by.x</th>
+      <td><p>A character value for variable in <code>df</code> to use for matching
+with <code>coords</code> for merging</p></td>
+    </tr>
+    <tr>
+      <th>by.y</th>
+      <td><p>A character value for variable in <code>coords</code> to use for
+matching with <code>df</code> for merging</p></td>
+    </tr>
+    <tr>
       <th>proj</th>
       <td><p>A projection string of class CRS</p></td>
     </tr>
     </table>
-
+    
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>An `sp` class version of datasets</p>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>create_sp</span>(<span class='kw'>df</span> <span class='kw'>=</span> <span class='no'>coverageData.r2</span>, <span class='kw'>coords</span> <span class='kw'>=</span> <span class='no'>sampleList.r2</span>,
           <span class='kw'>proj</span> <span class='kw'>=</span> <span class='kw pkg'>sp</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/sp/topics/CRS-class'>CRS</a></span>(<span class='kw pkg'>sp</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/sp/topics/is.projected'>proj4string</a></span>(<span class='no'>gmHexGrid</span>)))</div><div class='output co'>#&gt; class       : SpatialPointsDataFrame 
-#&gt; features    : 3425 
+#&gt; features    : 3586 
 #&gt; extent      : -10.79869, -10.65192, 6.238232, 6.408978  (xmin, xmax, ymin, ymax)
 #&gt; crs         : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
 #&gt; variables   : 171
 #&gt; names       :        eid,         motherID,        sdate, cid, did, team, consent2,  m2, ch, mcheck1, ifa1, ifa2, ifa3, ifa3a.1, ifa3a.2, ... 
 #&gt; min values  : 3004102101, 3004102101-67-64, Aug 27, 2019,   1,   4,    1,        1,   2,  1,       1,    1,    1,    1,       0,       0, ... 
-#&gt; max values  : 3004961011,   3004961011-9-9,  Sep 5, 2019,   1,   4,    6,        2, 281,  5,       2,   99,   99,   99,       1,       1, ... </div><div class='input'>
+#&gt; max values  : 3004961011,   3004961011-9-9,  Sep 5, 2019,   1,   4,    6,        2, 341,  5,       2,   99,   99,   99,       1,       1, ... </div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      
       <li><a href="#value">Value</a></li>
+      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
