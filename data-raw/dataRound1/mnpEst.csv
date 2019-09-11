@@ -1,0 +1,47 @@
+"county","type","indicator","estimate","lcl","ucl"
+"Monrovia","est","mnp1",0.179310344827586,0.10544765407733,0.264966977466978
+"Grand Bassa","est","mnp1",0.0422535211267606,0.00819338931094229,0.0902597402597403
+"Monrovia","est","mnp2",0.125,0.0569594525059175,0.208410493827161
+"Grand Bassa","est","mnp2",0.00709219858156028,0,0.0335798749029813
+"Monrovia","est","mnp2a.1",0.0204081632653061,0,0.0769984917043741
+"Grand Bassa","est","mnp2a.1",0.0134228187919463,0,0.0411419362265454
+"Monrovia","est","mnp2a.2",0,0,0
+"Grand Bassa","est","mnp2a.2",0,0,0
+"Monrovia","est","mnp2a.3",0.0087719298245614,0,0.0501119402985075
+"Grand Bassa","est","mnp2a.3",0,0,0
+"Monrovia","est","mnp2a.4",0.428571428571429,0.265284926470588,0.594356435643564
+"Grand Bassa","est","mnp2a.4",0.0630630630630631,0.0230769230769231,0.134778890279516
+"Monrovia","est","mnp2a.5",0.0165289256198347,0,0.0642499150526674
+"Grand Bassa","est","mnp2a.5",0.00793650793650794,0,0.04458071278826
+"Monrovia","est","mnp2a.6",0.0735294117647059,0.0156129807692308,0.187881097560976
+"Grand Bassa","est","mnp2a.6",0.0857142857142857,0.0338562823924919,0.163621794871795
+"Monrovia","est","mnp2a.7",0,0,0
+"Grand Bassa","est","mnp2a.7",0.0575539568345324,0.00951490876724522,0.120795523290986
+"Monrovia","est","mnp2a.8",0,0,0.0736029411764706
+"Grand Bassa","est","mnp2a.8",0,0,0
+"Monrovia","est","mnp2a.9",0,0,0
+"Grand Bassa","est","mnp2a.9",0,0,0.0185271720318449
+"Monrovia","est","mnp2a.10",0.866666666666667,0.70296875,0.971213768115942
+"Grand Bassa","est","mnp2a.10",0.849557522123894,0.756232492997199,0.922483349710667
+"Monrovia","est","mnp3",0.111111111111111,0.0392263923213978,0.193661177532145
+"Grand Bassa","est","mnp3",0.00699300699300699,0,0.0296519075466444
+"Monrovia","est","mnp3a.1",0,0,0
+"Grand Bassa","est","mnp3a.1",NA,NA,NA
+"Monrovia","est","mnp3a.2",0,0,0
+"Grand Bassa","est","mnp3a.2",NA,NA,NA
+"Monrovia","est","mnp3a.3",0,0,0
+"Grand Bassa","est","mnp3a.3",NA,NA,NA
+"Monrovia","est","mnp3a.4",0,0,0
+"Grand Bassa","est","mnp3a.4",NA,NA,NA
+"Monrovia","est","mnp3a.5",0,0,0
+"Grand Bassa","est","mnp3a.5",NA,NA,NA
+"Monrovia","est","mnp3a.6",0,0,0
+"Grand Bassa","est","mnp3a.6",NA,NA,NA
+"Monrovia","est","mnp3a.7",0,0,0
+"Grand Bassa","est","mnp3a.7",NA,NA,NA
+"Monrovia","est","mnp3a.8",1,1,1
+"Grand Bassa","est","mnp3a.8",NA,NA,NA
+"Monrovia","est","mnp3a.9",0,0,0
+"Grand Bassa","est","mnp3a.9",NA,NA,NA
+"Monrovia","est","mnp4",6.53333333333333,2.1532967032967,20.8475961538462
+"Grand Bassa","est","mnp4",1.6,0.7,3
