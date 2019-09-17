@@ -71,7 +71,7 @@ get_liberia_data <- function(id, username, password,
                          stringsAsFactors = FALSE)
   ## Read repeat data
   for(i in rep.name) {
-    assign(x = paste(rep.name, "_data", sep = ""),
+    assign(x = paste(i, "_data", sep = ""),
            value = read.csv(paste(temp, "/", filename, "-",
                                   rep.name, ".csv", sep = ""),
                             stringsAsFactors = FALSE))
