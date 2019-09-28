@@ -13,6 +13,9 @@
 #' @importFrom sp SpatialPointsDataFrame SpatialPolygonsDataFrame SpatialPoints CRS proj4string coordinates
 #' @importFrom gstat idw
 #' @importFrom stats aggregate quantile
+#' @importFrom shiny runApp
+#' @importFrom squeacr calculate_cf calculate_tc
+#' @importFrom nutricheckr flag_who find_child_stunting find_child_wasting find_child_underweight
 #'
 #
 ################################################################################
