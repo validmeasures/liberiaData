@@ -169,10 +169,9 @@ coverageData.r2 <- get_spid(df = coverageData.r2, splist = sampleList.r2)
 
 ########################### Create internal datasets ###########################
 
-usethis::use_data(coverageData1.r2, overwrite = TRUE)
-usethis::use_data(coverageData2.r2, overwrite = TRUE)
-usethis::use_data(coverageData.r2, overwrite = TRUE)
-
+usethis::use_data(coverageData1.r2, compress = "xz", overwrite = TRUE)
+usethis::use_data(coverageData2.r2, compress = "xz", overwrite = TRUE)
+usethis::use_data(coverageData.r2, compress = "xz", overwrite = TRUE)
 
 ########################### Read village data ##################################
 
@@ -187,13 +186,13 @@ villageData.r2 <- villageData[ , c("cid", "county", "did", "eid", "lat", "lon", 
                                    "coords.Latitude", "coords.Longitude",
                                    "coords.Altitude", "coords.Accuracy")]
 
-usethis::use_data(villageData.r2, overwrite = TRUE)
+usethis::use_data(villageData.r2, compress = "xz", overwrite = TRUE)
 
 ################################# Read sample list #############################
 
 ## Round 2 sample list
 sampleList.r2 <- read.csv("data-raw/sample/sampleList.csv", stringsAsFactors = FALSE)
-usethis::use_data(sampleList.r2, overwrite = TRUE)
+usethis::use_data(sampleList.r2, compress = "xz", overwrite = TRUE)
 
 ########################### Recode IFA indicators ##############################
 
@@ -212,7 +211,7 @@ ls2 <- NULL
 
 ## Recode IFA indicators
 ifaDF <- recode_ifa(df = coverageData1.r2, ls1 = ls1, ls2 = ls2)
-usethis::use_data(ifaDF, overwrite = TRUE)
+usethis::use_data(ifaDF, compress = "xz", overwrite = TRUE)
 
 ########################### Recode IYCF indicators #############################
 
@@ -226,7 +225,7 @@ names(ls) <- paste("icf2", letters[5:7], sep = "")
 
 ## Recode IYCF indicators
 iycfDF <- recode_iycf(df = coverageData1.r2, ls = ls)
-usethis::use_data(iycfDF, overwrite = TRUE)
+usethis::use_data(iycfDF, compress = "xz", overwrite = TRUE)
 
 ########################### Recode MNP indicators ##############################
 
@@ -244,7 +243,7 @@ names(ls2) <- paste("mnp3", letters[10], sep = "")
 
 ## Recode MNP indicators
 mnpDF <- recode_mnp(df = coverageData1.r2, ls1 = ls1, ls2 = ls2)
-usethis::use_data(mnpDF, overwrite = TRUE)
+usethis::use_data(mnpDF, compress = "xz", overwrite = TRUE)
 
 
 ##################### Recode Vitamin A indicators ##############################
@@ -261,23 +260,22 @@ names(ls) <- paste("vit1", letters[5:10], sep = "")
 
 ## Recode vitamin A indicators
 vitDF <- recode_vita(df = coverageData1.r2, ls = ls)
-usethis::use_data(vitDF, overwrite = TRUE)
+usethis::use_data(vitDF, compress = "xz", overwrite = TRUE)
 
 ##################### Recode anthropometric indicators #########################
 
 anthroDF <- recode_anthro(df = coverageData.r2)
-usethis::use_data(anthroDF, overwrite = TRUE)
+usethis::use_data(anthroDF, compress = "xz", overwrite = TRUE)
 
 ##################### Recode CMAM indicators ###################################
 
 cmamDF <- recode_cmam(df = coverageData.r2)
-usethis::use_data(cmamDF, overwrite = TRUE)
-
+usethis::use_data(cmamDF, compress = "xz", overwrite = TRUE)
 
 ##################### Recode CMAM indicators ###################################
 
 screenDF <- recode_screening(df = coverageData.r2)
-usethis::use_data(screenDF, overwrite = TRUE)
+usethis::use_data(screenDF, compress = "xz", overwrite = TRUE)
 
 ############################### Interpolation ##################################
 
@@ -289,35 +287,35 @@ intResults <- interpolate_indicators(indicator = c("ifaDF", "iycfDF",
                                      hexgrid = gmHexGrid)
 
 ifaInt <- intResults[["ifaDF"]]
-usethis::use_data(ifaInt, overwrite = TRUE)
+usethis::use_data(ifaInt, compress = "xz", overwrite = TRUE)
 
 iycfInt <- intResults[["iycfDF"]]
-usethis::use_data(iycfInt, overwrite = TRUE)
+usethis::use_data(iycfInt, compress = "xz", overwrite = TRUE)
 
 mnpInt <- intResults[["mnpDF"]]
-usethis::use_data(mnpInt, overwrite = TRUE)
+usethis::use_data(mnpInt, compress = "xz", overwrite = TRUE)
 
 vitInt <- intResults[["vitDF"]]
-usethis::use_data(vitInt, overwrite = TRUE)
+usethis::use_data(vitInt, compress = "xz", overwrite = TRUE)
 
 screenInt <- intResults[["screenDF"]]
-usethis::use_data(screenInt, overwrite = TRUE)
+usethis::use_data(screenInt, compress = "xz", overwrite = TRUE)
 
 anthroInt <- intResults[["anthroDF"]]
-usethis::use_data(anthroInt, overwrite = TRUE)
+usethis::use_data(anthroInt, compress = "xz", overwrite = TRUE)
 
 cmamInt <- intResults[["cmamDF"]]
-usethis::use_data(cmamInt, overwrite = TRUE)
+usethis::use_data(cmamInt, compress = "xz", overwrite = TRUE)
 
 ################################## Population Data #############################
 
 psuData <- sampleList.r2[ , c("EFEACODE", "TOTAL")]
 names(psuData) <- c("psu", "pop")
 psuDataGM <- psuData[sampleList.r2$CCNAME == "Montserrado", ]
-usethis::use_data(psuDataGM, overwrite = TRUE)
+usethis::use_data(psuDataGM, compress = "xz", overwrite = TRUE)
 
 psuDataGB <- psuData[sampleList.r2$CCNAME == "Grand Bassa", ]
-usethis::use_data(psuDataGB, overwrite = TRUE)
+usethis::use_data(psuDataGB, compress = "xz", overwrite = TRUE)
 
 ################################################################################
 
@@ -457,7 +455,7 @@ varNames <- c("At least one ANC visit",
               "Severe acute malnutrition by MUAC prevalence")
 
 indicatorList <- data.frame(df, varNames, varLabel)
-usethis::use_data(indicatorList, overwrite = TRUE)
+usethis::use_data(indicatorList, compress = "xz", overwrite = TRUE)
 
 ############################### Get bootstrap results ##########################
 
@@ -466,32 +464,32 @@ bootResults <- boot_estimate(w = psuDataGM)
 ##
 ifaBoot <- bootResults[["ifaDF"]]
 ifaBoot <- merge(indicatorList, ifaBoot, by = "varLabel", all.y = TRUE)
-usethis::use_data(ifaBoot, overwrite = TRUE)
+usethis::use_data(ifaBoot, compress = "xz", overwrite = TRUE)
 
 ##
 iycfBoot <- bootResults[["iycfDF"]]
 iycfBoot <- merge(indicatorList, iycfBoot, by = "varLabel", all.y = TRUE)
-usethis::use_data(iycfBoot, overwrite = TRUE)
+usethis::use_data(iycfBoot, compress = "xz", overwrite = TRUE)
 
 ##
 mnpBoot <- bootResults[["mnpDF"]]
 mnpBoot <- merge(indicatorList, mnpBoot, by = "varLabel", all.y = TRUE)
-usethis::use_data(mnpBoot, overwrite = TRUE)
+usethis::use_data(mnpBoot, compress = "xz", overwrite = TRUE)
 
 ##
 vitBoot <- bootResults[["vitDF"]]
 vitBoot <- merge(indicatorList, vitBoot, by = "varLabel", all.y = TRUE)
-usethis::use_data(vitBoot, overwrite = TRUE)
+usethis::use_data(vitBoot, compress = "xz", overwrite = TRUE)
 
 ##
 screenBoot <- bootResults[["screenDF"]]
 screenBoot <- merge(indicatorList, screenBoot, by = "varLabel", all.y = TRUE)
-usethis::use_data(screenBoot, overwrite = TRUE)
+usethis::use_data(screenBoot, compress = "xz", overwrite = TRUE)
 
 ##
 anthroBoot <- bootResults[["anthroDF"]]
 anthroBoot <- merge(indicatorList, anthroBoot, by = "varLabel", all.y = TRUE)
-usethis::use_data(anthroBoot, overwrite = TRUE)
+usethis::use_data(anthroBoot, compress = "xz", overwrite = TRUE)
 
 ############################# CMAM Coverage ####################################
 
@@ -510,5 +508,5 @@ cmamEst <- data.frame(
   ucl = c(cf[[2]][2], tc[[2]][2])
 )
 
-usethis::use_data(cmamEst, overwrite = TRUE)
+usethis::use_data(cmamEst, compress = "xz", overwrite = TRUE)
 

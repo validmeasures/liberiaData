@@ -13,7 +13,7 @@ gmHexGrid@data <- subset(gmHexGrid@data, select = county)
 writeOGR(gmHexGrid, dsn = "data-raw/maps/gmHexGrid.gpkg", layer = "Monrovia", driver = "GPKG",
          overwrite_layer = TRUE, delete_dsn = FALSE)
 ##
-usethis::use_data(gmHexGrid, overwrite = TRUE)
+usethis::use_data(gmHexGrid, compress = "xz", overwrite = TRUE)
 
 ##
 gbHexGrid <- readOGR(dsn = "data-raw/maps/coveragePolyGB", layer = "coveragePolyGB", verbose = FALSE)
@@ -21,4 +21,4 @@ gbHexGrid@data <- subset(gbHexGrid@data, select = county)
 writeOGR(gbHexGrid, dsn = "data-raw/maps/gbHexGrid.gpkg", layer = "Grand Bassa", driver = "GPKG",
          overwrite_layer = TRUE, delete_dsn = FALSE)
 ##
-usethis::use_data(gbHexGrid, overwrite = TRUE)
+usethis::use_data(gbHexGrid, compress = "xz", overwrite = TRUE)

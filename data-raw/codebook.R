@@ -58,5 +58,5 @@ codebook <- data.frame(variable = as.character(survey$name),
                        question = as.character(survey$label),
                        choices = as.character(responses))
 
-codebook <- tibble::as.tibble(codebook)
-usethis::use_data(codebook, overwrite = TRUE)
+codebook <- tibble::as_tibble(codebook)
+usethis::use_data(codebook, compress = "xz", overwrite = TRUE)
