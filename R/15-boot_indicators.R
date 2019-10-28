@@ -28,8 +28,7 @@ boot_estimate <- function(indicator = c("ifaDF", "iycfDF",
                                         "mnpDF", "vitDF",
                                         "screenDF",
                                         "anthroDF"),
-                          county,
-                          w, replicates = 399,
+                          county, w, replicates = 399,
                           core.columns = c("spid", "cid", "did", "eid",
                                            "motherID", "m2")) {
   ##
