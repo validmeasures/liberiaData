@@ -6,6 +6,8 @@
 #' A wrapper for \code{bootBW} function in \code{bbw} package.
 #'
 #' @param indicator A character vector of indicator data.frame names
+#' @param county An integer indicating which county to interpolate; 1 for
+#'   Greater Monrovia; 2 for Grand Bassa
 #' @param w Population dataset
 #' @param replicates Number of bootstrap replicates
 #' @param core.columns A vector of variable names included in indicator
@@ -15,7 +17,7 @@
 #'   limits
 #'
 #' @examples
-#' boot_estimate(indicator = "iycfDF", w = psuDataGM, replicates = 9)
+#' boot_estimate(indicator = "iycfDF", county = 1, w = psuDataGM, replicates = 9)
 #'
 #' @export
 #'
@@ -26,6 +28,7 @@ boot_estimate <- function(indicator = c("ifaDF", "iycfDF",
                                         "mnpDF", "vitDF",
                                         "screenDF",
                                         "anthroDF"),
+                          county,
                           w, replicates = 399,
                           core.columns = c("spid", "cid", "did", "eid",
                                            "motherID", "m2")) {
@@ -35,6 +38,7 @@ boot_estimate <- function(indicator = c("ifaDF", "iycfDF",
   ##
   for(i in indicator) {
     currentDF <- get(i)
+    currentDF <- currentDF[currentDF$cid == county, ]
     ##
     params <- names(currentDF)[!names(currentDF) %in% core.columns]
     ##

@@ -5,11 +5,14 @@
 \title{Apply blocked weighted bootstrap to indicator datasets}
 \usage{
 boot_estimate(indicator = c("ifaDF", "iycfDF", "mnpDF", "vitDF",
-  "screenDF", "anthroDF"), w, replicates = 399,
+  "screenDF", "anthroDF"), county, w, replicates = 399,
   core.columns = c("spid", "cid", "did", "eid", "motherID", "m2"))
 }
 \arguments{
 \item{indicator}{A character vector of indicator data.frame names}
+
+\item{county}{An integer indicating which county to interpolate; 1 for
+Greater Monrovia; 2 for Grand Bassa}
 
 \item{w}{Population dataset}
 
@@ -26,6 +29,6 @@ A data.frame of indicator estimates with lower and upper confidence
 A wrapper for \code{bootBW} function in \code{bbw} package.
 }
 \examples{
-boot_estimate(indicator = "iycfDF", w = psuDataGM, replicates = 9)
+boot_estimate(indicator = "iycfDF", county = 1, w = psuDataGM, replicates = 9)
 
 }

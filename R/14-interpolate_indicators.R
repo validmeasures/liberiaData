@@ -4,6 +4,8 @@
 #' Function to interpolate indicators from the Liberia Coverage Survey
 #'
 #' @param indicator A character vector of indicator data.frame names
+#' @param county An integer indicating which county to interpolate; 1 for
+#'   Greater Monrovia; 2 for Grand Bassa
 #' @param core.columns A vector of variable names included in indicator
 #'   data.frames
 #' @param coords A data.frame containing per enumeration area centroid
@@ -17,6 +19,7 @@
 #'
 #' @examples
 #' interpolate_indicators(indicator = "vitDF",
+#'                        county = 1,
 #'                        coords = sampleList.r2[ , c("EFEACODE", "lon", "lat")],
 #'                        hexgrid = gmHexGrid)
 #'
@@ -29,6 +32,7 @@ interpolate_indicators <- function(indicator = c("ifaDF", "iycfDF",
                                                  "mnpDF", "vitDF",
                                                  "screenDF",
                                                  "anthroDF", "cmamDF"),
+                                   county,
                                    core.columns = c("spid", "cid", "did", "eid",
                                                     "motherID", "m2"),
                                    coords, hexgrid,
@@ -40,6 +44,8 @@ interpolate_indicators <- function(indicator = c("ifaDF", "iycfDF",
   for(i in indicator) {
     ##
     currentDF <- get(i)
+    ##
+    currentDF <- currentDF[currentDF$cid == county, ]
     ##
     ## Check if i is anthroDF
     if(i == "anthroDF") {

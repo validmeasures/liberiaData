@@ -5,11 +5,14 @@
 \title{Function to interpolate indicators from the Liberia Coverage Survey}
 \usage{
 interpolate_indicators(indicator = c("ifaDF", "iycfDF", "mnpDF", "vitDF",
-  "screenDF", "anthroDF", "cmamDF"), core.columns = c("spid", "cid",
-  "did", "eid", "motherID", "m2"), coords, hexgrid, idp = 2)
+  "screenDF", "anthroDF", "cmamDF"), county, core.columns = c("spid",
+  "cid", "did", "eid", "motherID", "m2"), coords, hexgrid, idp = 2)
 }
 \arguments{
 \item{indicator}{A character vector of indicator data.frame names}
+
+\item{county}{An integer indicating which county to interpolate; 1 for
+Greater Monrovia; 2 for Grand Bassa}
 
 \item{core.columns}{A vector of variable names included in indicator
 data.frames}
@@ -31,6 +34,7 @@ Function to interpolate indicators from the Liberia Coverage Survey
 }
 \examples{
 interpolate_indicators(indicator = "vitDF",
+                       county = 1,
                        coords = sampleList.r2[ , c("EFEACODE", "lon", "lat")],
                        hexgrid = gmHexGrid)
 
