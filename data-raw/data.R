@@ -499,26 +499,32 @@ intResultsGB <- interpolate_indicators(indicator = c("ifaDF", "iycfDF",
                                        hexgrid = gbHexGrid)
 
 ifaInt <- list(intResultsGM[["ifaDF"]], intResultsGB[["ifaDF"]])
+names(ifaInt) <- c("Greater Monrovia", "Grand Bassa")
 usethis::use_data(ifaInt, compress = "xz", overwrite = TRUE)
 
 iycfInt <- list(intResultsGM[["iycfDF"]], intResultsGB[["iycfDF"]])
+names(iycfInt) <- c("Greater Monrovia", "Grand Bassa")
 usethis::use_data(iycfInt, compress = "xz", overwrite = TRUE)
 
 mnpInt <- list(intResultsGM[["mnpDF"]], intResultsGB[["mnpDF"]])
+names(mnpInt) <- c("Greater Monrovia", "Grand Bassa")
 usethis::use_data(mnpInt, compress = "xz", overwrite = TRUE)
 
 vitInt <- list(intResultsGM[["vitDF"]], intResultsGB[["vitDF"]])
+names(vitInt) <- c("Greater Monrovia", "Grand Bassa")
 usethis::use_data(vitInt, compress = "xz", overwrite = TRUE)
 
 screenInt <- list(intResultsGM[["screenDF"]], intResultsGB[["screenDF"]])
+names(screenInt) <- c("Greater Monrovia", "Grand Bassa")
 usethis::use_data(screenInt, compress = "xz", overwrite = TRUE)
 
 anthroInt <- list(intResultsGM[["anthroDF"]], intResultsGB[["anthroDF"]])
+names(anthroInt) <- c("Greater Monrovia", "Grand Bassa")
 usethis::use_data(anthroInt, compress = "xz", overwrite = TRUE)
 
 cmamInt <- list(intResultsGM[["cmamDF"]], intResultsGB[["cmamDF"]])
+names(cmamInt) <- c("Greater Monrovia", "Grand Bassa")
 usethis::use_data(cmamInt, compress = "xz", overwrite = TRUE)
-
 
 ################################## Population Data #############################
 
@@ -528,6 +534,7 @@ psuDataGM <- psuData[sampleList.r2$CCNAME == "Montserrado", ]
 usethis::use_data(psuDataGM, compress = "xz", overwrite = TRUE)
 
 psuDataGB <- psuData[sampleList.r2$CCNAME == "Grand Bassa", ]
+psuDataGB <- psuDataGB[psuDataGB$psu %in% ifaDF$eid, ]
 usethis::use_data(psuDataGB, compress = "xz", overwrite = TRUE)
 
 ################################################################################
@@ -703,31 +710,37 @@ bootResults <- boot_estimate(county = 1, w = psuDataGM)
 ##
 ifaBoot <- bootResults[["ifaDF"]]
 ifaBoot <- merge(indicatorList, ifaBoot, by = "varLabel", all.y = TRUE)
+ifaBoot1 <- data.frame(county = "Greater Monrovia", ifaBoot)
 #usethis::use_data(ifaBoot, compress = "xz", overwrite = TRUE)
 
 ##
 iycfBoot <- bootResults[["iycfDF"]]
 iycfBoot <- merge(indicatorList, iycfBoot, by = "varLabel", all.y = TRUE)
+iycfBoot1 <- data.frame(county = "Greater Monrovia", iycfBoot)
 #usethis::use_data(iycfBoot, compress = "xz", overwrite = TRUE)
 
 ##
 mnpBoot <- bootResults[["mnpDF"]]
 mnpBoot <- merge(indicatorList, mnpBoot, by = "varLabel", all.y = TRUE)
+mnpBoot1 <- data.frame(county = "Greater Monrovia", mnpBoot)
 #usethis::use_data(mnpBoot, compress = "xz", overwrite = TRUE)
 
 ##
 vitBoot <- bootResults[["vitDF"]]
 vitBoot <- merge(indicatorList, vitBoot, by = "varLabel", all.y = TRUE)
+vitBoot1 <- data.frame(county = "Greater Monrovia", vitBoot)
 #usethis::use_data(vitBoot, compress = "xz", overwrite = TRUE)
 
 ##
 screenBoot <- bootResults[["screenDF"]]
 screenBoot <- merge(indicatorList, screenBoot, by = "varLabel", all.y = TRUE)
+screenBoot1 <- data.frame(county = "Greater Monrovia", screenBoot)
 #usethis::use_data(screenBoot, compress = "xz", overwrite = TRUE)
 
 ##
 anthroBoot <- bootResults[["anthroDF"]]
 anthroBoot <- merge(indicatorList, anthroBoot, by = "varLabel", all.y = TRUE)
+anthroBoot1 <- data.frame(county = "Greater Monrovia", anthroBoot)
 #usethis::use_data(anthroBoot, compress = "xz", overwrite = TRUE)
 
 ############################## Grand Bassa #####################################
@@ -735,44 +748,64 @@ anthroBoot <- merge(indicatorList, anthroBoot, by = "varLabel", all.y = TRUE)
 bootResults <- boot_estimate(county = 2, w = psuDataGB)
 
 ##
+##
 ifaBoot <- bootResults[["ifaDF"]]
 ifaBoot <- merge(indicatorList, ifaBoot, by = "varLabel", all.y = TRUE)
+ifaBoot2 <- data.frame(county = "Grand Bassa", ifaBoot)
+
+ifaBoot <- data.frame(rbind(ifaBoot1, ifaBoot2))
 usethis::use_data(ifaBoot, compress = "xz", overwrite = TRUE)
 
 ##
 iycfBoot <- bootResults[["iycfDF"]]
 iycfBoot <- merge(indicatorList, iycfBoot, by = "varLabel", all.y = TRUE)
+iycfBoot2 <- data.frame(county = "Grand Bassa", iycfBoot)
+
+iycfBoot <- data.frame(rbind(iycfBoot1, iycfBoot2))
 usethis::use_data(iycfBoot, compress = "xz", overwrite = TRUE)
 
 ##
 mnpBoot <- bootResults[["mnpDF"]]
 mnpBoot <- merge(indicatorList, mnpBoot, by = "varLabel", all.y = TRUE)
+mnpBoot2 <- data.frame(county = "Grand Bassa", mnpBoot)
+
+mnpBoot <- data.frame(rbind(mnpBoot1, mnpBoot2))
 usethis::use_data(mnpBoot, compress = "xz", overwrite = TRUE)
 
 ##
 vitBoot <- bootResults[["vitDF"]]
 vitBoot <- merge(indicatorList, vitBoot, by = "varLabel", all.y = TRUE)
+vitBoot2 <- data.frame(county = "Grand Bassa", vitBoot)
+
+vitBoot <- data.frame(rbind(vitBoot1, vitBoot2))
 usethis::use_data(vitBoot, compress = "xz", overwrite = TRUE)
 
 ##
 screenBoot <- bootResults[["screenDF"]]
 screenBoot <- merge(indicatorList, screenBoot, by = "varLabel", all.y = TRUE)
+screenBoot2 <- data.frame(county = "Grand Bassa", screenBoot)
+
+screenBoot <- data.frame(rbind(screenBoot1, screenBoot2))
 usethis::use_data(screenBoot, compress = "xz", overwrite = TRUE)
 
 ##
 anthroBoot <- bootResults[["anthroDF"]]
 anthroBoot <- merge(indicatorList, anthroBoot, by = "varLabel", all.y = TRUE)
+anthroBoot2 <- data.frame(county = "Grand Bassa", anthroBoot)
+
+anthroBoot <- data.frame(rbind(anthroBoot1, anthroBoot2))
 usethis::use_data(anthroBoot, compress = "xz", overwrite = TRUE)
 
 
 ############################# CMAM Coverage ####################################
 
-samCases <- colSums(cmamDF[ , c("cin", "cout", "rin")])
+## Greater Monrovia
+samCases <- colSums(cmamDF[cmamDF$cid == 1, c("cin", "cout", "rin")])
 rout <- squeacr::calculate_rout(cin = samCases[1], cout = samCases[2], rin = samCases[3])
-
+##
 cf <- estimate_classic(x = samCases[1], n = samCases[1] + samCases[2])
 tc <- estimate_classic(x = samCases[1] + samCases[3], n = samCases[1] + samCases[2] + samCases[3] + rout)
-
+##
 cmamEst <- data.frame(
   varLabel = c("cf", "tc"),
   df = "cmamDF",
@@ -781,6 +814,27 @@ cmamEst <- data.frame(
   lcl = c(cf[[2]][1], tc[[2]][1]),
   ucl = c(cf[[2]][2], tc[[2]][2])
 )
+##
+cmamEst1 <- data.frame(county = "Greater Monrovia", cmamEst)
 
+## Grand Bassa
+samCases <- colSums(cmamDF[cmamDF$cid == 2, c("cin", "cout", "rin")])
+rout <- squeacr::calculate_rout(cin = samCases[1], cout = samCases[2], rin = samCases[3])
+##
+cf <- estimate_classic(x = samCases[1], n = samCases[1] + samCases[2])
+tc <- estimate_classic(x = samCases[1] + samCases[3], n = samCases[1] + samCases[2] + samCases[3] + rout)
+##
+cmamEst <- data.frame(
+  varLabel = c("cf", "tc"),
+  df = "cmamDF",
+  varNames = c("Case-finding effectiveness", "Treatment coverage"),
+  estimate = c(cf[[1]], tc[[1]]),
+  lcl = c(cf[[2]][1], tc[[2]][1]),
+  ucl = c(cf[[2]][2], tc[[2]][2])
+)
+##
+cmamEst2 <- data.frame(county = "Grand Bassa", cmamEst)
+##
+cmamEst <- data.frame(rbind(cmamEst1, cmamEst2))
 usethis::use_data(cmamEst, compress = "xz", overwrite = TRUE)
 

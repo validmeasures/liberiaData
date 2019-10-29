@@ -5,7 +5,7 @@
 \alias{iycfInt}
 \title{Interpolated Infant and Young Child Feeding (IYCF) counselling coverage
 indicator set Round 2}
-\format{A data.frame with 10 columns:
+\format{A list of 2 data.frames with 10 columns:
 \describe{
   \item{\code{icf1}}{Hear about IYCF counselling?}
   \item{\code{icf2}}{Attend IYCF counselling?}

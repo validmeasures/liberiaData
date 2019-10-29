@@ -5,7 +5,7 @@
 \alias{cmamInt}
 \title{Interpolated Community-based Management of Acute Malnutrition (CMAM) coverage
 indicator set Round 2}
-\format{A data.frame with 29 columns:
+\format{A list of 2 data.frames with 29 columns:
 \describe{
   \item{\code{q1}}{Is child sick?}
   \item{\code{q1a}}{Child suffering from: malnutrition}

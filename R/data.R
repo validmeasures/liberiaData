@@ -434,7 +434,7 @@
 #
 #' Interpolated iron-folic acid (IFA) indicator set Round 2
 #'
-#' @format A data.frame with 20 columns:
+#' @format A list of 2 data.frames each with 20 columns:
 #' \describe{
 #'   \item{\code{ifa1}}{Go to antenatal care?}
 #'   \item{\code{ifa2}}{Received information about IFA?}
@@ -470,7 +470,7 @@
 #' Interpolated Infant and Young Child Feeding (IYCF) counselling coverage
 #' indicator set Round 2
 #'
-#' @format A data.frame with 10 columns:
+#' @format A list of 2 data.frames with 10 columns:
 #' \describe{
 #'   \item{\code{icf1}}{Hear about IYCF counselling?}
 #'   \item{\code{icf2}}{Attend IYCF counselling?}
@@ -496,7 +496,7 @@
 #' Interpolated Micronutrient Powder (MNP) supplementation coverage indicator
 #' set Round 2
 #'
-#' @format A data.frame with 23 columns:
+#' @format A list of 2 data.frames with 23 columns:
 #' \describe{
 #'   \item{\code{mnp1}}{Heard about MNP?}
 #'   \item{\code{mnp2}}{Received/purchased MNP?}
@@ -534,7 +534,7 @@
 #
 #' Interpolated Vitamin A supplementation coverage indicator set Round 2
 #'
-#' @format A data.frame with 11 columns:
+#' @format A list of 2 data.frames with 11 columns:
 #' \describe{
 #'   \item{\code{vit1}}{Received vitamin A?}
 #'   \item{\code{vit1a}}{Reasons: Health centre ran out}
@@ -560,7 +560,7 @@
 #
 #' Interpolated child anthropometry indicator set Round 2
 #'
-#' @format A data.frame with 23 columns:
+#' @format A list of 2 data.frames with 23 columns:
 #' \describe{
 #'   \item{\code{spid}}{Sampling point identifier}
 #'   \item{\code{muac}}{Mid-upper arm circumference (MUAC) of child in centimetres}
@@ -596,7 +596,7 @@
 #' Interpolated Community-based Management of Acute Malnutrition (CMAM) coverage
 #' indicator set Round 2
 #'
-#' @format A data.frame with 29 columns:
+#' @format A list of 2 data.frames with 29 columns:
 #' \describe{
 #'   \item{\code{q1}}{Is child sick?}
 #'   \item{\code{q1a}}{Child suffering from: malnutrition}
@@ -640,7 +640,7 @@
 #
 #' Interpolated nutrition screening coverage indicator set Round 2
 #'
-#' @format A data.frame with 5 columns:
+#' @format A list of 2 data.frames with 5 columns:
 #' \describe{
 #'   \item{\code{muac.screen}}{Has child been measured with a MUAC tape in past month?}
 #'   \item{\code{oedema.screen}}{Has child been checked for oedema in the past month?}
@@ -707,8 +707,9 @@
 #'
 #' Boostrap results for iron-folic acid indicators
 #'
-#' @format A data.frame with 20 rows and 6 columns
+#' @format A data.frame with 20 rows and 7 columns
 #' \describe{
+#'   \item{\code{county}}{County name}
 #'   \item{\code{varLabel}}{Short code of indicators}
 #'   \item{\code{df}}{Name of data.frame to which indicator belongs}
 #'   \item{\code{varNames}}{Long names of indicators}
@@ -728,8 +729,9 @@
 #'
 #' Boostrap results for IYCF indicators
 #'
-#' @format A data.frame with 10 rows and 6 columns
+#' @format A data.frame with 10 rows and 7 columns
 #' \describe{
+#'   \item{\code{county}}{County name}
 #'   \item{\code{varLabel}}{Short code of indicators}
 #'   \item{\code{df}}{Name of data.frame to which indicator belongs}
 #'   \item{\code{varNames}}{Long names of indicators}
@@ -749,8 +751,9 @@
 #'
 #' Boostrap results for micronutrient powder indicators
 #'
-#' @format A data.frame with 23 rows and 6 columns
+#' @format A data.frame with 23 rows and 7 columns
 #' \describe{
+#'   \item{\code{county}}{County name}
 #'   \item{\code{varLabel}}{Short code of indicators}
 #'   \item{\code{df}}{Name of data.frame to which indicator belongs}
 #'   \item{\code{varNames}}{Long names of indicators}
@@ -770,8 +773,9 @@
 #'
 #' Boostrap results for vitamin A indicators
 #'
-#' @format A data.frame with 11 rows and 6 columns
+#' @format A data.frame with 11 rows and 7 columns
 #' \describe{
+#'   \item{\code{county}}{County name}
 #'   \item{\code{varLabel}}{Short code of indicators}
 #'   \item{\code{df}}{Name of data.frame to which indicator belongs}
 #'   \item{\code{varNames}}{Long names of indicators}
@@ -791,8 +795,9 @@
 #'
 #' Boostrap results for nutrition screening indicators
 #'
-#' @format A data.frame with 4 rows and 6 columns
+#' @format A data.frame with 4 rows and 7 columns
 #' \describe{
+#'   \item{\code{county}}{County name}
 #'   \item{\code{varLabel}}{Short code of indicators}
 #'   \item{\code{df}}{Name of data.frame to which indicator belongs}
 #'   \item{\code{varNames}}{Long names of indicators}
@@ -812,8 +817,9 @@
 #'
 #' Boostrap results for anthropometric indicators
 #'
-#' @format A data.frame with 20 rows and 6 columns
+#' @format A data.frame with 20 rows and 7 columns
 #' \describe{
+#'   \item{\code{county}}{County name}
 #'   \item{\code{varLabel}}{Short code of indicators}
 #'   \item{\code{df}}{Name of data.frame to which indicator belongs}
 #'   \item{\code{varNames}}{Long names of indicators}
@@ -833,8 +839,9 @@
 #'
 #' Boostrap results for CMAM coverage indicators
 #'
-#' @format A data.frame with 2 rows and 6 columns
+#' @format A data.frame with 2 rows and 7 columns
 #' \describe{
+#'   \item{\code{county}}{County name}
 #'   \item{\code{varLabel}}{Short code of indicators}
 #'   \item{\code{df}}{Name of data.frame to which indicator belongs}
 #'   \item{\code{varNames}}{Long names of indicators}

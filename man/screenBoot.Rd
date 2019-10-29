@@ -4,8 +4,9 @@
 \name{screenBoot}
 \alias{screenBoot}
 \title{Boostrap results for nutrition screening indicators}
-\format{A data.frame with 4 rows and 6 columns
+\format{A data.frame with 4 rows and 7 columns
 \describe{
+  \item{\code{county}}{County name}
   \item{\code{varLabel}}{Short code of indicators}
   \item{\code{df}}{Name of data.frame to which indicator belongs}
   \item{\code{varNames}}{Long names of indicators}

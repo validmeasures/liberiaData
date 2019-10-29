@@ -4,7 +4,7 @@
 \name{ifaInt}
 \alias{ifaInt}
 \title{Interpolated iron-folic acid (IFA) indicator set Round 2}
-\format{A data.frame with 20 columns:
+\format{A list of 2 data.frames each with 20 columns:
 \describe{
   \item{\code{ifa1}}{Go to antenatal care?}
   \item{\code{ifa2}}{Received information about IFA?}

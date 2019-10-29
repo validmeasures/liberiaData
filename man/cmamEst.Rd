@@ -4,8 +4,9 @@
 \name{cmamEst}
 \alias{cmamEst}
 \title{Boostrap results for CMAM coverage indicators}
-\format{A data.frame with 2 rows and 6 columns
+\format{A data.frame with 2 rows and 7 columns
 \describe{
+  \item{\code{county}}{County name}
   \item{\code{varLabel}}{Short code of indicators}
   \item{\code{df}}{Name of data.frame to which indicator belongs}
   \item{\code{varNames}}{Long names of indicators}

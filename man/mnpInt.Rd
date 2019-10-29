@@ -5,7 +5,7 @@
 \alias{mnpInt}
 \title{Interpolated Micronutrient Powder (MNP) supplementation coverage indicator
 set Round 2}
-\format{A data.frame with 23 columns:
+\format{A list of 2 data.frames with 23 columns:
 \describe{
   \item{\code{mnp1}}{Heard about MNP?}
   \item{\code{mnp2}}{Received/purchased MNP?}

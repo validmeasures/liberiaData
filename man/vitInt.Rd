@@ -4,7 +4,7 @@
 \name{vitInt}
 \alias{vitInt}
 \title{Interpolated Vitamin A supplementation coverage indicator set Round 2}
-\format{A data.frame with 11 columns:
+\format{A list of 2 data.frames with 11 columns:
 \describe{
   \item{\code{vit1}}{Received vitamin A?}
   \item{\code{vit1a}}{Reasons: Health centre ran out}

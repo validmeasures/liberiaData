@@ -4,7 +4,7 @@
 \name{anthroInt}
 \alias{anthroInt}
 \title{Interpolated child anthropometry indicator set Round 2}
-\format{A data.frame with 23 columns:
+\format{A list of 2 data.frames with 23 columns:
 \describe{
   \item{\code{spid}}{Sampling point identifier}
   \item{\code{muac}}{Mid-upper arm circumference (MUAC) of child in centimetres}
