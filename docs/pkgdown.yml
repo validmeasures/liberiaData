@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2020-11-29T10:17Z
+last_built: 2020-11-29T18:08Z
 urls:
   reference: https://validmeasures.org/liberiaData/reference
   article: https://validmeasures.org/liberiaData/articles

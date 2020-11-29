@@ -79,19 +79,55 @@
 <a href="#liberiadata-liberia-coverage-survey-data-handler" class="anchor"></a>liberiaData: Liberia Coverage Survey Data Handler</h1></div>
 <!-- badges: start -->
 
-<p>The Liberia Coverage Survey for the assessment of CMAM coverage, micronutrient powder supplementation coverage, vitamin A supplementation coverage, iron folic acid supplementation coverage and IYCF counselling coverage has been commissioned by UNICEF Liberia with funding from Power of Nutrition. In support of this survey, this package for data manipulation, processing and analysis has been developed.</p>
+<p>The Liberia Coverage Survey for the assessment of <em>CMAM coverage</em>, <em>micronutrient powder supplementation coverage</em>, <em>vitamin A supplementation coverage</em>, <em>iron folic acid supplementation coverage</em> and <em>IYCF counselling coverage</em> has been commissioned by <a href="https://www.unicef.org/liberia/">UNICEF Liberia</a> with funding from <a href="https://www.powerofnutrition.org">Power of Nutrition</a>. In support of this survey, this package for data manipulation, processing and analysis has been developed.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <!-- You can install the released version of liberiaData from [CRAN](https://CRAN.R-project.org) with: -->
 <p>You can install the development version of <code>liberiaData</code> from <a href="https://github.com/validmeasures/liberiaData">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="va">remotes</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org">remotes</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"validmeasures/liberiaData"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
+<p>The <code>liberiaData</code> package has 4 sets of functions that perform the following tasks:</p>
+<div id="data-management" class="section level3">
+<h3 class="hasAnchor">
+<a href="#data-management" class="anchor"></a><strong>Data management</strong>
+</h3>
+<p>These functions interface with the server that holds the collected raw data from the survey conducted. The server is an <a href="https://getodk.org">Open Data Kit</a> Aggregate server. Two functions fall under this task. The first is <code><a href="reference/get_liberia_data.html">get_liberia_data()</a></code> which is a wrapper function to functions in the <code>odkr</code> package (see <a href="https://github.com/rapidsurveys/odkr">repository</a>) for pulling forms from the server and exporting the forms into datasets. The second is a utility function called <code><a href="reference/merge_repeats.html">merge_repeats()</a></code> that merges data from nested forms within the main forms into the main dataset.</p>
+</div>
+<div id="data-processing" class="section level3">
+<h3 class="hasAnchor">
+<a href="#data-processing" class="anchor"></a><strong>Data processing</strong>
+</h3>
+<p>The next set of functions process the raw data to be usable for analysis. These functions are primarily <em>recode</em> functions (functions beginning with <code>recode_</code> followed by a descriptor of what the function processes) specific to the various indicators in the survey.</p>
+<p>In addition to the <code>recode_*</code> functions, there are also a couple of spatial data processing functions (<code><a href="reference/create_sp.html">create_sp()</a></code> and <code><a href="reference/get_spid.html">get_spid()</a></code>) that transform datasets into spatial class formats needed for spatial analysis.</p>
+<p>For a detailed description of the indicators in this survey and their definitions, see the section on indicators in the survey’s design document <a href="https://validmeasures.org/liberiaS3M/indicators.html">here</a></p>
+</div>
+<div id="data-analysis" class="section level3">
+<h3 class="hasAnchor">
+<a href="#data-analysis" class="anchor"></a><strong>Data analysis</strong>
+</h3>
+<p>The next set of functions are the analysis functions. First are the estimator functions to report results for the whole survey area. Two types of estimation are performed for specific types of indicators. A classic unweighted estimator (<code><a href="reference/estimate_classic.html">estimate_classic()</a></code>) is used to estimate the coverage of the Integrated Management of Acute Malnutrition (IMAM) while for all other indicators a weighted bootstrap estimator (<code><a href="reference/boot_estimate.html">boot_estimate()</a></code>) is used. We use the <code>bbw</code> package (see <a href="https://github.com/rapidsurveys/bbw">repository</a>) to apply a <em>blocked weighted bootstrap</em> estimator as our survey sample is not priorly weighted.</p>
+<p>Second is the spatial interpolation function (<code><a href="reference/interpolate_indicators.html">interpolate_indicators()</a></code>) which is a wrapper to the <code>gstat</code> package function for inverse distance weighting (IDW) interpolation.</p>
+<p>For a detailed description of the analysis approach for this survey, see the section on analysis in the survey’s design document <a href="https://validmeasures.org/liberiaS3M/data.html">here</a>.</p>
+</div>
+<div id="reporting" class="section level3">
+<h3 class="hasAnchor">
+<a href="#reporting" class="anchor"></a><strong>Reporting</strong>
+</h3>
+<p>The <code>liberiaData</code> package has a function (<code><a href="reference/run_dashboard.html">run_dashboard()</a></code>) that runs an embedded Shiny application to demonstrate the preliminary output of the analysis.</p>
+</div>
+</div>
+<div id="data-analysis-workflow-and-replication-data" class="section level2">
+<h2 class="hasAnchor">
+<a href="#data-analysis-workflow-and-replication-data" class="anchor"></a>Data analysis workflow and replication data</h2>
+<p>The <code>liberiaData</code> package contains all the R scripts used to perform the different steps described above. These scripts can be found in the <em>data-raw</em> folder - <em>data.R</em> contains the script for pulling the data from server, cleaning, recoding and then analysis.; <em>maps.R</em> contains the script for spatial interpolation.</p>
+<p>All outputs were then exported as package data (<em>.rda</em> format) found in the <em>data</em> folder.</p>
+<p>This package was used to produce the final report using Rmarkdown which can be found in this <a href="https://github.com/validmeasures/liberiaCoverageReport">repository</a>.</p>
 </div>
 </div>
   </div>
@@ -124,6 +160,7 @@
 <ul class="list-unstyled">
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 <li><a href="https://travis-ci.org/validmeasures/liberiaData"><img src="https://travis-ci.org/validmeasures/liberiaData.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://ci.appveyor.com/project/validmeasures/liberiaData"><img src="https://ci.appveyor.com/api/projects/status/github/validmeasures/liberiaData?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 </ul>
 </div>
 </div>
