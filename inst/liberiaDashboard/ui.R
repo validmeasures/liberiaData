@@ -37,12 +37,12 @@ ui <- dashboardPage(
         tabName = "gm",
         icon = icon(name = "globe",
                     lib = "font-awesome",
-                    class = "fa-lg")),
-      menuItem(text = "Grand Bassa",
-        tabName = "gb",
-        icon = icon(name = "globe",
-                    lib = "font-awesome",
-                    class = "fa-lg"))
+                    class = "fa-lg"))#,
+      #menuItem(text = "Grand Bassa",
+      #  tabName = "gb",
+      #  icon = icon(name = "globe",
+      #              lib = "font-awesome",
+      #              class = "fa-lg"))
     )
   ),
   ## Body
@@ -62,8 +62,7 @@ ui <- dashboardPage(
             width = 4,
             radioButtons(inputId = "round",
               label = "Select round",
-              choices = c("Round 1" = "r1",
-                          "Round 2" = "r2"),
+              choices = c("Round 2" = "r2"),
               selected = "r2"
             ),
             selectInput(inputId = "varLabel",

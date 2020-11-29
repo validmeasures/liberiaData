@@ -39,7 +39,7 @@ if(!require(stringr)) install.packages("stringr")
 
 if(!require(liberia)) install_github("validmeasures/liberia")
 if(!require(liberiaData)) install_github("validmeasures/liberiaData")
-if(!require(spatialsampler)) install_github("SpatialWorks/spatialsampler")
+if(!require(spatialsampler)) install_github("spatialworks/spatialsampler")
 if(!require(odkr)) install_github("validmeasures/odkr")
 if(!require(sampsizer)) install_github("ernestguevarra/sampsizer")
 
@@ -75,11 +75,11 @@ gbLat2 <- bbox(grandBassa)[2, 2]
 
 ################################################################################
 
-themeSettings <- theme_bw() + 
+themeSettings <- theme_bw() +
   theme(panel.border = element_rect(colour = "#993300",
                                     size = 0.5),
-        panel.grid.major = element_line(linetype = 1, 
-                                        size = 0.2, 
+        panel.grid.major = element_line(linetype = 1,
+                                        size = 0.2,
                                         colour = "gray90"),
         panel.grid.minor = element_line(linetype = 0),
         strip.background = element_rect(colour = "#993300",

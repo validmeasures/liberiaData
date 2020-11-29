@@ -25,7 +25,9 @@ server <- function(input, output, session) {
   ##
   covHex <- reactive({
     covHex <- gmHexGrid
-    covHex@data <- data.frame(covHex@data, ifaInt, iycfInt, mnpInt, vitInt, screenInt, cmamInt, anthroInt)
+    covHex@data <- data.frame(covHex@data, ifaInt[[1]], iycfInt[[1]],
+                              mnpInt[[1]], vitInt[[1]], screenInt[[1]],
+                              cmamInt[[1]], anthroInt[[1]])
     covHex
   })
   observe({
@@ -96,7 +98,7 @@ server <- function(input, output, session) {
     ##
     updateSelectInput(session,
       inputId = "varLabel",
-      label = "Select indicator",
+      label = "Select indicator to map",
       choices = indicatorChoices
     )
   })
@@ -120,70 +122,70 @@ server <- function(input, output, session) {
     labels <- paste(round(covHex()[[input$varLabel]] * 100, digits = 1), "%", sep = "")
     ##
     if(input$varLabel == "ifa5") {
-      values <- ifaInt$ifa5
+      values <- ifaInt[[1]]$ifa5
       labs <- labelFormat()
       labels <- paste(round(covHex()[[input$varLabel]], digits = 1), "days", sep = " ")
     }
     if(input$varLabel == "icf3") {
-      values <- iycfInt$icf3
+      values <- iycfInt[[1]]$icf3
       labs <- labelFormat()
       labels <- paste(round(covHex()[[input$varLabel]], digits = 1), "times", sep = " ")
     }
     if(input$varLabel == "mnp4") {
-      values <- mnpInt$mnp4
+      values <- mnpInt[[1]]$mnp4
       labs <- labelFormat()
       labels <- paste(round(covHex()[[input$varLabel]], digits = 1), "times", sep = " ")
     }
     if(input$varLabel == "global.haz") {
-      values <- c(0, max(anthroInt$global.haz))
+      values <- c(0, max(anthroInt[[1]]$global.haz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "moderate.haz") {
-      values <- c(0, max(anthroInt$moderate.haz))
+      values <- c(0, max(anthroInt[[1]]$moderate.haz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "severe.haz") {
-      values <- c(0, max(anthroInt$severe.haz))
+      values <- c(0, max(anthroInt[[1]]$severe.haz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "global.waz") {
-      values <- c(0, max(anthroInt$global.waz))
+      values <- c(0, max(anthroInt[[1]]$global.waz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "moderate.waz") {
-      values <- c(0, max(anthroInt$moderate.waz))
+      values <- c(0, max(anthroInt[[1]]$moderate.waz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "severe.waz") {
-      values <- c(0, max(anthroInt$severe.waz))
+      values <- c(0, max(anthroInt[[1]]$severe.waz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "gam.whz") {
-      values <- c(0, max(anthroInt$gam.whz))
+      values <- c(0, max(anthroInt[[1]]$gam.whz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "mam.whz") {
-      values <- c(0, max(anthroInt$mam.whz))
+      values <- c(0, max(anthroInt[[1]]$mam.whz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "sam.whz") {
-      values <- c(0, max(anthroInt$sam.whz))
+      values <- c(0, max(anthroInt[[1]]$sam.whz))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "gam.muac") {
-      values <- c(0, max(anthroInt$gam.muac))
+      values <- c(0, max(anthroInt[[1]]$gam.muac))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "mam.muac") {
-      values <- c(0, max(anthroInt$mam.muac))
+      values <- c(0, max(anthroInt[[1]]$mam.muac))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "sam.muac") {
-      values <- c(0, max(anthroInt$sam.muac))
+      values <- c(0, max(anthroInt[[1]]$sam.muac))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     if(input$varLabel == "oedema") {
-      values <- c(0, max(anthroInt$oedema))
+      values <- c(0, max(anthroInt[[1]]$oedema))
       palette <- rev(brewer.pal(n = 10, name = "RdYlGn"))
     }
     ##
@@ -226,7 +228,8 @@ server <- function(input, output, session) {
     output$ifaPlot <- renderPlotly({
       ##
       x <- ifaBoot[ifaBoot$varLabel %in% c("ifa1", "ifa2", "ifa3",
-                                           "ifa4", "ifa6", "ifa7"), ]
+                                           "ifa4", "ifa6", "ifa7") &
+                     ifaBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- c("At least one\nANC visit",
                  "Know/heard\nof IFA",
@@ -255,8 +258,8 @@ server <- function(input, output, session) {
     ##
     output$ifaReasons <- renderPlotly({
       x <- ifaBoot[ifaBoot$varLabel %in% c(paste("ifa3", letters[1:9], sep = ""),
-      ##
-                                           paste("ifa4", letters[1:4], sep = "")), ]
+                                           paste("ifa4", letters[1:4], sep = "")) &
+                     ifaBoot$county == "Greater Monrovia", ]
       ##
       x <- x[x$estimate != 0, ]
       ##
@@ -274,7 +277,8 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "iycfGM", {
     output$icfPlot <- renderPlotly({
       ##
-      x <- iycfBoot[iycfBoot$varLabel %in% c("icf1", "icf2"), ]
+      x <- iycfBoot[iycfBoot$varLabel %in% c("icf1", "icf2") &
+                      iycfBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- c("Know/heard \nabout\nIYCF\ncounselling",
                  "Attended\nIYCF\ncounselling")
@@ -294,7 +298,8 @@ server <- function(input, output, session) {
     })
     ##
     output$icfReasons <- renderPlotly({
-      x <- iycfBoot[iycfBoot$varLabel %in% c(paste("icf2", letters[1:7], sep = "")), ]
+      x <- iycfBoot[iycfBoot$varLabel %in% c(paste("icf2", letters[1:7], sep = "")) &
+                      iycfBoot$county == "Greater Monrovia", ]
       ##
       x <- x[x$estimate != 0, ]
       ##
@@ -312,7 +317,8 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "mnpGM", {
     output$mnpPlot <- renderPlotly({
       ##
-      x <- mnpBoot[mnpBoot$varLabel %in% c("mnp1", "mnp2"), ]
+      x <- mnpBoot[mnpBoot$varLabel %in% c("mnp1", "mnp2") &
+                     mnpBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- c("Know/heard\nabout\nMNP",
                  "Received/\npurchased\nMNP")
@@ -333,7 +339,8 @@ server <- function(input, output, session) {
     ##
     output$mnpReasons <- renderPlotly({
       x <- mnpBoot[mnpBoot$varLabel %in% c(paste("mnp2", letters[1:4], sep = ""),
-                                           paste("mnp3", letters[1:10], sep = "")), ]
+                                           paste("mnp3", letters[1:10], sep = "")) &
+                     mnpBoot$county == "Greater Monrovia", ]
       ##
       x <- x[x$estimate != 0, ]
       ##
@@ -351,7 +358,8 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "vitGM", {
     output$vitPlot <- renderPlotly({
       ##
-      x <- vitBoot[vitBoot$varLabel == "vit1", ]
+      x <- vitBoot[vitBoot$varLabel == "vit1" &
+                     vitBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- "Received\nvitamin A\nin the\npast 6 months"
       ##
@@ -366,7 +374,8 @@ server <- function(input, output, session) {
     })
     ##
     output$vitReasons <- renderPlotly({
-      x <- vitBoot[vitBoot$varLabel %in% c(paste("vit1", letters[1:10], sep = "")), ]
+      x <- vitBoot[vitBoot$varLabel %in% c(paste("vit1", letters[1:10], sep = "")) &
+                     vitBoot$county == "Greater Monrovia", ]
       ##
       x <- x[x$estimate != 0, ]
       ##
@@ -384,7 +393,7 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "screenGM", {
     output$screenPlot <- renderPlotly({
       ##
-      x <- screenBoot
+      x <- screenBoot[screenBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- c("Child\nheight\nmeasured\nin the\npast month",
                  "Child\nMUAC\nmeasured\nin the\npast month",
@@ -408,7 +417,7 @@ server <- function(input, output, session) {
     })
     ##
     output$screenTable <- renderTable({
-      x <- screenBoot
+      x <- screenBoot[screenBoot$county == "Greater Monrovia", ]
       x <- x[ , c("varNames", "estimate", "lcl", "ucl")]
       names(x) <- c("Indicator", "Estimate", "95% LCL", "95% UCL")
       x[ , 2:4] <- x[ , 2:4] * 100
@@ -419,7 +428,7 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "cmamGM", {
     output$cmamPlot <- renderPlotly({
       ##
-      x <- cmamEst
+      x <- cmamEst[cmamEst$county == "Greater Monrovia", ]
       ##
       xlabs <- c("Case-finding\neffectiveness",
                  "Treatment\ncoverage")
@@ -439,13 +448,14 @@ server <- function(input, output, session) {
     })
     ##
     output$cmamReasons <- renderPlotly({
-      x <- data.frame(colSums(cmamDF[ , as.character(indicatorList$varLabel[c(69, 75:95)])]))
+      x <- data.frame(colSums(cmamDF[cmamDF$cid == 1,
+                                     as.character(indicatorList$varLabel[c(95, 101:121)])]))
       ##
       names(x) <- "n"
       ##
       x <- data.frame(varLabel = row.names(x), x)
       ##
-      x <- merge(indicatorList[c(69, 75:95), ], x, by = "varLabel", all.y = TRUE)
+      x <- merge(indicatorList[c(95, 101:121), ], x, by = "varLabel", all.y = TRUE)
       ##
       x <- x[x$n != 0, ]
       ##
@@ -463,7 +473,8 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "stuntGM", {
     output$stuntPlot <- renderPlotly({
       ##
-      x <- anthroBoot[anthroBoot$varLabel %in% c("global.haz", "moderate.haz", "severe.haz"), ]
+      x <- anthroBoot[anthroBoot$varLabel %in% c("global.haz", "moderate.haz", "severe.haz") &
+                        anthroBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- c("Global stunting",
                  "Moderate stunting",
@@ -485,7 +496,8 @@ server <- function(input, output, session) {
     })
     ##
     output$stuntTable <- renderTable({
-      x <- anthroBoot[anthroBoot$varLabel %in% c("global.haz", "moderate.haz", "severe.haz"), ]
+      x <- anthroBoot[anthroBoot$varLabel %in% c("global.haz", "moderate.haz", "severe.haz") &
+                        anthroBoot$county == "Greater Monrovia", ]
       x <- x[ , c("varNames", "estimate", "lcl", "ucl")]
       names(x) <- c("Indicator", "Estimate", "95% LCL", "95% UCL")
       x[ , 2:4] <- x[ , 2:4] * 100
@@ -496,7 +508,8 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "underweightGM", {
     output$underweightPlot <- renderPlotly({
       ##
-      x <- anthroBoot[anthroBoot$varLabel %in% c("global.waz", "moderate.waz", "severe.waz"), ]
+      x <- anthroBoot[anthroBoot$varLabel %in% c("global.waz", "moderate.waz", "severe.waz") &
+                        anthroBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- c("Global underweight",
                  "Moderate underweight",
@@ -518,7 +531,8 @@ server <- function(input, output, session) {
     })
     ##
     output$underweightTable <- renderTable({
-      x <- anthroBoot[anthroBoot$varLabel %in% c("global.waz", "moderate.waz", "severe.waz"), ]
+      x <- anthroBoot[anthroBoot$varLabel %in% c("global.waz", "moderate.waz", "severe.waz") &
+                        anthroBoot$county == "Greater Monrovia", ]
       x <- x[ , c("varNames", "estimate", "lcl", "ucl")]
       names(x) <- c("Indicator", "Estimate", "95% LCL", "95% UCL")
       x[ , 2:4] <- x[ , 2:4] * 100
@@ -529,7 +543,8 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "whzGM", {
     output$whzPlot <- renderPlotly({
       ##
-      x <- anthroBoot[anthroBoot$varLabel %in% c("gam.whz", "mam.whz", "sam.whz"), ]
+      x <- anthroBoot[anthroBoot$varLabel %in% c("gam.whz", "mam.whz", "sam.whz") &
+                        anthroBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- c("Global wasting\nby WHZ",
                  "Moderate wasting\nby WHZ",
@@ -551,7 +566,8 @@ server <- function(input, output, session) {
     })
     ##
     output$whzTable <- renderTable({
-      x <- anthroBoot[anthroBoot$varLabel %in% c("gam.whz", "mam.whz", "sam.whz"), ]
+      x <- anthroBoot[anthroBoot$varLabel %in% c("gam.whz", "mam.whz", "sam.whz") &
+                        anthroBoot$county == "Greater Monrovia", ]
       x <- x[ , c("varNames", "estimate", "lcl", "ucl")]
       names(x) <- c("Indicator", "Estimate", "95% LCL", "95% UCL")
       x[ , 2:4] <- x[ , 2:4] * 100
@@ -562,7 +578,8 @@ server <- function(input, output, session) {
   observeEvent(input$round == "r2" & input$gm == "muacGM", {
     output$muacPlot <- renderPlotly({
       ##
-      x <- anthroBoot[anthroBoot$varLabel %in% c("gam.muac", "mam.muac", "sam.muac"), ]
+      x <- anthroBoot[anthroBoot$varLabel %in% c("gam.muac", "mam.muac", "sam.muac") &
+                        anthroBoot$county == "Greater Monrovia", ]
       ##
       xlabs <- c("Global wasting\nby MUAC",
                  "Moderate wasting\nby MUAC",
@@ -584,7 +601,8 @@ server <- function(input, output, session) {
     })
     ##
     output$muacTable <- renderTable({
-      x <- anthroBoot[anthroBoot$varLabel %in% c("gam.muac", "mam.muac", "sam.muac"), ]
+      x <- anthroBoot[anthroBoot$varLabel %in% c("gam.muac", "mam.muac", "sam.muac") &
+                        anthroBoot$county == "Greater Monrovia", ]
       x <- x[ , c("varNames", "estimate", "lcl", "ucl")]
       names(x) <- c("Indicator", "Estimate", "95% LCL", "95% UCL")
       x[ , 2:4] <- x[ , 2:4] * 100
@@ -608,7 +626,8 @@ server <- function(input, output, session) {
     })
     ##
     output$oedemaTable <- renderTable({
-      x <- anthroBoot[anthroBoot$varLabel == "oedema", ]
+      x <- anthroBoot[anthroBoot$varLabel == "oedema" &
+                        anthroBoot$county == "Greater Monrovia", ]
       x <- x[ , c("varNames", "estimate", "lcl", "ucl")]
       names(x) <- c("Indicator", "Estimate", "95% LCL", "95% UCL")
       x[ , 2:4] <- x[ , 2:4] * 100
