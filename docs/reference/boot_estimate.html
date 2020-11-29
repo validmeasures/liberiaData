@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,7 +41,6 @@
 
 <meta property="og:title" content="Apply blocked weighted bootstrap to indicator datasets — boot_estimate" />
 <meta property="og:description" content="A wrapper for bootBW function in bbw package." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -55,7 +58,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -90,7 +93,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/validmeasures/liberiaData">
+  <a href="https://github.com/validmeasures/liberiaData/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -117,9 +120,13 @@
     <p>A wrapper for <code>bootBW</code> function in <code>bbw</code> package.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>boot_estimate</span>(<span class='kw'>indicator</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"ifaDF"</span>, <span class='st'>"iycfDF"</span>, <span class='st'>"mnpDF"</span>, <span class='st'>"vitDF"</span>,
-  <span class='st'>"screenDF"</span>, <span class='st'>"anthroDF"</span>), <span class='no'>w</span>, <span class='kw'>replicates</span> <span class='kw'>=</span> <span class='fl'>399</span>,
-  <span class='kw'>core.columns</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"spid"</span>, <span class='st'>"cid"</span>, <span class='st'>"did"</span>, <span class='st'>"eid"</span>, <span class='st'>"motherID"</span>, <span class='st'>"m2"</span>))</pre>
+    <pre class="usage"><span class='fu'>boot_estimate</span><span class='op'>(</span>
+  indicator <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"ifaDF"</span>, <span class='st'>"iycfDF"</span>, <span class='st'>"mnpDF"</span>, <span class='st'>"vitDF"</span>, <span class='st'>"screenDF"</span>, <span class='st'>"anthroDF"</span><span class='op'>)</span>,
+  <span class='va'>county</span>,
+  <span class='va'>w</span>,
+  replicates <span class='op'>=</span> <span class='fl'>399</span>,
+  core.columns <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"spid"</span>, <span class='st'>"cid"</span>, <span class='st'>"did"</span>, <span class='st'>"eid"</span>, <span class='st'>"motherID"</span>, <span class='st'>"m2"</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -127,6 +134,11 @@
     <tr>
       <th>indicator</th>
       <td><p>A character vector of indicator data.frame names</p></td>
+    </tr>
+    <tr>
+      <th>county</th>
+      <td><p>An integer indicating which county to interpolate; 1 for
+Greater Monrovia; 2 for Grand Bassa</p></td>
     </tr>
     <tr>
       <th>w</th>
@@ -149,29 +161,33 @@ data.frames</p></td>
   limits</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>boot_estimate</span>(<span class='kw'>indicator</span> <span class='kw'>=</span> <span class='st'>"iycfDF"</span>, <span class='kw'>w</span> <span class='kw'>=</span> <span class='no'>psuDataGM</span>, <span class='kw'>replicates</span> <span class='kw'>=</span> <span class='fl'>9</span>)</div><div class='output co'>#&gt; $iycfDF
-#&gt;    varLabel   estimate        lcl        ucl
-#&gt; 1      icf1 0.87672956 0.83953463 0.91500323
-#&gt; 2      icf2 0.86797386 0.81236352 0.89322703
-#&gt; 3     icf2a 0.18627451 0.13294385 0.29989238
-#&gt; 4     icf2b 0.56521739 0.40189882 0.73376509
-#&gt; 5     icf2c 0.00000000 0.00000000 0.00000000
-#&gt; 6     icf2d 0.07608696 0.02847234 0.11547587
-#&gt; 7     icf2e 0.04504505 0.00000000 0.09435939
-#&gt; 8     icf2f 0.04901961 0.00000000 0.07445812
-#&gt; 9     icf2g 0.02531646 0.00000000 0.05008085
-#&gt; 10     icf3 5.45029240 5.30829951 5.73911483
+    <pre class="examples"><div class='input'><span class='fu'>boot_estimate</span><span class='op'>(</span>indicator <span class='op'>=</span> <span class='st'>"iycfDF"</span>, county <span class='op'>=</span> <span class='fl'>1</span>, w <span class='op'>=</span> <span class='va'>psuDataGM</span>, replicates <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $iycfDF
+#&gt;    varLabel    estimate         lcl        ucl
+#&gt; 1      icf1 0.895348837 0.871197572 0.91146474
+#&gt; 2      icf2 0.869772999 0.840393904 0.89719052
+#&gt; 3     icf2a 0.168067227 0.135238095 0.29033101
+#&gt; 4     icf2b 0.604166667 0.462020906 0.73809015
+#&gt; 5     icf2c 0.000000000 0.000000000 0.00000000
+#&gt; 6     icf2d 0.073170732 0.032792208 0.15061267
+#&gt; 7     icf2e 0.064220183 0.001680672 0.11777778
+#&gt; 8     icf2f 0.031250000 0.000000000 0.07840083
+#&gt; 9     icf2g 0.017857143 0.000000000 0.08071157
+#&gt; 10    icf2h 0.010416667 0.000000000 0.03490715
+#&gt; 11    icf2i 0.000000000 0.000000000 0.04667799
+#&gt; 12    icf2j 0.000000000 0.000000000 0.00000000
+#&gt; 13    icf2k 0.000000000 0.000000000 0.00000000
+#&gt; 14    icf2l 0.000000000 0.000000000 0.00000000
+#&gt; 15    icf2m 0.000000000 0.000000000 0.00000000
+#&gt; 16    icf2n 0.008928571 0.000000000 0.04942704
+#&gt; 17     icf3 5.363103953 5.089308587 5.67848437
 #&gt; </div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -182,7 +198,7 @@ data.frames</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
