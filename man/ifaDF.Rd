@@ -4,7 +4,8 @@
 \name{ifaDF}
 \alias{ifaDF}
 \title{Iron-folic acid (IFA) indicator set Round 2}
-\format{A data.frame with 25 columns:
+\format{
+A data.frame with 25 columns:
 \describe{
   \item{\code{spid}}{Sampling point identifier}
   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
@@ -32,7 +33,8 @@
   \item{\code{ifa5}}{How many days did you take IFA?}
   \item{\code{ifa6}}{Took IFA for at least 90 days}
   \item{\code{ifa7}}{Took IFA for 180 days}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

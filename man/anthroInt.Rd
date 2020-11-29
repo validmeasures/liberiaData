@@ -4,7 +4,8 @@
 \name{anthroInt}
 \alias{anthroInt}
 \title{Interpolated child anthropometry indicator set Round 2}
-\format{A list of 2 data.frames with 23 columns:
+\format{
+A list of 2 data.frames with 23 columns:
 \describe{
   \item{\code{spid}}{Sampling point identifier}
   \item{\code{muac}}{Mid-upper arm circumference (MUAC) of child in centimetres}
@@ -26,7 +27,8 @@
   \item{\code{gam.muac}}{Global wasting by MUAC}
   \item{\code{mam.muac}}{Moderate wasting by MUAC}
   \item{\code{sam.muac}}{Severe wasting by MUAC}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

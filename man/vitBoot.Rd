@@ -4,7 +4,8 @@
 \name{vitBoot}
 \alias{vitBoot}
 \title{Boostrap results for vitamin A indicators}
-\format{A data.frame with 11 rows and 7 columns
+\format{
+A data.frame with 11 rows and 7 columns
 \describe{
   \item{\code{county}}{County name}
   \item{\code{varLabel}}{Short code of indicators}
@@ -13,7 +14,8 @@
   \item{\code{estimate}}{Indicator estimate}
   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
-}}
+}
+}
 \usage{
 vitBoot
 }

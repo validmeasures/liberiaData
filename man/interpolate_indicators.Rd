@@ -4,9 +4,14 @@
 \alias{interpolate_indicators}
 \title{Function to interpolate indicators from the Liberia Coverage Survey}
 \usage{
-interpolate_indicators(indicator = c("ifaDF", "iycfDF", "mnpDF", "vitDF",
-  "screenDF", "anthroDF", "cmamDF"), county, core.columns = c("spid",
-  "cid", "did", "eid", "motherID", "m2"), coords, hexgrid, idp = 2)
+interpolate_indicators(
+  indicator = c("ifaDF", "iycfDF", "mnpDF", "vitDF", "screenDF", "anthroDF", "cmamDF"),
+  county,
+  core.columns = c("spid", "cid", "did", "eid", "motherID", "m2"),
+  coords,
+  hexgrid,
+  idp = 2
+)
 }
 \arguments{
 \item{indicator}{A character vector of indicator data.frame names}

@@ -4,7 +4,9 @@
 \name{psuDataGB}
 \alias{psuDataGB}
 \title{Population dataset for enumeration areas in Grand Bassa}
-\format{An object of class \code{data.frame} with 85 rows and 2 columns.}
+\format{
+An object of class \code{data.frame} with 85 rows and 2 columns.
+}
 \usage{
 psuDataGB
 }

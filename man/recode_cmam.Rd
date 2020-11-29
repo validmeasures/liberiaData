@@ -4,8 +4,10 @@
 \alias{recode_cmam}
 \title{Function to recode CMAM coverage indicators}
 \usage{
-recode_cmam(df, core.columns = c("spid", "cid", "did", "eid", "motherID",
-  "m2"))
+recode_cmam(
+  df,
+  core.columns = c("spid", "cid", "did", "eid", "motherID", "m2")
+)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}

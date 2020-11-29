@@ -4,13 +4,15 @@
 \name{coverageData.r2}
 \alias{coverageData.r2}
 \title{Liberia Coverage Survey Data Round 2}
-\format{A data.frame with 134 columns
+\format{
+A data.frame with 134 columns
 \describe{
   \item{\code{sdate}}{Date of data collection}
   \item{\code{cid}}{County identifier}
   \item{\code{county}}{County name}
   \item{\code{did}}{District identifier}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

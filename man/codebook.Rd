@@ -4,12 +4,14 @@
 \name{codebook}
 \alias{codebook}
 \title{Liberia Coverage Survey data codebook}
-\format{A tibble with 3 columns and 152 rows:
+\format{
+A tibble with 3 columns and 152 rows:
 \describe{
   \item{\code{variable}}{Variable name}
   \item{\code{question}}{Question or data assigned to \code{variable}}
   \item{\code{choices}}{Possible responses for specific \code{variable}}
- }}
+ }
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

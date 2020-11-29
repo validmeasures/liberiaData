@@ -5,7 +5,8 @@
 \alias{cmamInt}
 \title{Interpolated Community-based Management of Acute Malnutrition (CMAM) coverage
 indicator set Round 2}
-\format{A list of 2 data.frames with 29 columns:
+\format{
+A list of 2 data.frames with 29 columns:
 \describe{
   \item{\code{q1}}{Is child sick?}
   \item{\code{q1a}}{Child suffering from: malnutrition}
@@ -36,7 +37,8 @@ indicator set Round 2}
   \item{\code{q4r}}{SAM case in SFP}
   \item{\code{cf}}{Case-finding effectiveness}
   \item{\code{tc}}{Treatment coverage}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

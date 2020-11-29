@@ -4,8 +4,16 @@
 \alias{get_liberia_data}
 \title{Function to get Liberia Coverage Survey datasets and forms from ODK server.}
 \usage{
-get_liberia_data(id, username, password, start = Sys.Date(),
-  end = Sys.Date(), filename, rep = FALSE, rep.name = NULL)
+get_liberia_data(
+  id,
+  username,
+  password,
+  start = Sys.Date(),
+  end = Sys.Date(),
+  filename,
+  rep = FALSE,
+  rep.name = NULL
+)
 }
 \arguments{
 \item{id}{Form ID. Can be one of two form IDs used by the

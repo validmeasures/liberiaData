@@ -4,7 +4,8 @@
 \name{vitInt}
 \alias{vitInt}
 \title{Interpolated Vitamin A supplementation coverage indicator set Round 2}
-\format{A list of 2 data.frames with 11 columns:
+\format{
+A list of 2 data.frames with 11 columns:
 \describe{
   \item{\code{vit1}}{Received vitamin A?}
   \item{\code{vit1a}}{Reasons: Health centre ran out}
@@ -17,7 +18,8 @@
   \item{\code{vit1h}}{Reasons: Never been to hospital}
   \item{\code{vit1i}}{Reasons: Vaccine team didn't come/reach}
   \item{\code{vit1j}}{Reasons: Not interested}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

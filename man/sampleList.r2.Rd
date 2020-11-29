@@ -4,7 +4,8 @@
 \name{sampleList.r2}
 \alias{sampleList.r2}
 \title{Liberia Coverage Survey sample list Round 2}
-\format{A data.frame of with 23 columns and 178 rows:
+\format{
+A data.frame of with 23 columns and 178 rows:
 \describe{
   \item{\code{spid}}{Sampling point identifier}
   \item{\code{CCNAME}}{County name}
@@ -29,7 +30,8 @@
   \item{\code{lat}}{Latitude coordinate of centroid of enumeration area}
   \item{\code{d}}{Distance from centroid of grid}
   \item{\code{gmap}}{Google maps link}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

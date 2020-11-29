@@ -4,8 +4,12 @@
 \alias{recode_ifa}
 \title{Function to recode iron-folic acid coverage indicators}
 \usage{
-recode_ifa(df, core.columns = c("spid", "cid", "did", "eid", "motherID",
-  "m2"), ls1 = NULL, ls2 = NULL)
+recode_ifa(
+  df,
+  core.columns = c("spid", "cid", "did", "eid", "motherID", "m2"),
+  ls1 = NULL,
+  ls2 = NULL
+)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}

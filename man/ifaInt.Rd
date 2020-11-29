@@ -4,7 +4,8 @@
 \name{ifaInt}
 \alias{ifaInt}
 \title{Interpolated iron-folic acid (IFA) indicator set Round 2}
-\format{A list of 2 data.frames each with 20 columns:
+\format{
+A list of 2 data.frames each with 20 columns:
 \describe{
   \item{\code{ifa1}}{Go to antenatal care?}
   \item{\code{ifa2}}{Received information about IFA?}
@@ -26,7 +27,8 @@
   \item{\code{ifa5}}{How many days did you take IFA?}
   \item{\code{ifa6}}{Took IFA for at least 90 days}
   \item{\code{ifa7}}{Took IFA for 180 days}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

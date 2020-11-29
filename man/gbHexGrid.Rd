@@ -4,7 +4,9 @@
 \name{gbHexGrid}
 \alias{gbHexGrid}
 \title{Grand Bassa hexagonal grid map}
-\format{A SpatialPolygonsDataFrame of 8670 hexagons across Grand Bassa}
+\format{
+A SpatialPolygonsDataFrame of 8670 hexagons across Grand Bassa
+}
 \usage{
 gbHexGrid
 }

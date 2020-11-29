@@ -4,13 +4,15 @@
 \name{screenInt}
 \alias{screenInt}
 \title{Interpolated nutrition screening coverage indicator set Round 2}
-\format{A list of 2 data.frames with 5 columns:
+\format{
+A list of 2 data.frames with 5 columns:
 \describe{
   \item{\code{muac.screen}}{Has child been measured with a MUAC tape in past month?}
   \item{\code{oedema.screen}}{Has child been checked for oedema in the past month?}
   \item{\code{weight.screen}}{Has child's weight been measured in the past month?}
   \item{\code{height.screen}}{Has child's height been measured in the past month?}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

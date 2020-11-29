@@ -5,7 +5,8 @@
 \alias{cmamDF}
 \title{Community-based Management of Acute Malnutrition (CMAM) coverage indicators
 Round 2}
-\format{A data.frame with 35 columns:
+\format{
+A data.frame with 35 columns:
 \describe{
   \item{\code{spid}}{Sampling point identifier}
   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
@@ -43,7 +44,8 @@ Round 2}
   \item{\code{q4p}}{Out of stock}
   \item{\code{q4q}}{Lack of money to pay for transport}
   \item{\code{q4r}}{SAM case in SFP}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

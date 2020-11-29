@@ -4,12 +4,14 @@
 \name{indicatorList}
 \alias{indicatorList}
 \title{List of indicators assessed in the Liberia Coverage Survey}
-\format{A data.frame with 116 rows and 3 columns:
+\format{
+A data.frame with 116 rows and 3 columns:
 \describe{
   \item{\code{df}}{Name of data.frame to which indicator belongs}
   \item{\code{varNames}}{Long names of indicators}
   \item{\code{varLabel}}{Short code of indicators}
-}}
+}
+}
 \usage{
 indicatorList
 }

@@ -4,7 +4,8 @@
 \name{villageData.r2}
 \alias{villageData.r2}
 \title{Liberia Coverage Survey Village Data Round 2}
-\format{A data.frame with 11 columns
+\format{
+A data.frame with 11 columns
 \describe{
   \item{\code{cid}}{County identifier}
   \item{\code{county}}{County name}
@@ -17,7 +18,8 @@
   \item{\code{coords.Longitude}}{Recorded longitude coordinate}
   \item{\code{coords.Altitude}}{Recorded altitude}
   \item{\code{coords.Accuracy}}{Accuracy of coordinates recording}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

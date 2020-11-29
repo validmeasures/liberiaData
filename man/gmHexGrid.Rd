@@ -4,7 +4,9 @@
 \name{gmHexGrid}
 \alias{gmHexGrid}
 \title{Greater Monrovia hexagonal grid map}
-\format{A SpatialPolygonsDataFrame of 8663 hexagons across Monrovia}
+\format{
+A SpatialPolygonsDataFrame of 8663 hexagons across Monrovia
+}
 \usage{
 gmHexGrid
 }

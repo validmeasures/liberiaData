@@ -4,9 +4,13 @@
 \alias{boot_estimate}
 \title{Apply blocked weighted bootstrap to indicator datasets}
 \usage{
-boot_estimate(indicator = c("ifaDF", "iycfDF", "mnpDF", "vitDF",
-  "screenDF", "anthroDF"), county, w, replicates = 399,
-  core.columns = c("spid", "cid", "did", "eid", "motherID", "m2"))
+boot_estimate(
+  indicator = c("ifaDF", "iycfDF", "mnpDF", "vitDF", "screenDF", "anthroDF"),
+  county,
+  w,
+  replicates = 399,
+  core.columns = c("spid", "cid", "did", "eid", "motherID", "m2")
+)
 }
 \arguments{
 \item{indicator}{A character vector of indicator data.frame names}

@@ -4,7 +4,8 @@
 \name{screenDF}
 \alias{screenDF}
 \title{Nutrition screening coverage indicators}
-\format{A data.frame with 10 columns:
+\format{
+A data.frame with 10 columns:
 \describe{
   \item{\code{spid}}{Sampling point identifier}
   \item{\code{cid}}{County identifier. 1 = Urban Montserrado; 2 = Grand Bassa}
@@ -16,7 +17,8 @@
   \item{\code{oedema.screen}}{Has child been checked for oedema in the past month?}
   \item{\code{weight.screen}}{Has child's weight been measured in the past month?}
   \item{\code{height.screen}}{Has child's height been measured in the past month?}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

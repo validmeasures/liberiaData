@@ -5,7 +5,8 @@
 \alias{iycfInt}
 \title{Interpolated Infant and Young Child Feeding (IYCF) counselling coverage
 indicator set Round 2}
-\format{A list of 2 data.frames with 10 columns:
+\format{
+A list of 2 data.frames with 10 columns:
 \describe{
   \item{\code{icf1}}{Hear about IYCF counselling?}
   \item{\code{icf2}}{Attend IYCF counselling?}
@@ -17,7 +18,8 @@ indicator set Round 2}
   \item{\code{icf2f}}{Reasons: No one told me about it/not invited}
   \item{\code{icf2g}}{Reasons: No time}
   \item{\code{icf3}}{Received/purchased IFA?}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

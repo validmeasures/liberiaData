@@ -4,7 +4,8 @@
 \name{ifaBoot}
 \alias{ifaBoot}
 \title{Boostrap results for iron-folic acid indicators}
-\format{A data.frame with 20 rows and 7 columns
+\format{
+A data.frame with 20 rows and 7 columns
 \describe{
   \item{\code{county}}{County name}
   \item{\code{varLabel}}{Short code of indicators}
@@ -13,7 +14,8 @@
   \item{\code{estimate}}{Indicator estimate}
   \item{\code{lcl}}{Indiator 95\% lower confidence limits}
   \item{\code{ucl}}{Indiator 95\% lower confidence limits}
-}}
+}
+}
 \usage{
 ifaBoot
 }

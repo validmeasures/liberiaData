@@ -5,7 +5,8 @@
 \alias{mnpInt}
 \title{Interpolated Micronutrient Powder (MNP) supplementation coverage indicator
 set Round 2}
-\format{A list of 2 data.frames with 23 columns:
+\format{
+A list of 2 data.frames with 23 columns:
 \describe{
   \item{\code{mnp1}}{Heard about MNP?}
   \item{\code{mnp2}}{Received/purchased MNP?}
@@ -30,7 +31,8 @@ set Round 2}
   \item{\code{mnp3i}}{Reasons: Haven't seen it}
   \item{\code{mnp3j}}{Reasons: Child refused to take it}
   \item{\code{mnp4}}{How many times child ate MNP in the past week?}
-}}
+}
+}
 \source{
 Liberia Coverage Survey Round 2 - 27 August to 30 September 2019
 }

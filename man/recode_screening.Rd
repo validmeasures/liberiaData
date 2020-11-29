@@ -4,8 +4,10 @@
 \alias{recode_screening}
 \title{Function to recode nutrition screening coverage indicators}
 \usage{
-recode_screening(df, core.columns = c("spid", "cid", "did", "eid",
-  "motherID", "m2"))
+recode_screening(
+  df,
+  core.columns = c("spid", "cid", "did", "eid", "motherID", "m2")
+)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}

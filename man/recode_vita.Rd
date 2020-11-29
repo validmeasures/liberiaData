@@ -4,8 +4,11 @@
 \alias{recode_vita}
 \title{Function to recode vitamin A supplementation coverage indicators}
 \usage{
-recode_vita(df, core.columns = c("spid", "cid", "did", "eid", "motherID",
-  "m2"), ls = NULL)
+recode_vita(
+  df,
+  core.columns = c("spid", "cid", "did", "eid", "motherID", "m2"),
+  ls = NULL
+)
 }
 \arguments{
 \item{df}{A coverage data.frame collected for the Liberia Coverage Survey}
