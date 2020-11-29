@@ -1,0 +1,94 @@
+title: liberiaData
+
+url: https://validmeasures.org/liberiaData
+
+template:
+  params:
+    bootswatch: sandstone
+    ganalytics:
+
+reference:
+  - title: Description
+    contents:
+    - liberiaData
+
+  - title: Data handling
+    contents:
+    - get_liberia_data
+    - merge_repeats
+    - recode_others
+    - recode_ifa
+    - recode_iycf
+    - recode_mnp
+    - recode_vita
+    - recode_age
+    - recode_sex
+    - recode_weight
+    - recode_height
+    - recode_muac
+    - recode_position
+    - recode_oedema
+    - recode_anthro
+    - recode_cmam
+    - recode_screening
+    - interpolate_indicators
+    - create_points
+    - create_sp
+    - get_spid
+
+  - title: Estimators
+    contents:
+    - estimate_classic
+    - boot_estimate
+
+  - title: Supporting Datasets
+    contents:
+    - codebook
+    - sampleList.r2
+    - indicatorList
+
+  - title: Indicator Datasets
+    contents:
+    - villageData.r2
+    - psuDataGB
+    - psuDataGM
+    - coverageData.r2
+    - coverageData1.r2
+    - coverageData2.r2
+    - ifaDF
+    - iycfDF
+    - mnpDF
+    - vitDF
+    - anthroDF
+    - cmamDF
+    - screenDF
+
+  - title: Spatial Interpolation Datasets
+    contents:
+    - ifaInt
+    - iycfInt
+    - mnpInt
+    - vitInt
+    - cmamInt
+    - screenInt
+    - anthroInt
+
+  - title: Boostrap Estimate Datasets
+    contents:
+    - ifaBoot
+    - iycfBoot
+    - mnpBoot
+    - vitBoot
+    - cmamEst
+    - screenBoot
+    - anthroBoot
+
+  - title: Raster Maps
+    contents:
+    - gmHexGrid
+    - gbHexGrid
+
+  - title: Launching Results Dashboard
+    contents:
+    - run_dashboard
+
